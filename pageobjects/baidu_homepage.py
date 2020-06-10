@@ -12,3 +12,5 @@ class HomePage(BasePage):
 
     def send_submit_btn(self):
         self.click(self.search_submit_btn)
+
+
