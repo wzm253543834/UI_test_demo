@@ -1,5 +1,5 @@
 # coding=utf-8
-import time
+# import time
 import unittest
 from framework.browser_engine import BrowserEngine
 from pageobjects.lemobar_homepage import HomePage
@@ -76,6 +76,7 @@ class LemobarSearch(unittest.TestCase):
         homepage.search_click_branch_price()
         homepage.sleep(3)
         homepage.get_window_img()
+
 
 if __name__ == '__main__':
     unittest.main()
