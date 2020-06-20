@@ -14,6 +14,13 @@ class BranchPage(BasePage):
     menu_lemobar_branch_sitemanage = "xpath=>//ul[@class='el-menu-vertical-demo el-menu']/li[1]/ul/li[7]"
     menu_lemobar_branch_officemanage = "xpath=>//ul[@class='el-menu-vertical-demo el-menu']/li[1]/ul/li[8]"
     lemobar_tab_branch = "xpath=>//*[@id='tab-2']"
+    lemobar_tab_price = "xpath=>//*[@id='tab-3']"
+    lemobar_tab_equipment = "xpath=>//*[@id='tab-4']"
+    lemobar_tab_equipmessage = "xpath=>//*[@id='tab-151']"
+    lemobar_tab_abequipment = "xpath=>//*[@id='tab-7']"
+    lemobar_tab_contractwarn = "xpath=>//*[@id='tab-109']"
+    lemobar_tab_sitemanage = "xpath=>//*[@id='tab-120']"
+    lemobar_tab_officemanage = "xpath=>//*[@id='tab-126']"
 
     def search_click_branch(self):
         self.click(self.menu_lemobar_branch)
