@@ -25,3 +25,6 @@ class HomePage(BasePage):
 
     def search_click_branch_branch(self):
         self.click(self.menu_lemobar_branch_branch)
+
+    def search_click_branch_price(self):
+        self.click(self.menu_lemobar_branch_price)

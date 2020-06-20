@@ -66,6 +66,13 @@ class LemobarSearch(unittest.TestCase):
         homepage.sleep(3)
         homepage.get_window_img()
 
+    def test_price_test(self):
+        homepage = HomePage(self.driver)
+        homepage.search_click_branch()
+        homepage.sleep(3)
+        homepage.search_click_branch_price()
+        homepage.sleep(3)
+        homepage.get_window_img()
 
 if __name__ == '__main__':
     unittest.main()
