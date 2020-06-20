@@ -5,14 +5,14 @@ from framework.base_page import BasePage
 class BranchPage(BasePage):
 
     menu_lemobar_branch = "xpath=>//ul[@class='el-menu-vertical-demo el-menu']/li[1]"
-    menu_lemobar_branch_branch = "xpath=>//span[text()='网点管理']"
-    menu_lemobar_branch_price = "xpath=>//span[text()='价格管理']"
-    menu_lemobar_branch_equipment = "xpath=>//span[text()='设备管理']"
-    menu_lemobar_branch_equipmessage = "xpath=>//span[text()='设备信息']"
-    menu_lemobar_branch_abequipment = "xpath=>//span[text()='异常设备管理']"
-    menu_lemobar_branch_contractwarn = "xpath=>//span[text()='合同预警']"
-    menu_lemobar_branch_sitemanage = "xpath=>//span[text()='场地管理']"
-    menu_lemobar_branch_officemanage = "xpath=>//span[text()='分公司管理']"
+    menu_lemobar_branch_branch = "xpath=>//ul[@class='el-menu-vertical-demo el-menu']/li[1]/ul/li[1]"
+    menu_lemobar_branch_price = "xpath=>//ul[@class='el-menu-vertical-demo el-menu']/li[1]/ul/li[2]"
+    menu_lemobar_branch_equipment = "xpath=>//ul[@class='el-menu-vertical-demo el-menu']/li[1]/ul/li[3]"
+    menu_lemobar_branch_equipmessage = "xpath=>//ul[@class='el-menu-vertical-demo el-menu']/li[1]/ul/li[4]"
+    menu_lemobar_branch_abequipment = "xpath=>//ul[@class='el-menu-vertical-demo el-menu']/li[1]/ul/li[5]"
+    menu_lemobar_branch_contractwarn = "xpath=>//ul[@class='el-menu-vertical-demo el-menu']/li[1]/ul/li[6]"
+    menu_lemobar_branch_sitemanage = "xpath=>//ul[@class='el-menu-vertical-demo el-menu']/li[1]/ul/li[7]"
+    menu_lemobar_branch_officemanage = "xpath=>//ul[@class='el-menu-vertical-demo el-menu']/li[1]/ul/li[8]"
 
     def search_click_branch(self):
         self.click(self.menu_lemobar_branch)

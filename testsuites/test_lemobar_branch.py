@@ -45,7 +45,7 @@ class LemobarSearch(unittest.TestCase):
         homepage.login()
         homepage.get_window_img()  # 调用基类截图方法
         try:
-            assert 'selenium' in homepage.get_page_title()
+            assert '乐摩吧数据中心管理系统' in homepage.get_page_title()
             print('Test Pass.')
         except Exception as e:
             print('Test Fail.', format(e))
@@ -78,7 +78,7 @@ class LemobarSearch(unittest.TestCase):
         :return:
         """
         homepage = BranchPage(self.driver)
-        homepage.search_click_branch_abequipment()
+        homepage.search_click_branch_equipment()
         homepage.sleep(3)
         homepage.get_window_img()
 
