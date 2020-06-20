@@ -1,8 +1,9 @@
-# coding=utf-8
+# coding = utf-8
 # import time
 import unittest
 from framework.browser_engine import BrowserEngine
-from pageobjects.lemobar_homepage import HomePage
+from pageobjects.lemobar_login import HomePage
+from pageobjects.lemobar_branch import BranchPage
 
 
 class LemobarSearch(unittest.TestCase):
@@ -26,7 +27,7 @@ class LemobarSearch(unittest.TestCase):
         """
         BrowserEngine.quit_browser(cls)
 
-    def test_enter_lemobar(self):
+    def test_login_lemobar(self):
         """
         乐摩吧首页账号登录
         :return:
@@ -41,11 +42,7 @@ class LemobarSearch(unittest.TestCase):
         time.sleep(2)
         """
         homepage = HomePage(self.driver)
-        homepage.input_username('wangzm')
-        homepage.input_password('a645765783')
-        homepage.sleep(20)
-        homepage.enter_homepage()
-        homepage.sleep(10)
+        homepage.login()
         homepage.get_window_img()  # 调用基类截图方法
         try:
             assert 'selenium' in homepage.get_page_title()
@@ -58,7 +55,7 @@ class LemobarSearch(unittest.TestCase):
         网点管理查询
         :return:
         """
-        homepage = HomePage(self.driver)
+        homepage = BranchPage(self.driver)
         homepage.search_click_branch()
         homepage.sleep(3)
         homepage.search_click_branch_branch()
@@ -70,7 +67,7 @@ class LemobarSearch(unittest.TestCase):
         价格管理查询
         :return:
         """
-        homepage = HomePage(self.driver)
+        homepage = BranchPage(self.driver)
         homepage.search_click_branch()
         homepage.sleep(3)
         homepage.search_click_branch_price()

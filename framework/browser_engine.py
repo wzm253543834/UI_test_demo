@@ -1,4 +1,4 @@
-# -*- coding:utf-8 -*-
+# coding = utf-8
 import configparser
 import os.path
 from selenium import webdriver
