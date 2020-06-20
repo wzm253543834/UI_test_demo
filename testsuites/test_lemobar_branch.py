@@ -72,6 +72,66 @@ class LemobarSearch(unittest.TestCase):
         homepage.sleep(3)
         homepage.get_window_img()
 
+    def test_d_equipment_search(self):
+        """
+        设备列表
+        :return:
+        """
+        homepage = BranchPage(self.driver)
+        homepage.search_click_branch_abequipment()
+        homepage.sleep(3)
+        homepage.get_window_img()
+
+    def test_e_equipmessage_search(self):
+        """
+        设备信息
+        :return:
+        """
+        homepage = BranchPage(self.driver)
+        homepage.search_click_branch_equipmessage()
+        homepage.sleep(3)
+        homepage.get_window_img()
+
+    def test_f_abequipment_search(self):
+        """
+        异常设备列表
+        :return:
+        """
+        homepage = BranchPage(self.driver)
+        homepage.search_click_branch_abequipment()
+        homepage.sleep(3)
+        homepage.get_window_img()
+
+    def test_g_contractwarn_search(self):
+        """
+        合同预警
+        :return:
+        """
+        homepage = BranchPage(self.driver)
+        homepage.search_click_branch_contractwarn()
+        homepage.sleep(3)
+        homepage.get_window_img()
+
+    def test_h_sitemanage_search(self):
+        """
+        场地管理
+        :return:
+        """
+        homepage = BranchPage(self.driver)
+        homepage.search_click_branch_sitemanage()
+        homepage.sleep(3)
+        homepage.get_window_img()
+
+    def test_i_officemanage_search(self):
+        """
+        分公司管理
+        :return:
+        """
+        homepage = BranchPage(self.driver)
+        homepage.search_click_branch_officemanage()
+        homepage.sleep(3)
+        homepage.get_window_img()
+
 
 if __name__ == '__main__':
     unittest.main()
