@@ -6,7 +6,7 @@ from pageobjects.lemobar_login import HomePage
 from pageobjects.lemobar_branch import BranchPage
 
 
-class LemobarSearch(unittest.TestCase):
+class BranchSearch(unittest.TestCase):
 
     @classmethod
     # def setUp(self):
