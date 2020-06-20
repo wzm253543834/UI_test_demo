@@ -29,6 +29,7 @@ class LemobarSearch(unittest.TestCase):
     def test_enter_lemobar(self):
         """
         乐摩吧首页账号登录
+        :return:
         """
         """
         这里一定要test开头，把测试逻辑代码封装到一个test开头的方法里。
@@ -40,9 +41,6 @@ class LemobarSearch(unittest.TestCase):
         time.sleep(2)
         """
         homepage = HomePage(self.driver)
-        # homepage.type_search('selenium')  # 调用页面对象中的方法
-        # homepage.send_submit_btn()  # 调用页面对象类中的点击搜索按钮方法
-        # time.sleep(30)
         homepage.input_username('wangzm')
         homepage.input_password('a645765783')
         homepage.sleep(20)
@@ -58,6 +56,7 @@ class LemobarSearch(unittest.TestCase):
     def test_branch_search(self):
         """
         网点管理查询
+        :return:
         """
         homepage = HomePage(self.driver)
         homepage.search_click_branch()
@@ -67,6 +66,10 @@ class LemobarSearch(unittest.TestCase):
         homepage.get_window_img()
 
     def test_price_test(self):
+        """
+        价格管理查询
+        :return:
+        """
         homepage = HomePage(self.driver)
         homepage.search_click_branch()
         homepage.sleep(3)
