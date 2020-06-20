@@ -25,6 +25,6 @@ class HomePage(BasePage):
         self.input_username('wangzm')
         self.input_password('a645765783')
         self.clear_code()
-        self.sleep(20)
+        self.sleep(15)
         self.enter_lemobar_homepage()
         self.sleep(5)

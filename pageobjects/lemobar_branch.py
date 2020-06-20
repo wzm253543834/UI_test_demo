@@ -22,7 +22,8 @@ class BranchPage(BasePage):
         self.click(self.menu_lemobar_branch_branch)
 
     def find_tab_branch(self):
-        self.get_tab_title(self.lemobar_tab_branch)
+        str = self.get_tab_title(self.lemobar_tab_branch)
+        return str
 
     def search_click_branch_price(self):
         self.click(self.menu_lemobar_branch_price)

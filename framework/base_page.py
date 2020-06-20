@@ -179,12 +179,13 @@ class BasePage(object):
         return self.driver.title
 
     def get_tab_title(self, selector):
+        el = self.find_element(selector)
+        tl = el.text
         try:
-            el = self.find_element(selector).text
-            logger.info("The tab\'s title is \' %s \'.", el)
+            logger.info("The tab\'s title is %s.", tl)
+            return tl
         except NameError as e:
             logger.error("Failed to find the tab\'s title: %s", e)
-
 
     @staticmethod
     def sleep(seconds):
