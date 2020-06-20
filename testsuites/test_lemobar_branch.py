@@ -61,6 +61,11 @@ class LemobarSearch(unittest.TestCase):
         homepage.search_click_branch_branch()
         homepage.sleep(3)
         homepage.get_window_img()
+        try:
+            assert '网点管理' in homepage.find_tab_branch()
+            print('Test Pass')
+        except Exception as e:
+            print('Test Fail.', format(e))
 
     def test_c_price_search(self):
         """
@@ -74,7 +79,7 @@ class LemobarSearch(unittest.TestCase):
 
     def test_d_equipment_search(self):
         """
-        设备列表
+        设备列表查询
         :return:
         """
         homepage = BranchPage(self.driver)
@@ -84,7 +89,7 @@ class LemobarSearch(unittest.TestCase):
 
     def test_e_equipmessage_search(self):
         """
-        设备信息
+        设备信息查询
         :return:
         """
         homepage = BranchPage(self.driver)
@@ -94,7 +99,7 @@ class LemobarSearch(unittest.TestCase):
 
     def test_f_abequipment_search(self):
         """
-        异常设备列表
+        异常设备列表查询
         :return:
         """
         homepage = BranchPage(self.driver)
@@ -104,7 +109,7 @@ class LemobarSearch(unittest.TestCase):
 
     def test_g_contractwarn_search(self):
         """
-        合同预警
+        合同预警查询
         :return:
         """
         homepage = BranchPage(self.driver)
@@ -114,7 +119,7 @@ class LemobarSearch(unittest.TestCase):
 
     def test_h_sitemanage_search(self):
         """
-        场地管理
+        场地管理查询
         :return:
         """
         homepage = BranchPage(self.driver)
@@ -124,7 +129,7 @@ class LemobarSearch(unittest.TestCase):
 
     def test_i_officemanage_search(self):
         """
-        分公司管理
+        分公司管理查询
         :return:
         """
         homepage = BranchPage(self.driver)

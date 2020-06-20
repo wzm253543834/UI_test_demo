@@ -9,12 +9,6 @@ class HomePage(BasePage):
     index_code = "xpath=>//*[@id='app']/section/div[2]/div/form/div[5]/div[1]/div/div/input"
     index_enter = "xpath=>//*[@id='app']/section/div[2]/div/form/div[7]/div/div/button"
 
-    def clear_username(self):
-        self.clear(self.index_username)
-
-    def clear_password(self):
-        self.clear(self.index_password)
-
     def clear_code(self):
         self.clear(self.index_code)
 
@@ -28,9 +22,7 @@ class HomePage(BasePage):
         self.click(self.index_enter)
 
     def login(self):
-        self.clear_username()
         self.input_username('wangzm')
-        self.clear_password()
         self.input_password('a645765783')
         self.clear_code()
         self.sleep(20)

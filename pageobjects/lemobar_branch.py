@@ -13,6 +13,10 @@ class BranchPage(BasePage):
     menu_lemobar_branch_contractwarn = "xpath=>//ul[@class='el-menu-vertical-demo el-menu']/li[1]/ul/li[6]"
     menu_lemobar_branch_sitemanage = "xpath=>//ul[@class='el-menu-vertical-demo el-menu']/li[1]/ul/li[7]"
     menu_lemobar_branch_officemanage = "xpath=>//ul[@class='el-menu-vertical-demo el-menu']/li[1]/ul/li[8]"
+    lemobar_tab_branch = "xpath=>//*[@id='tab-2']"
+
+    def find_tab_branch(self):
+        self.get_tab_title(self.lemobar_tab_branch)
 
     def search_click_branch(self):
         self.click(self.menu_lemobar_branch)
