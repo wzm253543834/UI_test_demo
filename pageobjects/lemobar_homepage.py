@@ -8,7 +8,8 @@ class HomePage(BasePage):
     index_password = "xpath=>//*[@id='app']/section/div[2]/div/form/div[3]/div/div/input"
     index_enter = "xpath=>//*[@id='app']/section/div[2]/div/form/div[7]/div/div/button"
     menu_lemobar_branch = "xpath=>//ul[@class='el-menu-vertical-demo el-menu']/li[1]"
-    menu_lemobar_branch_branch = "xpath=>//ul[@class='el-menu-vertical-demo el-menu']/li[1]//span[text()='网点管理']"
+    menu_lemobar_branch_branch = "xpath=>//span[text()='网点管理']"
+    menu_lemobar_branch_price = "xpath=>//span[text()='价格管理']"
 
     def input_username(self, text):
         self.type(self.index_username, text)

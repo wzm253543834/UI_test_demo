@@ -55,7 +55,7 @@ class LemobarSearch(unittest.TestCase):
         except Exception as e:
             print('Test Fail.', format(e))
 
-    def test_homepage_search(self):
+    def test_branch_search(self):
         """
         网点管理查询
         """
