@@ -76,6 +76,11 @@ class BranchSearch(unittest.TestCase):
         homepage.search_click_branch_price()
         homepage.sleep(3)
         homepage.get_window_img()
+        try:
+            assert '价格管理' in homepage.find_tab_price()
+            print('Test Pass')
+        except Exception as e:
+            print('Test Fail.', format(e))
 
     def test_d_equipment_search(self):
         """

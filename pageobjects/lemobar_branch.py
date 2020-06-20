@@ -35,6 +35,10 @@ class BranchPage(BasePage):
     def search_click_branch_price(self):
         self.click(self.menu_branch_price)
 
+    def find_tab_price(self):
+        str = self.get_tab_title(self.tab_price)
+        return str
+
     def search_click_branch_equipment(self):
         self.click(self.menu_branch_equipment)
 
