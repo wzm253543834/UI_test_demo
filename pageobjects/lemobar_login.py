@@ -14,12 +14,12 @@ class HomePage(BasePage):
     def input_password(self, text):
         self.type(self.index_password, text)
 
-    def enter_homepage(self):
+    def enter_lemobar_homepage(self):
         self.click(self.index_enter)
 
     def login(self):
         self.input_username('wangzm')
         self.input_password('a645765783')
         self.sleep(20)
-        self.enter_homepage()
+        self.enter_lemobar_homepage()
         self.sleep(5)
