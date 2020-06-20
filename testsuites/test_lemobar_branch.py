@@ -27,7 +27,7 @@ class LemobarSearch(unittest.TestCase):
         """
         BrowserEngine.quit_browser(cls)
 
-    def test_login_lemobar(self):
+    def test_a_login_lemobar(self):
         """
         乐摩吧首页账号登录
         :return:
@@ -50,7 +50,7 @@ class LemobarSearch(unittest.TestCase):
         except Exception as e:
             print('Test Fail.', format(e))
 
-    def test_branch_search(self):
+    def test_b_branch_search(self):
         """
         网点管理查询
         :return:
@@ -62,14 +62,12 @@ class LemobarSearch(unittest.TestCase):
         homepage.sleep(3)
         homepage.get_window_img()
 
-    def test_price_test(self):
+    def test_c_price_search(self):
         """
         价格管理查询
         :return:
         """
         homepage = BranchPage(self.driver)
-        homepage.search_click_branch()
-        homepage.sleep(3)
         homepage.search_click_branch_price()
         homepage.sleep(3)
         homepage.get_window_img()

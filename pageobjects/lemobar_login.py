@@ -22,4 +22,4 @@ class HomePage(BasePage):
         self.input_password('a645765783')
         self.sleep(20)
         self.enter_homepage()
-        self.sleep(20)
+        self.sleep(5)
