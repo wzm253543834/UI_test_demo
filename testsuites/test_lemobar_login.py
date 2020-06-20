@@ -28,7 +28,7 @@ class LemobarSearch(unittest.TestCase):
 
     def test_enter_lemobar(self):
         """
-        测试1
+        乐摩吧首页账号登录
         """
         """
         这里一定要test开头，把测试逻辑代码封装到一个test开头的方法里。
@@ -57,7 +57,7 @@ class LemobarSearch(unittest.TestCase):
 
     def test_homepage_search(self):
         """
-        测试2
+        网点管理查询
         """
         homepage = HomePage(self.driver)
         homepage.search_click_branch()
