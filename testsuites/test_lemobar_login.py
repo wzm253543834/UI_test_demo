@@ -47,7 +47,7 @@ class LemobarSearch(unittest.TestCase):
         homepage.input_password('a645765783')
         homepage.sleep(20)
         homepage.enter_homepage()
-        homepage.sleep(20)
+        homepage.sleep(10)
         homepage.get_window_img()  # 调用基类截图方法
         try:
             assert 'selenium' in homepage.get_page_title()
@@ -63,7 +63,7 @@ class LemobarSearch(unittest.TestCase):
         homepage.search_click_branch()
         homepage.sleep(3)
         homepage.search_click_branch_branch()
-        time.sleep(5)
+        homepage.sleep(3)
         homepage.get_window_img()
 
 

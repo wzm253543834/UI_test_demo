@@ -31,4 +31,4 @@ if __name__ == '__main__':
     # runner.run(suite)
 
     runner = BeautifulReport(suite)
-    runner.report(filename='./test_report/测试报告' + now, description='xxx项目测试用例')
+    runner.report(filename='./test_report/测试报告' + now, description='乐摩吧项目测试用例')
