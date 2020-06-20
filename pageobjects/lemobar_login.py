@@ -18,7 +18,7 @@ class HomePage(BasePage):
     def input_password(self, text):
         self.type(self.index_password, text)
 
-    def enter_lemobar_homepage(self):
+    def click_login_button(self):
         self.click(self.index_enter)
 
     def login(self):
@@ -26,5 +26,5 @@ class HomePage(BasePage):
         self.input_password('a645765783')
         self.clear_code()
         self.sleep(15)
-        self.enter_lemobar_homepage()
+        self.click_login_button()
         self.sleep(5)
