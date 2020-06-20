@@ -2,10 +2,11 @@
 import time
 import unittest
 from framework.browser_engine import BrowserEngine
-from pageobjects.baidu_homepage import HomePage
+from pageobjects.lemobar_homepage import HomePage
 
 
-class BaiduSearch(unittest.TestCase):
+class LemobarSearch(unittest.TestCase):
+
     @classmethod
     # def setUp(self):
     def setUpClass(cls):
@@ -25,7 +26,7 @@ class BaiduSearch(unittest.TestCase):
         """
         BrowserEngine.quit_browser(cls)
 
-    def test_baidu_search(self):
+    def test_enter_lemobar(self):
         """
         测试1
         """
@@ -39,10 +40,14 @@ class BaiduSearch(unittest.TestCase):
         time.sleep(2)
         """
         homepage = HomePage(self.driver)
-        homepage.type_search('selenium')  # 调用页面对象中的方法
-        homepage.send_submit_btn()  # 调用页面对象类中的点击搜索按钮方法
-        # time.sleep(2)
-        homepage.sleep(2)
+        # homepage.type_search('selenium')  # 调用页面对象中的方法
+        # homepage.send_submit_btn()  # 调用页面对象类中的点击搜索按钮方法
+        # time.sleep(30)
+        homepage.input_username('wangzm')
+        homepage.input_password('a645765783')
+        homepage.sleep(20)
+        homepage.enter_homepage()
+        homepage.sleep(20)
         homepage.get_window_img()  # 调用基类截图方法
         try:
             assert 'selenium' in homepage.get_page_title()
@@ -50,14 +55,15 @@ class BaiduSearch(unittest.TestCase):
         except Exception as e:
             print('Test Fail.', format(e))
 
-    def test_search1(self):
+    def test_homepage_search(self):
         """
         测试2
         """
         homepage = HomePage(self.driver)
-        homepage.type_search('python')
-        homepage.send_submit_btn()
-        time.sleep(1)
+        homepage.search_click_branch()
+        homepage.sleep(3)
+        homepage.search_click_branch_branch()
+        time.sleep(5)
         homepage.get_window_img()
 
 
