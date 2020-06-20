@@ -15,14 +15,14 @@ class BranchPage(BasePage):
     menu_lemobar_branch_officemanage = "xpath=>//ul[@class='el-menu-vertical-demo el-menu']/li[1]/ul/li[8]"
     lemobar_tab_branch = "xpath=>//*[@id='tab-2']"
 
-    def find_tab_branch(self):
-        self.get_tab_title(self.lemobar_tab_branch)
-
     def search_click_branch(self):
         self.click(self.menu_lemobar_branch)
 
     def search_click_branch_branch(self):
         self.click(self.menu_lemobar_branch_branch)
+
+    def find_tab_branch(self):
+        self.get_tab_title(self.lemobar_tab_branch)
 
     def search_click_branch_price(self):
         self.click(self.menu_lemobar_branch_price)
