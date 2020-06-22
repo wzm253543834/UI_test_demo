@@ -17,7 +17,7 @@ class BrowserEngine(object):
     def __init__(self, driver):
         self.driver = driver
 
-    # read the browser type from config.ini file，return the driver
+    # 从config.ini文件读取相关的测试地址和浏览器
     def open_browser(self, driver):
         config = configparser.ConfigParser()
         # file_path = os.path.dirname(os.getcwd()) + '/config/config.ini'

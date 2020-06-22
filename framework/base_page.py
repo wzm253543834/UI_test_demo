@@ -17,7 +17,7 @@ class BasePage(object):
     def __init__(self, driver):
         self.driver = driver
 
-    # quit browser and end testing
+    # 关闭浏览器并结束测试
     def quit_browser(self):
         self.driver.quit()
 
@@ -178,6 +178,7 @@ class BasePage(object):
         logger.info("Current page title is %s", self.driver.title)
         return self.driver.title
 
+    # 获取tab页标题
     def get_tab_title(self, selector):
         el = self.find_element(selector)
         tl = el.text
@@ -187,6 +188,7 @@ class BasePage(object):
         except NameError as e:
             logger.error("Failed to find the tab\'s title: %s", e)
 
+    # 等待时间
     @staticmethod
     def sleep(seconds):
         time.sleep(seconds)
