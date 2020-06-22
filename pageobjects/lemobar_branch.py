@@ -29,30 +29,54 @@ class BranchPage(BasePage):
         self.click(self.menu_branch_branch)
 
     def find_tab_branch(self):
-        str = self.get_tab_title(self.tab_branch)
-        return str
+        st = self.get_tab_title(self.tab_branch)
+        return st
 
     def search_click_branch_price(self):
         self.click(self.menu_branch_price)
 
     def find_tab_price(self):
-        str = self.get_tab_title(self.tab_price)
-        return str
+        st = self.get_tab_title(self.tab_price)
+        return st
 
     def search_click_branch_equipment(self):
         self.click(self.menu_branch_equipment)
 
+    def find_tab_equipment(self):
+        st = self.get_tab_title(self.tab_abequipment)
+        return st
+
     def search_click_branch_equipmessage(self):
         self.click(self.menu_branch_equipmessage)
+
+    def find_tab_equipmessage(self):
+        st = self.get_tab_title(self.tab_equipmessage)
+        return st
 
     def search_click_branch_abequipment(self):
         self.click(self.menu_branch_abequipment)
 
+    def find_tab_abequipment(self):
+        st = self.get_tab_title(self.tab_abequipment)
+        return st
+
     def search_click_branch_contractwarn(self):
         self.click(self.menu_branch_contractwarn)
+
+    def find_tab_contractwarn(self):
+        st = self.get_tab_title(self.tab_contractwarn)
+        return st
 
     def search_click_branch_sitemanage(self):
         self.click(self.menu_branch_sitemanage)
 
+    def find_tab_sitemanage(self):
+        st = self.get_tab_title(self.tab_sitemanage)
+        return st
+
     def search_click_branch_officemanage(self):
         self.click(self.menu_branch_officemanage)
+
+    def find_tab_officemanage(self):
+        st = self.get_tab_title(self.tab_officemanage)
+        return st
