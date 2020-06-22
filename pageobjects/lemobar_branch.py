@@ -101,3 +101,67 @@ class BranchPage(BasePage):
     def find_tab_officemanage(self):
         st = self.get_tab_title(self.tab_officemanage)
         return st
+
+
+class BranchSearch(BasePage):
+
+    branch_branchid_search = "xpath=>//*[@id='search_list']/div[1]/div/div/input"
+    branch_branchname_search = "xpath=>//*[@id='search_list']/div[2]/div/div/input"
+    branch_officename_search = "xpath=>//*[@id='search_list']/div[3]/div/div/div/input"
+    branch_branchenablestatus_search = "xpath=>//*[@id='search_list']/div[4]/div/div/div/input"
+    branch_besidebranchstatus_search = "xpath=>//*[@id='search_list']/div[5]/div/div/div/input"
+    branch_partnername_search = "xpath=>//*[@id='search_list']/div[7]/div/div/input"
+    branch_equipmentmodel_search = "xpath=>//*[@id='search_list']/div[8]/div/div/div/input"
+    branch_partnertype_search = "xpath=>//*[@id='search_list']/div[9]/div/div/div/input"
+    branch_sitename_search = "xpath=>//*[@id='search_list']/div[10]/div/div/input"
+    branch_iswarehouse_search = "xpath=>//*[@id='search_list']/div[11]/div/div/div/input"
+    branch_search_button = "xpath=>//*[@id='search_list']/div[6]/div/button"
+    branch_clear_button = "xpath=>//*[@id='search_list']/div[12]/div/button"
+    branch_officename_fuzhou = "xpath=>/html/body/div[2]/div[1]/div[1]/ul/li[7]"
+    branch_branchenablestatus = "xpath=>/html/body/div[3]/div[1]/div[1]/ul/li[1]"
+    branch_besidebranchstatus = "xpath=>/html/body/div[4]/div[1]/div[1]/ul/li[1]"
+    branch_equipmentmodel = "xpath=>/html/body/div[5]/div[1]/div[1]/ul/li[1]"
+    branch_partnertype = "xpath=>/html/body/div[6]/div[1]/div[1]/ul/li[1]"
+    branch_iswarehouse = "xpath=>/html/body/div[7]/div[1]/div[1]/ul/li[1]"
+
+    def branchid_search(self, text):
+        self.type(self.branch_branchid_search, text)
+
+    def branchname_search(self, text):
+        self.type(self.branch_branchname_search, text)
+
+    def officename_search(self):
+        self.click(self.branch_officename_search)
+        self.click(self.branch_officename_fuzhou)
+
+    def branchenablestatus_search(self):
+        self.click(self.branch_branchenablestatus_search)
+        self.click(self.branch_branchenablestatus)
+
+    def besidebranchstatus_search(self):
+        self.click(self.branch_besidebranchstatus_search)
+        self.click(self.branch_besidebranchstatus)
+
+    def partnername_search(self, text):
+        self.type(self.branch_partnername_search, text)
+
+    def equipmentmodel_search(self):
+        self.click(self.branch_equipmentmodel_search)
+        self.click(self.branch_equipmentmodel)
+
+    def partnertype_search(self):
+        self.click(self.branch_partnertype_search)
+        self.click(self.branch_partnertype)
+
+    def sitename_search(self, text):
+        self.type(self.branch_sitename_search, text)
+
+    def iswarehouse_search(self):
+        self.click(self.branch_iswarehouse_search)
+        self.click(self.branch_iswarehouse)
+
+    def search_button_click(self):
+        self.click(self.branch_search_button)
+
+    def clear_button_click(self):
+        self.click(self.branch_clear_button)
