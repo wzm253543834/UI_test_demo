@@ -71,64 +71,66 @@ class BranchPageSearch(unittest.TestCase):
         newsearch = BranchSearch(self.driver)
         # 网点id查询
         newsearch.branchid_search('22515')
-        newsearch.search_button_click()
+        newsearch.branchsearch_button_click()
         newsearch.sleep(2)
-        newsearch.clear_button_click()
+        newsearch.branchclear_button_click()
         newsearch.sleep(2)
         # 网点名称查询
         newsearch.branchname_search('福州展示仓01')
-        newsearch.search_button_click()
+        newsearch.branchsearch_button_click()
         newsearch.sleep(2)
-        newsearch.clear_button_click()
+        newsearch.branchclear_button_click()
         newsearch.sleep(2)
         # 分公司名称查询
         newsearch.officename_search()
-        newsearch.search_button_click()
+        newsearch.branchsearch_button_click()
         newsearch.sleep(2)
-        newsearch.clear_button_click()
+        newsearch.branchclear_button_click()
         newsearch.sleep(2)
         # 网点启用状态查询
         newsearch.branchenablestatus_search()
-        newsearch.search_button_click()
+        newsearch.branchsearch_button_click()
         newsearch.sleep(2)
-        newsearch.clear_button_click()
+        newsearch.branchclear_button_click()
         newsearch.sleep(2)
         # 周边网点状态查询
         newsearch.besidebranchstatus_search()
-        newsearch.search_button_click()
+        newsearch.branchsearch_button_click()
         newsearch.sleep(2)
-        newsearch.clear_button_click()
+        newsearch.branchclear_button_click()
         newsearch.sleep(2)
         # 合伙人查询
         newsearch.partnername_search('直营仓库')
-        newsearch.search_button_click()
+        newsearch.branchsearch_button_click()
         newsearch.sleep(2)
-        newsearch.clear_button_click()
+        newsearch.branchclear_button_click()
         newsearch.sleep(2)
         # 设备型号查询
         newsearch.equipmentmodel_search()
-        newsearch.search_button_click()
+        newsearch.branchsearch_button_click()
         newsearch.sleep(2)
-        newsearch.clear_button_click()
+        newsearch.branchclear_button_click()
         newsearch.sleep(2)
         # 合作类型查询
         newsearch.partnertype_search()
-        newsearch.search_button_click()
+        newsearch.branchsearch_button_click()
         newsearch.sleep(2)
-        newsearch.clear_button_click()
+        newsearch.branchclear_button_click()
         newsearch.sleep(2)
         # 场地名称查询
         newsearch.sitename_search('福州展示仓')
-        newsearch.search_button_click()
+        newsearch.branchsearch_button_click()
         newsearch.sleep(2)
-        newsearch.clear_button_click()
+        newsearch.branchclear_button_click()
         newsearch.sleep(2)
         # 是否仓库查询
         newsearch.iswarehouse_search()
-        newsearch.search_button_click()
+        newsearch.branchsearch_button_click()
         newsearch.sleep(2)
-        newsearch.clear_button_click()
+        newsearch.branchclear_button_click()
         newsearch.sleep(2)
+        # 刷新页面
+        homepage.refresh()
 
     def test_c_price_search(self):
         """
@@ -144,6 +146,15 @@ class BranchPageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail.', format(e))
+
+        newsearch = BranchSearch(self.driver)
+        newsearch.wakeupbodyprice_search('10')
+        newsearch.pricesearch_button_click()
+        newsearch.sleep(2)
+        newsearch.priceclear_button_click()
+        newsearch.sleep(2)
+
+        homepage.refresh()
 
     def test_d_equipment_search(self):
         """

@@ -21,6 +21,11 @@ class BasePage(object):
     def quit_browser(self):
         self.driver.quit()
 
+    # 浏览器刷新
+    def refresh(self):
+        self.driver.refresh()
+        logger.info("Refresh on current page.")
+
     # 浏览器前进操作
     def forward(self):
         self.driver.forward()
@@ -164,7 +169,7 @@ class BasePage(object):
             logger.error("Failed to clear in inputBox with %s", e)
             self.get_window_img()
 
-    # 点击元素
+    # 点击
     def click(self, selector):
         el = self.find_element(selector)
         try:

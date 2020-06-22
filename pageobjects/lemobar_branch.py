@@ -54,7 +54,7 @@ class BranchPage(BasePage):
 
     # 获取设备列表tab名
     def find_tab_equipment(self):
-        st = self.get_tab_title(self.tab_abequipment)
+        st = self.get_tab_title(self.tab_equipment)
         return st
 
     # 点击设备信息
@@ -160,8 +160,55 @@ class BranchSearch(BasePage):
         self.click(self.branch_iswarehouse_search)
         self.click(self.branch_iswarehouse)
 
-    def search_button_click(self):
+    def branchsearch_button_click(self):
         self.click(self.branch_search_button)
 
-    def clear_button_click(self):
+    def branchclear_button_click(self):
         self.click(self.branch_clear_button)
+
+    price_wakeupbodyprice_search = "xpath=>//*[@id='search_list']/div[1]/div/div/input"
+    price_passbreathbloodprice_search = "xpath=>//*[@id='search_list']/div[2]/div/div/input"
+    price_diastolemeridiansprice_search = "xpath=>//*[@id='search_list']/div[3]/div/div/input"
+    price_priceid_search = "xpath=>//*[@id='search_list']/div[4]/div/div/input"
+    price_isenable_search = "xpath=>//*[@id='search_list']/div[5]/div/div/div/input"
+    price_wakeupbodytime_search = "xpath=>//*[@id='search_list']/div[7]/div/div/input"
+    price_passbreathbloodtime_search = "xpath=>//*[@id='search_list']/div[8]/div/div/input"
+    price_diastolemeridianstime_search = "xpath=>//*[@id='search_list']/div[9]/div/div/input"
+    price_pricename_search = "xpath=>//*[@id='search_list']/div[10]/div/div/input"
+    price_search_button = "xpath=>//*[@id='search_list']/div[6]/div/button"
+    price_clear_button = "xpath=>//*[@id='search_list']/div[11]/div/button"
+    price_isenable = "xpath=>/html/body/div[2]/div[1]/div[1]/ul/li[1]"
+
+    def wakeupbodyprice_search(self, text):
+        self.type(self.price_wakeupbodyprice_search, text)
+
+    def passbreathbloodprice_search(self, text):
+        self.type(self.price_passbreathbloodprice_search, text)
+
+    def diastolemeridiansprice_search(self, text):
+        self.type(self.price_diastolemeridiansprice_search, text)
+
+    def priceid_search(self, text):
+        self.type(self.price_priceid_search, text)
+
+    def isenable_search(self):
+        self.click(self.price_isenable_search)
+        self.click(self.price_isenable)
+
+    def wakeupbodytime_search(self, text):
+        self.type(self.price_wakeupbodytime_search, text)
+
+    def passbreathbloodtime_search(self, text):
+        self.type(self.price_passbreathbloodtime_search, text)
+
+    def diastolemeridianstime_search(self, text):
+        self.type(self.price_diastolemeridianstime_search, text)
+
+    def pricename_search(self, text):
+        self.type(self.price_pricename_search, text)
+
+    def pricesearch_button_click(self):
+        self.click(self.price_search_button)
+
+    def priceclear_button_click(self):
+        self.click(self.price_clear_button)
