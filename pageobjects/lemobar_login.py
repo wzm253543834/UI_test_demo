@@ -21,11 +21,11 @@ class HomePage(BasePage):
     def input_password(self, text):
         self.type(self.index_password, text)
 
-    # 按登录按钮
+    # 点击登录按钮
     def click_login_button(self):
         self.click(self.index_enter)
 
-    # 登录
+    # 账号登录
     def login(self):
         self.input_username('wangzm')
         self.input_password('a645765783')
