@@ -22,6 +22,7 @@ class BranchPage(BasePage):
     tab_sitemanage = "xpath=>//*[@id='tab-120']"
     tab_officemanage = "xpath=>//*[@id='tab-126']"
 
+    # 网点设备各菜单地址及tab页地址
     def search_click_branch(self):
         self.click(self.menu_branch)
 
