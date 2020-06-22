@@ -4,9 +4,10 @@ import unittest
 from framework.browser_engine import BrowserEngine
 from pageobjects.lemobar_login import HomePage
 from pageobjects.lemobar_branch import BranchPage
+from pageobjects.lemobar_branch import BranchSearch
 
 
-class BranchSearch(unittest.TestCase):
+class BranchPageSearch(unittest.TestCase):
 
     @classmethod
     # def setUp(self):
