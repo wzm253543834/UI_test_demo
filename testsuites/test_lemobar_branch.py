@@ -91,6 +91,11 @@ class BranchSearch(unittest.TestCase):
         homepage.search_click_branch_equipment()
         homepage.sleep(3)
         homepage.get_window_img()
+        try:
+            assert '设备列表' in homepage.find_tab_equipment()
+            print('Test Pass')
+        except Exception as e:
+            print('Test Fail', format(e))
 
     def test_e_equipmessage_search(self):
         """
@@ -101,6 +106,11 @@ class BranchSearch(unittest.TestCase):
         homepage.search_click_branch_equipmessage()
         homepage.sleep(3)
         homepage.get_window_img()
+        try:
+            assert '设备信息' in homepage.find_tab_equipmessage()
+            print('Test Pass')
+        except Exception as e:
+            print('Test Fail', format(e))
 
     def test_f_abequipment_search(self):
         """
@@ -111,6 +121,11 @@ class BranchSearch(unittest.TestCase):
         homepage.search_click_branch_abequipment()
         homepage.sleep(3)
         homepage.get_window_img()
+        try:
+            assert '异常设备列表' in homepage.find_tab_abequipment()
+            print('Test Pass')
+        except Exception as e:
+            print('Test Fail', format(e))
 
     def test_g_contractwarn_search(self):
         """
@@ -121,6 +136,11 @@ class BranchSearch(unittest.TestCase):
         homepage.search_click_branch_contractwarn()
         homepage.sleep(3)
         homepage.get_window_img()
+        try:
+            assert '合同预警' in homepage.find_tab_contractwarn()
+            print('Test Pass')
+        except Exception as e:
+            print('Test Fail', format(e))
 
     def test_h_sitemanage_search(self):
         """
@@ -131,6 +151,11 @@ class BranchSearch(unittest.TestCase):
         homepage.search_click_branch_sitemanage()
         homepage.sleep(3)
         homepage.get_window_img()
+        try:
+            assert '场地管理' in homepage.find_tab_sitemanage()
+            print('Test Pass')
+        except Exception as e:
+            print('Test Fail', format(e))
 
     def test_i_officemanage_search(self):
         """
@@ -141,6 +166,11 @@ class BranchSearch(unittest.TestCase):
         homepage.search_click_branch_officemanage()
         homepage.sleep(3)
         homepage.get_window_img()
+        try:
+            assert '分公司管理' in homepage.find_tab_officemanage()
+            print('Test Pass')
+        except Exception as e:
+            print('Test Fail', format(e))
 
 
 if __name__ == '__main__':
