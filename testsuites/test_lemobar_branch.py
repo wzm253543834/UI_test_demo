@@ -8,6 +8,7 @@ from pageobjects.lemobar_branch import BranchSearch
 from pageobjects.lemobar_branch import PriceSearch
 from pageobjects.lemobar_branch import EquipmentSearch
 from pageobjects.lemobar_branch import EquipmessageSearch
+from pageobjects.lemobar_branch import AbequipmentSearch
 
 
 class BranchPageSearch(unittest.TestCase):
@@ -380,6 +381,52 @@ class BranchPageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
+
+        newsearch = AbequipmentSearch(self.driver)
+        # 设备ID查询
+        newsearch.equipmentid_search('123456')
+        newsearch.search_button_click()
+        newsearch.sleep(2)
+        newsearch.clear_button_click()
+        newsearch.sleep(2)
+        # 设备名称查询
+        newsearch.equipmentname_search('测试')
+        newsearch.search_button_click()
+        newsearch.sleep(2)
+        newsearch.clear_button_click()
+        newsearch.sleep(2)
+        # 设备型号查询
+        newsearch.equipmentmodel_search()
+        newsearch.search_button_click()
+        newsearch.sleep(2)
+        newsearch.clear_button_click()
+        newsearch.sleep(2)
+        # 网点ID查询
+        newsearch.branchid_search('22515')
+        newsearch.search_button_click()
+        newsearch.sleep(2)
+        newsearch.clear_button_click()
+        newsearch.sleep(2)
+        # 网点名称查询
+        newsearch.branchname_search('福州展示仓01')
+        newsearch.search_button_click()
+        newsearch.sleep(2)
+        newsearch.clear_button_click()
+        newsearch.sleep(2)
+        # 合伙人查询
+        newsearch.partnername_search('直营仓库')
+        newsearch.search_button_click()
+        newsearch.sleep(2)
+        newsearch.clear_button_click()
+        newsearch.sleep(2)
+        # 发货时间查询
+        newsearch.delivertime_search()
+        newsearch.search_button_click()
+        newsearch.sleep(2)
+        newsearch.clear_button_click()
+        newsearch.sleep(2)
+        # 刷新页面
+        newsearch.refresh()
 
     def test_g_contractwarn_search(self):
         """
