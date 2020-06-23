@@ -124,47 +124,66 @@ class BranchSearch(BasePage):
     branch_partnertype = "xpath=>/html/body/div[6]/div[1]/div[1]/ul/li[1]"
     branch_iswarehouse = "xpath=>/html/body/div[7]/div[1]/div[1]/ul/li[1]"
 
+    """
+    网点管理各筛选项
+    """
+
+    # 网点id查询
     def branchid_search(self, text):
         self.type(self.branch_branchid_search, text)
 
+    # 网点名称查询
     def branchname_search(self, text):
         self.type(self.branch_branchname_search, text)
 
+    # 分公司名称查询
     def officename_search(self):
         self.click(self.branch_officename_search)
         self.click(self.branch_officename_fuzhou)
 
+    # 网点启用状态查询
     def branchenablestatus_search(self):
         self.click(self.branch_branchenablestatus_search)
         self.click(self.branch_branchenablestatus)
 
+    # 周边网点状态查询
     def besidebranchstatus_search(self):
         self.click(self.branch_besidebranchstatus_search)
         self.click(self.branch_besidebranchstatus)
 
+    # 合伙人查询
     def partnername_search(self, text):
         self.type(self.branch_partnername_search, text)
 
+    # 设备型号查询
     def equipmentmodel_search(self):
         self.click(self.branch_equipmentmodel_search)
         self.click(self.branch_equipmentmodel)
 
+    # 合作类型查询
     def partnertype_search(self):
         self.click(self.branch_partnertype_search)
         self.click(self.branch_partnertype)
 
+    # 场地名称查询
     def sitename_search(self, text):
         self.type(self.branch_sitename_search, text)
 
+    # 是否仓库查询
     def iswarehouse_search(self):
         self.click(self.branch_iswarehouse_search)
         self.click(self.branch_iswarehouse)
 
-    def branchsearch_button_click(self):
+    # 查询按钮
+    def search_button_click(self):
         self.click(self.branch_search_button)
 
-    def branchclear_button_click(self):
+    # 清空按钮
+    def clear_button_click(self):
         self.click(self.branch_clear_button)
+
+
+class PriceSearch(BasePage):
 
     price_wakeupbodyprice_search = "xpath=>//*[@id='search_list']/div[1]/div/div/input"
     price_passbreathbloodprice_search = "xpath=>//*[@id='search_list']/div[2]/div/div/input"
@@ -179,36 +198,81 @@ class BranchSearch(BasePage):
     price_clear_button = "xpath=>//*[@id='search_list']/div[11]/div/button"
     price_isenable = "xpath=>/html/body/div[2]/div[1]/div[1]/ul/li[1]"
 
+    """
+    价格管理各筛选项
+    """
+
+    # 唤醒身体价格查询
     def wakeupbodyprice_search(self, text):
         self.type(self.price_wakeupbodyprice_search, text)
 
+    # 通行气血价格查询
     def passbreathbloodprice_search(self, text):
         self.type(self.price_passbreathbloodprice_search, text)
 
+    # 舒张筋骨价格查询
     def diastolemeridiansprice_search(self, text):
         self.type(self.price_diastolemeridiansprice_search, text)
 
+    # 价格id查询
     def priceid_search(self, text):
         self.type(self.price_priceid_search, text)
 
-    def priceisenable_search(self):
+    # 是否启用查询
+    def isenable_search(self):
         self.click(self.price_isenable_search)
         self.click(self.price_isenable)
 
+    # 唤醒身体时长查询
     def wakeupbodytime_search(self, text):
         self.type(self.price_wakeupbodytime_search, text)
 
+    # 通行气血时长查询
     def passbreathbloodtime_search(self, text):
         self.type(self.price_passbreathbloodtime_search, text)
 
+    # 舒张筋骨时长查询
     def diastolemeridianstime_search(self, text):
         self.type(self.price_diastolemeridianstime_search, text)
 
+    # 价格名称查询
     def pricename_search(self, text):
         self.type(self.price_pricename_search, text)
 
-    def pricesearch_button_click(self):
+    # 查询按钮
+    def search_button_click(self):
         self.click(self.price_search_button)
 
-    def priceclear_button_click(self):
+    # 清空按钮
+    def clear_button_click(self):
         self.click(self.price_clear_button)
+
+
+class EquipmentSearch(BasePage):
+
+    equipment_equipmentid_search = "xpath=>//*[@id='search_list']/div[1]/div/div/input"
+    equipment_equipmentname_search = "xpath=>//*[@id='search_list']/div[2]/div/div/input"
+    equipment_equipmentmodel_search = "xpath=>//*[@id='search_list']/div[3]/div/div/div/input"
+    equipment_branchid_search = "xpath=>//*[@id='search_list']/div[4]/div/div/input"
+    equipment_branchname_search = "xpath=>//*[@id='search_list']/div[5]/div/div/input"
+    equipment_partnername_search = "xpath=>//*[@id='search_list']/div[7]/div/div/input"
+    equipment_equipmentstatus_search = "xpath=>//*[@id='search_list']/div[8]/div/div/div/input"
+    equipment_delivertime_search = "xpath=>//*[@id='search_list']/div[9]/div/div/input[1]"
+    equipment_equipmentisenablestatus_search = "xpath=>//*[@id='search_list']/div[10]/div/div/div/input"
+    equipment_movetime_search = "xpath=>//*[@id='search_list']/div[11]/div/div/input"
+    equipment_isinwarehouse_search = "xpath=>//*[@id='search_list']/div[13]/div/div/div/input"
+    equipment_tag_search = "xpath=>//*[@id='search_list']/div[14]/div/div/input"
+    equipment_isscrap_search = "xpath=>//*[@id='search_list']/div[15]/div/div/div/input"
+    equipment_search_button = "xpath=>//*[@id='search_list']/div[6]/div/button"
+    equipment_clear_button = "xpath=>//*[@id='search_list']/div[12]/div/button"
+    equipment_equipmentmodel = "xpath=>"
+    equipment_equipmentstatus = "xpath=>"
+    equipment_delivertime = "xpath=>"
+    equipment_equipmentisenablestatus = "xpath=>"
+    equipment_isinwarehouse = "xpath=>"
+    equipment_isscrap = "xpath=>"
+
+    """
+    设备列表各筛选项
+    """
+
