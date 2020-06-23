@@ -276,3 +276,68 @@ class EquipmentSearch(BasePage):
     设备列表各筛选项
     """
 
+    # 设备id查询
+    def equipmentid_search(self, text):
+        self.type(self.equipment_equipmentid_search, text)
+
+    # 设备名称查询
+    def equipmentname_search(self, text):
+        self.type(self.equipment_equipmentname_search, text)
+
+    # 设备型号查询
+    def equipmentmodel_search(self):
+        self.click(self.equipment_equipmentmodel_search)
+        self.click(self.equipment_equipmentmodel)
+
+    # 网点id查询
+    def branchid_search(self, text):
+        self.type(self.equipment_branchid_search, text)
+
+    # 网点名称查询
+    def branchname_search(self, text):
+        self.type(self.equipment_branchname_search, text)
+
+    # 合伙人查询
+    def partnername_search(self, text):
+        self.type(self.equipment_partnername_search, text)
+
+    # 设备状态查询
+    def equipmentstatus_search(self):
+        self.click(self.equipment_equipmentstatus_search)
+        self.click(self.equipment_equipmentstatus)
+
+    # 发货时间查询
+    def delivertime_search(self):
+        self.click(self.equipment_delivertime_search)
+        self.click(self.equipment_delivertime)
+
+    # 设备启用状态查询
+    def equipmentisenablestatus_search(self):
+        self.click(self.equipment_equipmentisenablestatus_search)
+        self.click(self.equipment_equipmentisenablestatus)
+
+    # 移机时间（大于）查询
+    def movetime_search(self, text):
+        self.type(self.equipment_movetime_search, text)
+
+    # 是否在仓查询
+    def isinwarehouse_search(self):
+        self.click(self.equipment_isinwarehouse_search)
+        self.click(self.equipment_isinwarehouse)
+
+    # 标签查询
+    def tag_search(self, text):
+        self.type(self.equipment_tag_search, text)
+
+    # 是否报废查询
+    def isscrap_search(self):
+        self.click(self.equipment_isscrap_search)
+        self.click(self.equipment_isscrap)
+
+    # 查询按钮
+    def search_button_click(self):
+        self.click(self.equipment_search_button)
+
+    # 清空按钮
+    def clear_button_click(self):
+        self.click(self.equipment_clear_button)
