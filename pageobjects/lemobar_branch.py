@@ -191,7 +191,7 @@ class BranchSearch(BasePage):
     def priceid_search(self, text):
         self.type(self.price_priceid_search, text)
 
-    def isenable_search(self):
+    def priceisenable_search(self):
         self.click(self.price_isenable_search)
         self.click(self.price_isenable)
 

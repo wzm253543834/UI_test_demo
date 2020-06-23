@@ -148,12 +148,61 @@ class BranchPageSearch(unittest.TestCase):
             print('Test Fail.', format(e))
 
         newsearch = BranchSearch(self.driver)
+        # 唤醒身体价格查询
         newsearch.wakeupbodyprice_search('10')
         newsearch.pricesearch_button_click()
         newsearch.sleep(2)
         newsearch.priceclear_button_click()
         newsearch.sleep(2)
-
+        # 通行气血价格查询
+        newsearch.passbreathbloodprice_search('10')
+        newsearch.pricesearch_button_click()
+        newsearch.sleep(2)
+        newsearch.priceclear_button_click()
+        newsearch.sleep(2)
+        # 舒张筋骨价格查询
+        newsearch.diastolemeridiansprice_search('10')
+        newsearch.pricesearch_button_click()
+        newsearch.sleep(2)
+        newsearch.priceclear_button_click()
+        newsearch.sleep(2)
+        # 价格id查询
+        newsearch.priceid_search('10')
+        newsearch.pricesearch_button_click()
+        newsearch.sleep(2)
+        newsearch.priceclear_button_click()
+        newsearch.sleep(2)
+        # 是否启用查询
+        newsearch.priceisenable_search()
+        newsearch.pricesearch_button_click()
+        newsearch.sleep(2)
+        newsearch.priceclear_button_click()
+        newsearch.sleep(2)
+        # 唤醒身体时长查询
+        newsearch.wakeupbodytime_search('10')
+        newsearch.pricesearch_button_click()
+        newsearch.sleep(2)
+        newsearch.priceclear_button_click()
+        newsearch.sleep(2)
+        # 通行气血时长查询
+        newsearch.passbreathbloodtime_search('10')
+        newsearch.pricesearch_button_click()
+        newsearch.sleep(2)
+        newsearch.priceclear_button_click()
+        newsearch.sleep(2)
+        # 舒张筋骨时长查询
+        newsearch.diastolemeridianstime_search('10')
+        newsearch.pricesearch_button_click()
+        newsearch.sleep(2)
+        newsearch.priceclear_button_click()
+        newsearch.sleep(2)
+        # 价格名称查询
+        newsearch.pricename_search('通用价格组')
+        newsearch.pricesearch_button_click()
+        newsearch.sleep(2)
+        newsearch.priceclear_button_click()
+        newsearch.sleep(2)
+        # 刷新页面
         homepage.refresh()
 
     def test_d_equipment_search(self):
