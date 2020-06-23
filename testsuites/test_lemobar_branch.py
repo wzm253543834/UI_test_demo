@@ -9,6 +9,7 @@ from pageobjects.lemobar_branch import PriceSearch
 from pageobjects.lemobar_branch import EquipmentSearch
 from pageobjects.lemobar_branch import EquipmessageSearch
 from pageobjects.lemobar_branch import AbequipmentSearch
+from pageobjects.lemobar_branch import ContractwarnSearch
 
 
 class BranchPageSearch(unittest.TestCase):
@@ -442,6 +443,12 @@ class BranchPageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
+
+        newsearch = ContractwarnSearch(self.driver)
+        newsearch.partnername_search('直营仓库')
+
+        # 刷新页面
+        newsearch.refresh()
 
     def test_h_sitemanage_search(self):
         """

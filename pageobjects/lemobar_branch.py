@@ -457,3 +457,31 @@ class AbequipmentSearch(BasePage):
     # 清空按钮
     def clear_button_click(self):
         self.click(self.abequipment_clear_button)
+
+
+class ContractwarnSearch(BasePage):
+
+    contractwarn_partnername_search = "xpath=>//*[@id='search_list']/div[1]/div/div/input"
+    contractwarn_branchname_search = "xpath=>//*[@id='search_list']/div[2]/div/div/input"
+    contractwarn_search_button = "xpath=>//*[@id='search_list']/div[3]/div/button[1]"
+    contractwarn_clear_button = "xpath=>//*[@id='search_list']/div[3]/div/button[2]"
+
+    """
+    合同预警各筛选项
+    """
+
+    # 合伙人查询
+    def partnername_search(self, text):
+        self.type(self.contractwarn_partnername_search, text)
+
+    # 网点名称查询
+    def branchname_search(self, text):
+        self.type(self.contractwarn_branchname_search, text)
+
+    # 查询按钮
+    def search_button_click(self):
+        self.click(self.contractwarn_search_button)
+
+    # 清空按钮
+    def clear_button_click(self):
+        self.click(self.contractwarn_clear_button)
