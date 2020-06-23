@@ -7,6 +7,7 @@ from pageobjects.lemobar_branch import BranchPage
 from pageobjects.lemobar_branch import BranchSearch
 from pageobjects.lemobar_branch import PriceSearch
 from pageobjects.lemobar_branch import EquipmentSearch
+from pageobjects.lemobar_branch import EquipmessageSearch
 
 
 class BranchPageSearch(unittest.TestCase):
@@ -71,7 +72,7 @@ class BranchPageSearch(unittest.TestCase):
             print('Test Fail.', format(e))
 
         newsearch = BranchSearch(self.driver)
-        # 网点id查询
+        # 网点ID查询
         newsearch.branchid_search('22515')
         newsearch.search_button_click()
         newsearch.sleep(2)
@@ -223,7 +224,7 @@ class BranchPageSearch(unittest.TestCase):
             print('Test Fail', format(e))
 
         newsearch = EquipmentSearch(self.driver)
-        # 设备id查询
+        # 设备ID查询
         newsearch.equipmentid_search('123456')
         newsearch.search_button_click()
         newsearch.sleep(2)
@@ -241,7 +242,7 @@ class BranchPageSearch(unittest.TestCase):
         newsearch.sleep(2)
         newsearch.clear_button_click()
         newsearch.sleep(2)
-        # 网点id查询
+        # 网点ID查询
         newsearch.branchid_search('22515')
         newsearch.search_button_click()
         newsearch.sleep(2)
@@ -301,6 +302,7 @@ class BranchPageSearch(unittest.TestCase):
         newsearch.sleep(2)
         newsearch.clear_button_click()
         newsearch.sleep(2)
+        # 刷新页面
         newsearch.refresh()
 
     def test_e_equipmessage_search(self):
@@ -317,6 +319,52 @@ class BranchPageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
+
+        newsearch = EquipmessageSearch(self.driver)
+        # 设备ID查询
+        newsearch.equipmentid_search('123456')
+        newsearch.search_button_click()
+        newsearch.sleep(2)
+        newsearch.clear_button_click()
+        newsearch.sleep(2)
+        # 设备型号查询
+        newsearch.equipmentmodel_search()
+        newsearch.search_button_click()
+        newsearch.sleep(2)
+        newsearch.clear_button_click()
+        newsearch.sleep(2)
+        # 网点ID查询
+        newsearch.branchid_search('22515')
+        newsearch.search_button_click()
+        newsearch.sleep(2)
+        newsearch.clear_button_click()
+        newsearch.sleep(2)
+        # 网点名称查询
+        newsearch.branchname_search('福州展示仓01')
+        newsearch.search_button_click()
+        newsearch.sleep(2)
+        newsearch.clear_button_click()
+        newsearch.sleep(2)
+        # 设备状态查询
+        newsearch.equipmentstatus_search()
+        newsearch.search_button_click()
+        newsearch.sleep(2)
+        newsearch.clear_button_click()
+        newsearch.sleep(2)
+        # 是否启用查询
+        newsearch.isenable_search()
+        newsearch.search_button_click()
+        newsearch.sleep(2)
+        newsearch.clear_button_click()
+        newsearch.sleep(2)
+        # SIM卡号查询
+        newsearch.simcardnumber_search('1')
+        newsearch.search_button_click()
+        newsearch.sleep(2)
+        newsearch.clear_button_click()
+        newsearch.sleep(2)
+        # 刷新页面
+        newsearch.refresh()
 
     def test_f_abequipment_search(self):
         """

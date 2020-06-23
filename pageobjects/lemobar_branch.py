@@ -128,7 +128,7 @@ class BranchSearch(BasePage):
     网点管理各筛选项
     """
 
-    # 网点id查询
+    # 网点ID查询
     def branchid_search(self, text):
         self.type(self.branch_branchid_search, text)
 
@@ -276,7 +276,7 @@ class EquipmentSearch(BasePage):
     设备列表各筛选项
     """
 
-    # 设备id查询
+    # 设备ID查询
     def equipmentid_search(self, text):
         self.type(self.equipment_equipmentid_search, text)
 
@@ -289,7 +289,7 @@ class EquipmentSearch(BasePage):
         self.click(self.equipment_equipmentmodel_search)
         self.click(self.equipment_equipmentmodel)
 
-    # 网点id查询
+    # 网点ID查询
     def branchid_search(self, text):
         self.type(self.equipment_branchid_search, text)
 
@@ -341,3 +341,119 @@ class EquipmentSearch(BasePage):
     # 清空按钮
     def clear_button_click(self):
         self.click(self.equipment_clear_button)
+
+
+class EquipmessageSearch(BasePage):
+
+    equipmessage_equipmentid_search = "xpath=>//*[@id='search_list']/div[1]/div/div/input"
+    equipmessage_equipmentmodel_search = "xpath=>//*[@id='search_list']/div[2]/div/div/div/input"
+    equipmessage_branchid_search = "xpath=>//*[@id='search_list']/div[3]/div/div/input"
+    equipmessage_branchname_search = "xpath=>//*[@id='search_list']/div[4]/div/div/input"
+    equipmessage_equipmentstatus_search = "xpath=>//*[@id='search_list']/div[6]/div/div/div/input"
+    equipmessage_isenable_search = "xpath=>//*[@id='search_list']/div[7]/div/div/div/input"
+    equipmessage_simcardnumber_search = "xpath=>//*[@id='search_list']/div[8]/div/div/input"
+    equipmessage_search_button = "xpath=>//*[@id='search_list']/div[5]/div/button"
+    equipmessage_clear_button = "xpath=>//*[@id='search_list']/div[9]/div/button"
+    equipmessage_equipmentmodel = "xpath=>/html/body/div[2]/div[1]/div[1]/ul/li[1]"
+    equipmessage_equipmentstatus = "xpath=>/html/body/div[3]/div[1]/div[1]/ul/li[1]"
+    equipmessage_isenable = "xpath=>/html/body/div[4]/div[1]/div[1]/ul/li[1]"
+
+    """
+    设备信息各筛选项
+    """
+
+    # 设备ID查询
+    def equipmentid_search(self, text):
+        self.type(self.equipmessage_branchid_search, text)
+
+    # 设备型号查询
+    def equipmentmodel_search(self):
+        self.click(self.equipmessage_equipmentmodel_search)
+        self.click(self.equipmessage_equipmentmodel)
+
+    # 网点ID查询
+    def branchid_search(self, text):
+        self.type(self.equipmessage_branchid_search, text)
+
+    # 网点名称查询
+    def branchname_search(self, text):
+        self.type(self.equipmessage_branchname_search, text)
+
+    # 设备状态查询
+    def equipmentstatus_search(self):
+        self.click(self.equipmessage_equipmentstatus_search)
+        self.click(self.equipmessage_equipmentstatus)
+
+    # 是否启用查询
+    def isenable_search(self):
+        self.click(self.equipmessage_isenable_search)
+        self.click(self.equipmessage_isenable)
+
+    # SIM卡号查询
+    def simcardnumber_search(self, text):
+        self.type(self.equipmessage_simcardnumber_search, text)
+
+    # 查询按钮
+    def search_button_click(self):
+        self.click(self.equipmessage_search_button)
+
+    # 清空按钮
+    def clear_button_click(self):
+        self.click(self.equipmessage_clear_button)
+
+
+class AbequipmentSearch(BasePage):
+
+    abequipment_equipmentid_search = "xpath=>//*[@id='search_list']/div[1]/div/div/input"
+    abequipment_equipmentname_search = "xpath=>//*[@id='search_list']/div[2]/div/div/input"
+    abequipment_equipmentmodel_search = "xpath=>//*[@id='search_list']/div[3]/div/div/div/input"
+    abequipment_branchid_search = "xpath=>//*[@id='search_list']/div[4]/div/div/input"
+    abequipment_branchname_search = "xpath=>//*[@id='search_list']/div[5]/div/div/input"
+    abequipment_partnername_search = "xpath=>//*[@id='search_list']/div[7]/div/div/input"
+    abequipment_delivertime_search = "xpath=>//*[@id='search_list']/div[8]/div/div/input[1]"
+    abequipment_search_button = "xpath=>//*[@id='search_list']/div[6]/div/button"
+    abequipment_clear_button = "xpath=>//*[@id='search_list']/div[9]/div/button"
+    abequipment_equipmentmodel = "xpath=>/html/body/div[2]/div[1]/div[1]/ul/li[1]"
+    abequipment_delivertime = "xpath=>/html/body/div[3]/div[1]/div/div[1]/table/tbody/tr[5]/td[3]"
+
+    """
+    异常设备列表各筛选项
+    """
+
+    # 设备ID查询
+    def equipmentid_search(self, text):
+        self.type(self.abequipment_equipmentid_search, text)
+
+    # 设备名称查询
+    def equipmentname_search(self, text):
+        self.type(self.abequipment_equipmentname_search, text)
+
+    # 设备型号查询
+    def equipmentmodel_search(self):
+        self.click(self.abequipment_equipmentmodel_search)
+        self.click(self.abequipment_equipmentmodel)
+
+    # 网点ID查询
+    def branchid_search(self, text):
+        self.type(self.abequipment_branchid_search, text)
+
+    # 网点名称查询
+    def branchname_search(self, text):
+        self.type(self.abequipment_branchname_search, text)
+
+    # 合伙人查询
+    def partnername_search(self, text):
+        self.type(self.abequipment_partnername_search, text)
+
+    # 发货时间查询
+    def delivertime_search(self):
+        self.click(self.abequipment_delivertime_search)
+        self.click(self.abequipment_delivertime)
+
+    # 查询按钮
+    def search_button_click(self):
+        self.click(self.abequipment_search_button)
+
+    # 清空按钮
+    def clear_button_click(self):
+        self.click(self.abequipment_clear_button)
