@@ -265,12 +265,12 @@ class EquipmentSearch(BasePage):
     equipment_isscrap_search = "xpath=>//*[@id='search_list']/div[15]/div/div/div/input"
     equipment_search_button = "xpath=>//*[@id='search_list']/div[6]/div/button"
     equipment_clear_button = "xpath=>//*[@id='search_list']/div[12]/div/button"
-    equipment_equipmentmodel = "xpath=>"
-    equipment_equipmentstatus = "xpath=>"
-    equipment_delivertime = "xpath=>"
-    equipment_equipmentisenablestatus = "xpath=>"
-    equipment_isinwarehouse = "xpath=>"
-    equipment_isscrap = "xpath=>"
+    equipment_equipmentmodel = "xpath=>/html/body/div[2]/div[1]/div[1]/ul/li[1]"
+    equipment_equipmentstatus = "xpath=>/html/body/div[3]/div[1]/div[1]/ul/li[1]"
+    equipment_delivertime = "xpath=>/html/body/div[4]/div[1]/div/div[1]/table/tbody/tr[5]/td[3]"
+    equipment_equipmentisenablestatus = "xpath=>/html/body/div[5]/div[1]/div[1]/ul/li[1]"
+    equipment_isinwarehouse = "xpath=>/html/body/div[6]/div[1]/div[1]/ul/li[1]"
+    equipment_isscrap = "xpath=>/html/body/div[7]/div[1]/div[1]/ul/li[1]"
 
     """
     设备列表各筛选项
