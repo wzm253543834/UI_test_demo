@@ -3,15 +3,15 @@
 import unittest
 from framework.browser_engine import BrowserEngine
 from pageobjects.lemobar_login import HomePage
-from pageobjects.lemobar_branch import AreadevicePage
-from pageobjects.lemobar_branch import AreaSearch
-from pageobjects.lemobar_branch import PriceSearch
-from pageobjects.lemobar_branch import DevicelistSearch
-from pageobjects.lemobar_branch import DeviceInfoSearch
-from pageobjects.lemobar_branch import EpdevicelistSearch
-from pageobjects.lemobar_branch import ContractSearch
-from pageobjects.lemobar_branch import PlaceSearch
-from pageobjects.lemobar_branch import CompanySearch
+from pageobjects.lemobar_areadevice import AreadevicePage
+from pageobjects.lemobar_areadevice import AreaSearch
+from pageobjects.lemobar_areadevice import PriceSearch
+from pageobjects.lemobar_areadevice import DevicelistSearch
+from pageobjects.lemobar_areadevice import DeviceInfoSearch
+from pageobjects.lemobar_areadevice import EpdevicelistSearch
+from pageobjects.lemobar_areadevice import ContractSearch
+from pageobjects.lemobar_areadevice import PlaceSearch
+from pageobjects.lemobar_areadevice import CompanySearch
 
 
 class BranchPageSearch(unittest.TestCase):
