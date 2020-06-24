@@ -25,28 +25,28 @@ class BrowserEngine(object):
         config.read(file_path)
         # config.read(file_path, encoding='UTF-8')  # 如果代码中有中文注释，用这个，不然报解码错误
         browser = config.get("browserType", "browserName")
-        logger.info("You had select %s browser.", browser)
+        logger.info("你选择 %s 浏览器.", browser)
         url = config.get("testServer", "URL")
-        logger.info("The test server url is: %s", url)
+        logger.info("测试服务器地址是: %s", url)
 
         if browser == "Firefox":
             driver = webdriver.Firefox(self.firefox_driver_path)
-            logger.info("Starting Firefox browser.")
+            logger.info("启动 Firefox 浏览器.")
         elif browser == "Chrome":
             driver = webdriver.Chrome(self.chrome_driver_path)
-            logger.info("Starting Chrome browser.")
+            logger.info("启动 Chrome 浏览器.")
         elif browser == "IE":
             driver = webdriver.Ie(self.ie_driver_path)
-            logger.info("Starting IE browser.")
+            logger.info("启动 IE 浏览器.")
 
         driver.get(url)
-        logger.info("Open url: %s", url)
+        logger.info("打开链接: %s", url)
         driver.maximize_window()
-        logger.info("Maximize the current window.")
+        logger.info("当前窗口最大化.")
         driver.implicitly_wait(10)
-        logger.info("Set implicitly wait 10 seconds.")
+        logger.info("隐式等待10秒.")
         return driver
 
     def quit_browser(self):
-        logger.info("Now, Close and quit the browser.")
+        logger.info("现在，关闭并退出浏览器.")
         self.driver.quit()
