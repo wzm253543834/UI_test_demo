@@ -518,3 +518,26 @@ class PlaceSearch(BasePage):
     # 清空按钮
     def clear_button_click(self):
         self.click(self.place_clear_button)
+
+
+class CompanySearch(BasePage):
+
+    company_companyname_search = "xpath=>//*[@id='search_list']/div[1]/div/div/input"
+    company_search_button = "xpath=>//*[@id='search_list']/div[2]/div/button[1]"
+    company_clear_button = "xpath=>//*[@id='search_list']/div[2]/div/button[2]"
+
+    """
+    分公司管理各筛选项
+    """
+
+    # 分公司名称查询
+    def companyname_search(self, text):
+        self.type(self.company_companyname_search, text)
+
+    # 查询按钮
+    def search_button_click(self):
+        self.click(self.company_search_button)
+
+    # 清空按钮
+    def clear_button_click(self):
+        self.click(self.company_clear_button)

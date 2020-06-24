@@ -11,6 +11,7 @@ from pageobjects.lemobar_branch import DeviceInfoSearch
 from pageobjects.lemobar_branch import EpdevicelistSearch
 from pageobjects.lemobar_branch import ContractSearch
 from pageobjects.lemobar_branch import PlaceSearch
+from pageobjects.lemobar_branch import CompanySearch
 
 
 class BranchPageSearch(unittest.TestCase):
@@ -512,6 +513,16 @@ class BranchPageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
+
+        newsearch = CompanySearch(self.driver)
+        # 分公司名称查询
+        newsearch.companyname_search('上海分公司')
+        newsearch.search_button_click()
+        newsearch.sleep(2)
+        newsearch.clear_button_click()
+        newsearch.sleep(2)
+        # 刷新页面
+        newsearch.refresh()
 
 
 if __name__ == '__main__':
