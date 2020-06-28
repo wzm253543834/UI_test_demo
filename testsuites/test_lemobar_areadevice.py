@@ -14,7 +14,7 @@ from pageobjects.lemobar_areadevice import PlaceSearch
 from pageobjects.lemobar_areadevice import CompanySearch
 
 
-class BranchPageSearch(unittest.TestCase):
+class AreadevicePageSearch(unittest.TestCase):
 
     @classmethod
     # def setUp(self):
