@@ -14,6 +14,24 @@ class PayPage(BasePage):
     支付管理各菜单地址及tab页地址
     """
 
+    # 点击支付管理
     def search_click_pay(self):
         self.click(self.menu_pay)
 
+    # 点击基础支付类型
+    def search_click_pay_basepayment(self):
+        self.click(self.menu_pay_basepayment)
+
+    # 获取基础支付类型tab名
+    def find_tab_basepayment(self):
+        st = self.get_tab_title(self.tab_basepayment)
+        return st
+
+    # 点击支付组管理
+    def search_click_pay_payment(self):
+        self.click(self.menu_pay_payment)
+
+    # 获取支付组管理tab名
+    def find_tab_payment(self):
+        st = self.get_tab_title(self.tab_payment)
+        return st
