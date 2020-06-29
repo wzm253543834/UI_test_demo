@@ -23,3 +23,49 @@ class PayPageSearch(unittest.TestCase):
         :return:
         """
         BrowserEngine.quit_browser(cls)
+
+    def test_a_login_lemobar(self):
+        """
+        乐摩吧首页账号登录
+        :return:
+        """
+        """
+        这里一定要test开头，把测试逻辑代码封装到一个test开头的方法里。
+        :return:
+        """
+        homepage = HomePage(self.driver)
+        homepage.login()
+        homepage.get_window_img()
+        try:
+            assert '乐摩吧数据中心管理系统' in homepage.get_page_title()
+            print('Test Pass.')
+        except Exception as e:
+            print('Test Fail.', format(e))
+
+    def test_b_basepayment_search(self):
+        homepage = PayPage(self.driver)
+        homepage.search_click_pay()
+        homepage.sleep(3)
+        homepage.search_click_pay_basepayment()
+        homepage.sleep(3)
+        homepage.get_window_img()
+        try:
+            assert '基础支付类型' in homepage.find_tab_basepayment()
+            print('Test Pass.')
+        except Exception as e:
+            print('Test Fail.', format(e))
+
+    def test_c_payment_search(self):
+        homepage = PayPage(self.driver)
+        homepage.search_click_pay_payment()
+        homepage.sleep(3)
+        homepage.get_window_img()
+        try:
+            assert '支付组管理' in homepage.find_tab_payment()
+            print('Test Pass.')
+        except Exception as e:
+            print('Test Fail.', format(e))
+
+
+if __name__ == '__main__':
+    unittest.main()
