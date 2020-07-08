@@ -80,6 +80,12 @@ class AreadevicePageSearch(unittest.TestCase):
         newsearch.areaid_search('22515')
         newsearch.search_button_click()
         newsearch.sleep(2)
+        try:
+            assert '22515' in newsearch.find_result_areaid()
+            print('Test Pass')
+        except Exception as e:
+            print('Test Fail.', format(e))
+
         newsearch.clear_button_click()
         newsearch.sleep(2)
         # 网点名称查询

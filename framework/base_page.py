@@ -148,6 +148,80 @@ class BasePage(object):
             raise NameError("Please enter a valid type of targeting elements.")
         return element
 
+    def find_elements(self, selector):
+        """
+        这个地方为什么是根据=>来切割字符串，请看页面里定位元素的方法
+         submit_btn = "id=>su"
+         login_lnk = "xpath => //*[@id='u1']/a[7]"  # 百度首页登录链接定位
+         如果采用等号，结果很多xpath表达式中包含一个=，这样会造成切割不准确，影响元素定位
+        :param selector:
+        :return:
+        """
+        elements = ''
+        if '=>' not in selector:
+            return self.driver.find_elements_by_id(selector)
+        selector_by = selector.split('=>')[0]
+        selector_value = selector.split('=>')[1]
+        if selector_by == "i" or selector_by == "id":
+            try:
+                elements = self.driver.find_elements_by_id(selector_value)
+                logger.info("Had find the element successful ""by %s via value: %s", selector_by, selector_value)
+            except NoSuchElementException as e:
+                logger.error("NoSuchElementException: %s", e)
+                self.get_window_img()   # take screenshot
+        elif selector_by == "n" or selector_by == "name":
+            try:
+                elements = self.driver.find_elements_by_name(selector_value)
+                logger.info("Had find the elements successful ""by %s via value: %s", selector_by, selector_value)
+            except NoSuchElementException as e:
+                logger.error("NoSuchElementException: %s", e)
+                self.get_window_img()
+        elif selector_by == "c" or selector_by == "class_name":
+            try:
+                elements = self.driver.find_elements_by_class_name(selector_value)
+                logger.info("Had find the elements successful ""by %s via value: %s", selector_by, selector_value)
+            except NoSuchElementException as e:
+                logger.error("NoSuchElementException: %s", e)
+                self.get_window_img()
+        elif selector_by == "l" or selector_by == "link_text":
+            try:
+                elements = self.driver.find_elements_by_link_text(selector_value)
+                logger.info("Had find the elements successful ""by %s via value: %s", selector_by, selector_value)
+            except NoSuchElementException as e:
+                logger.error("NoSuchElementException: %s", e)
+                self.get_window_img()
+        elif selector_by == "p" or selector_by == "partial_link_text":
+            try:
+                elements = self.driver.find_elements_by_partial_link_text(selector_value)
+                logger.info("Had find the elements successful ""by %s via value: %s", selector_by, selector_value)
+            except NoSuchElementException as e:
+                logger.error("NoSuchElementException: %s", e)
+                self.get_window_img()
+        elif selector_by == "t" or selector_by == "tag_name":
+            try:
+                elements = self.driver.find_elements_by_tag_name(selector_value)
+                logger.info("Had find the element successful ""by %s via value: %s", selector_by, selector_value)
+            except NoSuchElementException as e:
+                logger.error("NoSuchElementException: %s", e)
+                self.get_window_img()
+        elif selector_by == "x" or selector_by == "xpath":
+            try:
+                elements = self.driver.find_elements_by_xpath(selector_value)
+                logger.info("Had find the elements successful ""by %s via value: %s", selector_by, selector_value)
+            except NoSuchElementException as e:
+                logger.error("NoSuchElementException: %s", e)
+                self.get_window_img()
+        elif selector_by == "s" or selector_by == "selector_selector":
+            try:
+                elements = self.driver.find_elements_by_css_selector(selector_value)
+                logger.info("Had find the elements successful ""by %s via value: %s", selector_by, selector_value)
+            except NoSuchElementException as e:
+                logger.error("NoSuchElementException: %s", e)
+                self.get_window_img()
+        else:
+            raise NameError("Please enter a valid type of targeting elements.")
+        return elements
+
     # 输入
     def type(self, selector, text):
         el = self.find_element(selector)
@@ -192,6 +266,13 @@ class BasePage(object):
             return tl
         except NameError as e:
             logger.error("Failed to find the tab\'s title: %s", e)
+
+    def get_search_result(self, selector):
+        li = self.find_elements(selector)
+        lis = []
+        for i in li:
+            lis.append(i.text)
+        return lis
 
     # 等待时间
     @staticmethod

@@ -117,7 +117,7 @@ class AreaSearch(BasePage):
     area_iswarehouse_search = "xpath=>//*[@id='search_list']/div[11]/div/div/div/input"
     area_search_button = "xpath=>//*[@id='search_list']/div[6]/div/button"
     area_clear_button = "xpath=>//*[@id='search_list']/div[12]/div/button"
-    area_companyname = "xpath=>/html/body/div[2]/div[1]/div[1]/ul/li[7]"
+    area_companyname = "xpath=>/html/body/div[2]/div[1]/div[1]/ul/li[1]"
     area_areaenablestatus = "xpath=>/html/body/div[3]/div[1]/div[1]/ul/li[1]"
     area_besideareastatus = "xpath=>/html/body/div[4]/div[1]/div[1]/ul/li[1]"
     area_devicemodel = "xpath=>/html/body/div[5]/div[1]/div[1]/ul/li[1]"
@@ -139,16 +139,19 @@ class AreaSearch(BasePage):
     # 分公司名称查询
     def companyname_search(self):
         self.click(self.area_companyname_search)
+        self.sleep(2)
         self.click(self.area_companyname)
 
     # 网点启用状态查询
     def areaenablestatus_search(self):
         self.click(self.area_areaenablestatus_search)
+        self.sleep(2)
         self.click(self.area_areaenablestatus)
 
     # 周边网点状态查询
     def besideareastatus_search(self):
         self.click(self.area_besideareastatus_search)
+        self.sleep(2)
         self.click(self.area_besideareastatus)
 
     # 合伙人查询
@@ -158,11 +161,13 @@ class AreaSearch(BasePage):
     # 设备型号查询
     def devicemodel_search(self):
         self.click(self.area_devicemodel_search)
+        self.sleep(2)
         self.click(self.area_devicemodel)
 
     # 合作类型查询
     def partnertype_search(self):
         self.click(self.area_partnertype_search)
+        self.sleep(2)
         self.click(self.area_partnertype)
 
     # 场地名称查询
@@ -172,6 +177,7 @@ class AreaSearch(BasePage):
     # 是否仓库查询
     def iswarehouse_search(self):
         self.click(self.area_iswarehouse_search)
+        self.sleep(2)
         self.click(self.area_iswarehouse)
 
     # 查询按钮
@@ -181,6 +187,13 @@ class AreaSearch(BasePage):
     # 清空按钮
     def clear_button_click(self):
         self.click(self.area_clear_button)
+
+    # 测试结果断言
+    result_areaid = "xpath=>//*[@id='area_fixed']/div[2]/div/div[3]/table/tbody/tr/td[3]/div"
+
+    def find_result_areaid(self):
+        a = self.get_search_result(self.result_areaid)
+        return a
 
 
 class PriceSearch(BasePage):
@@ -221,6 +234,7 @@ class PriceSearch(BasePage):
     # 是否启用查询
     def isenable_search(self):
         self.click(self.price_isenable_search)
+        self.sleep(2)
         self.click(self.price_isenable)
 
     # 唤醒身体时长查询
@@ -287,6 +301,7 @@ class DevicelistSearch(BasePage):
     # 设备型号查询
     def devicemodel_search(self):
         self.click(self.devicelist_devicemodel_search)
+        self.sleep(2)
         self.click(self.devicelist_devicemodel)
 
     # 网点ID查询
@@ -304,16 +319,19 @@ class DevicelistSearch(BasePage):
     # 设备状态查询
     def devicestatus_search(self):
         self.click(self.devicelist_devicestatus_search)
+        self.sleep(2)
         self.click(self.devicelist_devicestatus)
 
     # 发货时间查询
     def delivertime_search(self):
         self.click(self.devicelist_delivertime_search)
+        self.sleep(2)
         self.click(self.devicelist_delivertime)
 
     # 设备启用状态查询
     def deviceisenablestatus_search(self):
         self.click(self.devicelist_deviceisenablestatus_search)
+        self.sleep(2)
         self.click(self.devicelist_deviceisenablestatus)
 
     # 移机时间（大于）查询
@@ -323,6 +341,7 @@ class DevicelistSearch(BasePage):
     # 是否在仓查询
     def isinwarehouse_search(self):
         self.click(self.devicelist_isinwarehouse_search)
+        self.sleep(2)
         self.click(self.devicelist_isinwarehouse)
 
     # 标签查询
@@ -332,6 +351,7 @@ class DevicelistSearch(BasePage):
     # 是否报废查询
     def isscrap_search(self):
         self.click(self.devicelist_isscrap_search)
+        self.sleep(2)
         self.click(self.devicelist_isscrap)
 
     # 查询按钮
@@ -369,6 +389,7 @@ class DeviceInfoSearch(BasePage):
     # 设备型号查询
     def devicemodel_search(self):
         self.click(self.deviceInfo_devicemodel_search)
+        self.sleep(2)
         self.click(self.deviceInfo_devicemodel)
 
     # 网点ID查询
@@ -382,11 +403,13 @@ class DeviceInfoSearch(BasePage):
     # 设备状态查询
     def devicestatus_search(self):
         self.click(self.deviceInfo_devicestatus_search)
+        self.sleep(2)
         self.click(self.deviceInfo_devicestatus)
 
     # 是否启用查询
     def isenable_search(self):
         self.click(self.deviceInfo_isenable_search)
+        self.sleep(2)
         self.click(self.deviceInfo_isenable)
 
     # SIM卡号查询
@@ -431,6 +454,7 @@ class EpdevicelistSearch(BasePage):
     # 设备型号查询
     def devicemodel_search(self):
         self.click(self.epdevicelist_devicemodel_search)
+        self.sleep(2)
         self.click(self.epdevicelist_devicemodel)
 
     # 网点ID查询
@@ -448,6 +472,7 @@ class EpdevicelistSearch(BasePage):
     # 发货时间查询
     def delivertime_search(self):
         self.click(self.epdevicelist_delivertime_search)
+        self.sleep(2)
         self.click(self.epdevicelist_delivertime)
 
     # 查询按钮
