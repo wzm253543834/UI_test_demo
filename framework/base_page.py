@@ -1,5 +1,6 @@
 # coding = utf-8
 import time
+import random
 import os.path
 from framework.logger import Logger
 # from selenium import webdriver
@@ -272,7 +273,8 @@ class BasePage(object):
         lis = []
         for i in li:
             lis.append(i.text)
-        return lis
+        lisr = random.choice(lis)
+        return lisr
 
     # 等待时间
     @staticmethod
