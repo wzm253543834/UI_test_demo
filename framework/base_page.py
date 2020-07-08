@@ -276,6 +276,14 @@ class BasePage(object):
         lisr = random.choice(lis)
         return lisr
 
+    def get_search_result_icon(self, selector):
+        li = self.find_elements(selector)
+        lis = []
+        for i in li:
+            lis.append(i.get_attribude('class'))
+        lisr = random.choice(lis)
+        return lisr
+
     # 等待时间
     @staticmethod
     def sleep(seconds):
