@@ -268,6 +268,7 @@ class BasePage(object):
         except NameError as e:
             logger.error("Failed to find the tab\'s title: %s", e)
 
+    # 断言数据
     def get_search_result(self, selector):
         li = self.find_elements(selector)
         lis = []
@@ -276,6 +277,7 @@ class BasePage(object):
         lisr = random.choice(lis)
         return lisr
 
+    # 断言图标
     def get_search_result_icon(self, selector):
         li = self.find_elements(selector)
         lis = []
