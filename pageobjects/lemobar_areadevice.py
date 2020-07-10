@@ -190,9 +190,50 @@ class AreaSearch(BasePage):
 
     # 测试结果断言
     result_areaid = "xpath=>//*[@id='area_fixed']/div[2]/div/div[3]/table/tbody/tr/td[3]/div"
+    result_areaname = "xpath=>//*[@id='area_fixed']/div[2]/div/div[3]/table/tbody/tr/td[4]/div"
+    result_companyname = "xpath=>//*[@id='area_fixed']/div[2]/div/div[3]/table/tbody/tr/td[6]/div"
+    result_areaenablestatus = "xpath=>//*[@id='area_fixed']/div[2]/div/div[3]/table/tbody/tr/td[19]/div/i"
+    result_besideareastatus = "xpath=>//*[@id='area_fixed']/div[2]/div/div[3]/table/tbody/tr/td[18]/div/i"
+    result_partnername = "xpath=>//*[@id='area_fixed']/div[2]/div/div[3]/table/tbody/tr/td[8]/div"
+    result_devicemodel = "xpath=>//*[@id='area_fixed']/div[2]/div/div[3]/table/tbody/tr/td[17]/div"
+    result_partnertype = "xpath=>//*[@id='area_fixed']/div[2]/div/div[3]/table/tbody/tr/td[9]/div"
+    result_placename = "xpath=>//*[@id='area_fixed']/div[2]/div/div[3]/table/tbody/tr/td[7]/div"
+    # result_iswarehouse = "xpath=>"
 
     def find_result_areaid(self):
         a = self.get_search_result(self.result_areaid)
+        return a
+
+    def find_result_areaname(self):
+        a = self.get_search_result(self.result_areaname)
+        return a
+
+    def find_result_companyname(self):
+        a = self.get_search_result(self.result_companyname)
+        return a
+
+    def find_result_areaenablestatus(self):
+        a = self.get_search_result_icon(self.result_areaenablestatus)
+        return a
+
+    def find_result_besideareastatus(self):
+        a = self.get_search_result_icon(self.result_besideareastatus)
+        return a
+
+    def find_result_partnername(self):
+        a = self.get_search_result(self.result_partnername)
+        return a
+
+    def find_result_devicemodel(self):
+        a = self.get_search_result(self.result_devicemodel)
+        return a
+
+    def find_result_partnertype(self):
+        a = self.get_search_result(self.result_partnertype)
+        return a
+
+    def find_result_placename(self):
+        a = self.get_search_result(self.result_placename)
         return a
 
 
