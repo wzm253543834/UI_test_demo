@@ -311,6 +311,62 @@ class PriceSearch(BasePage):
     def clear_button_click(self):
         self.click(self.price_clear_button)
 
+    # 测试结果断言
+    result_wakeupbodyprice = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[1]/div[3]/table/tbody/tr/td[4]/div"
+    result_passbreathbloodprice = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[1]/div[3]/table/tbody/tr/td[6]/div"
+    result_diastolemeridiansprice = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[1]/div[3]/table/tbody/tr/td[8]/div"
+    result_priceid = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[1]/div[3]/table/tbody/tr/td[2]/div"
+    result_isenable = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[1]/div[3]/table/tbody/tr/td[10]/div/i"
+    result_wakeupbodytime = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[1]/div[3]/table/tbody/tr/td[5]/div"
+    result_passbreathbloodtime = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[1]/div[3]/table/tbody/tr/td[7]/div"
+    result_diastolemeridianstime = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[1]/div[3]/table/tbody/tr/td[9]/div"
+    result_pricename = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[1]/div[3]/table/tbody/tr/td[3]/div"
+
+    # 断言唤醒身体价格查询结果
+    def find_result_wakeupbodyprice(self):
+        a = self.get_search_result(self.result_wakeupbodyprice)
+        return a
+
+    # 断言通行气血价格查询结果
+    def find_result_passbreathbloodprice(self):
+        a = self.get_search_result(self.result_passbreathbloodprice)
+        return a
+
+    # 断言舒张筋骨价格查询结果
+    def find_result_diastolemeridiansprice(self):
+        a = self.get_search_result(self.result_diastolemeridiansprice)
+        return a
+
+    # 断言价格ID查询结果
+    def find_result_priceid(self):
+        a = self.get_search_result(self.result_priceid)
+        return a
+
+    # 断言是否启用查询结果
+    def find_result_isenable(self):
+        a = self.get_search_result_icon(self.result_isenable)
+        return a
+
+    # 断言唤醒身体时长查询结果
+    def find_result_wakeupbodytime(self):
+        a = self.get_search_result(self.result_wakeupbodytime)
+        return a
+
+    # 断言通行气血时长查询结果
+    def find_result_passbreathbloodtime(self):
+        a = self.get_search_result(self.result_passbreathbloodtime)
+        return a
+
+    # 断言舒张筋骨时长查询结果
+    def find_result_diastolemeridianstime(self):
+        a = self.get_search_result(self.result_diastolemeridianstime)
+        return a
+
+    # 断言价格名称查询结果
+    def find_result_pricename(self):
+        a = self.get_search_result(self.result_pricename)
+        return a
+
 
 class DevicelistSearch(BasePage):
 

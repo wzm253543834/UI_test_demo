@@ -216,6 +216,11 @@ class AreadevicePageSearch(unittest.TestCase):
         newsearch.wakeupbodyprice_search('10')
         newsearch.search_button_click()
         newsearch.sleep(2)
+        try:
+            assert '10' in newsearch.find_result_wakeupbodyprice()
+            print('Test Pass')
+        except Exception as e:
+            print('Test Fail.', format(e))
         newsearch.clear_button_click()
         newsearch.sleep(2)
 
@@ -223,6 +228,11 @@ class AreadevicePageSearch(unittest.TestCase):
         newsearch.passbreathbloodprice_search('10')
         newsearch.search_button_click()
         newsearch.sleep(2)
+        try:
+            assert '10' in newsearch.find_result_passbreathbloodprice()
+            print('Test Pass')
+        except Exception as e:
+            print('Test Fail.', format(e))
         newsearch.clear_button_click()
         newsearch.sleep(2)
 
@@ -230,6 +240,11 @@ class AreadevicePageSearch(unittest.TestCase):
         newsearch.diastolemeridiansprice_search('10')
         newsearch.search_button_click()
         newsearch.sleep(2)
+        try:
+            assert '10' in newsearch.find_result_diastolemeridiansprice()
+            print('Test Pass')
+        except Exception as e:
+            print('Test Fail.', format(e))
         newsearch.clear_button_click()
         newsearch.sleep(2)
 
@@ -237,6 +252,11 @@ class AreadevicePageSearch(unittest.TestCase):
         newsearch.priceid_search('10')
         newsearch.search_button_click()
         newsearch.sleep(2)
+        try:
+            assert '10' in newsearch.find_result_priceid()
+            print('Test Pass')
+        except Exception as e:
+            print('Test Fail.', format(e))
         newsearch.clear_button_click()
         newsearch.sleep(2)
 
@@ -244,6 +264,11 @@ class AreadevicePageSearch(unittest.TestCase):
         newsearch.isenable_search()
         newsearch.search_button_click()
         newsearch.sleep(2)
+        try:
+            assert 'el-icon-circle-check' in newsearch.find_result_isenable()
+            print('Test Pass')
+        except Exception as e:
+            print('Test Fail.', format(e))
         newsearch.clear_button_click()
         newsearch.sleep(2)
 
@@ -251,6 +276,11 @@ class AreadevicePageSearch(unittest.TestCase):
         newsearch.wakeupbodytime_search('10')
         newsearch.search_button_click()
         newsearch.sleep(2)
+        try:
+            assert '10' in newsearch.find_result_wakeupbodytime()
+            print('Test Pass')
+        except Exception as e:
+            print('Test Fail.', format(e))
         newsearch.clear_button_click()
         newsearch.sleep(2)
 
@@ -258,6 +288,11 @@ class AreadevicePageSearch(unittest.TestCase):
         newsearch.passbreathbloodtime_search('10')
         newsearch.search_button_click()
         newsearch.sleep(2)
+        try:
+            assert '10' in newsearch.find_result_passbreathbloodtime()
+            print('Test Pass')
+        except Exception as e:
+            print('Test Fail.', format(e))
         newsearch.clear_button_click()
         newsearch.sleep(2)
 
@@ -265,6 +300,11 @@ class AreadevicePageSearch(unittest.TestCase):
         newsearch.diastolemeridianstime_search('10')
         newsearch.search_button_click()
         newsearch.sleep(2)
+        try:
+            assert '10' in newsearch.find_result_diastolemeridianstime()
+            print('Test Pass')
+        except Exception as e:
+            print('Test Fail.', format(e))
         newsearch.clear_button_click()
         newsearch.sleep(2)
 
@@ -272,6 +312,11 @@ class AreadevicePageSearch(unittest.TestCase):
         newsearch.pricename_search('通用价格组')
         newsearch.search_button_click()
         newsearch.sleep(2)
+        try:
+            assert '通用价格组' in newsearch.find_result_pricename()
+            print('Test Pass')
+        except Exception as e:
+            print('Test Fail.', format(e))
         newsearch.clear_button_click()
         newsearch.sleep(2)
 
