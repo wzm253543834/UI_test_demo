@@ -440,11 +440,11 @@ class AreadevicePageSearch(unittest.TestCase):
         :return:
         """
         homepage = AreadevicePage(self.driver)
-        homepage.search_click_areadevice_deviceInfo()
+        homepage.search_click_areadevice_deviceinfo()
         homepage.sleep(3)
         homepage.get_window_img()
         try:
-            assert '设备信息' in homepage.find_tab_deviceInfo()
+            assert '设备信息' in homepage.find_tab_deviceinfo()
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))

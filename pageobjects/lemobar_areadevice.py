@@ -58,11 +58,11 @@ class AreadevicePage(BasePage):
         return st
 
     # 点击设备信息
-    def search_click_areadevice_deviceInfo(self):
+    def search_click_areadevice_deviceinfo(self):
         self.click(self.menu_areadevice_deviceInfo)
 
     # 获取设备信息tab名
-    def find_tab_deviceInfo(self):
+    def find_tab_deviceinfo(self):
         st = self.get_tab_title(self.tab_deviceInfo)
         return st
 
@@ -472,6 +472,17 @@ class DevicelistSearch(BasePage):
     result_deviceid = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[2]/div/div[3]/table/tbody/tr/td[2]/div/a"
     result_devicename = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[2]/div/div[3]/table/tbody/tr/td[3]/div"
     result_devicemodel = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[2]/div/div[3]/table/tbody/tr/td[4]/div"
+    result_areaid = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[2]/div/div[3]/table/tbody/tr/td[9]/div"
+    result_areaname = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[2]/div/div[3]/table/tbody/tr/td[8]/div"
+    result_partnername = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[2]/div/div[3]/table/tbody/tr/td[10]/div"
+    result_devicestatus = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[2]/div/div[3]/table/tbody/tr/td[5]/div"
+    result_delivertime = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[2]/div/div[3]/table/tbody/tr/td[11]/div"
+    result_deviceisenablestatus = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[2]/div/div[3]/table/tbody/tr/td[20]/div/i"
+    result_movetime = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[2]/div/div[3]/table/tbody/tr/td[12]/div"
+    # result_iswarehouse = "xpath=>"
+    result_tag = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[2]/div/div[3]/table/tbody/tr/td[5]/div"
+    result_isscrap = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[2]/div/div[3]/table/tbody/tr/td[21]/div/i"
+
 
 class DeviceInfoSearch(BasePage):
 
