@@ -483,6 +483,66 @@ class DevicelistSearch(BasePage):
     result_tag = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[2]/div/div[3]/table/tbody/tr/td[5]/div"
     result_isscrap = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[2]/div/div[3]/table/tbody/tr/td[21]/div/i"
 
+    # 断言设备ID查询结果
+    def find_result_deviceid(self):
+        a = self.get_search_result(self.result_deviceid)
+        return a
+
+    # 断言设备名称查询结果
+    def find_result_devicename(self):
+        a = self.get_search_result(self.result_devicename)
+        return a
+
+    # 断言设备型号查询结果
+    def find_result_devicemodel(self):
+        a = self.get_search_result(self.result_devicemodel)
+        return a
+
+    # 断言网点ID查询结果
+    def find_result_areaid(self):
+        a = self.get_search_result(self.result_areaid)
+        return a
+
+    # 断言网点名称查询结果
+    def find_result_areaname(self):
+        a = self.get_search_result(self.result_areaname)
+        return a
+
+    # 断言合伙人查询结果
+    def find_result_partnername(self):
+        a = self.get_search_result(self.result_partnername)
+        return a
+
+    # 断言设备状态查询结果
+    def find_result_devicestatus(self):
+        a = self.get_search_result(self.result_devicestatus)
+        return a
+
+    # 断言发货时间查询结果
+    def find_result_delivertime(self):
+        a = self.get_search_result(self.result_delivertime)
+        return a
+
+    # 断言设备启用状态查询结果
+    def find_result_deviceisenablestatus(self):
+        a = self.get_search_result_icon(self.result_deviceisenablestatus)
+        return a
+
+    # 断言移机时间（大于）查询结果
+    def find_result_movetime(self):
+        a = self.get_search_result(self.result_movetime)
+        return a
+
+    # 断言标签查询结果
+    def find_result_tag(self):
+        a = self.get_search_result(self.result_tag)
+        return a
+
+    # 断言是否报废查询结果
+    def find_result_isscrap(self):
+        a = self.get_search_result_icon(self.result_isscrap)
+        return a
+
 
 class DeviceInfoSearch(BasePage):
 
