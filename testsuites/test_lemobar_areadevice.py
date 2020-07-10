@@ -1,5 +1,6 @@
 # coding = utf-8
 # import time
+import datetime
 import unittest
 from framework.browser_engine import BrowserEngine
 from pageobjects.lemobar_login import HomePage
@@ -452,7 +453,16 @@ class AreadevicePageSearch(unittest.TestCase):
         newsearch.movetime_search('10')
         newsearch.search_button_click()
         newsearch.sleep(2)
-
+        try:
+            now_time = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+            start_time = newsearch.find_result_movetime()
+            d1 = datetime.datetime.strptime(now_time, '%Y-%m-%d %H:%M:%S')
+            d2 = datetime.datetime.strptime(start_time, '%Y-%m-%d %H:%M:%S')
+            delta = d1 - d2
+            assert delta.days >= 10
+            print('Test Pass')
+        except Exception as e:
+            print('Test Fail', format(e))
         newsearch.clear_button_click()
         newsearch.sleep(2)
 
