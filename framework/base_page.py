@@ -15,6 +15,7 @@ class BasePage(object):
     定义一个页面基类，让所有页面都继承这个类，封装一些常用的页面操作方法到这个类
     """
 
+    # 写一个构造函数，有一个参数driver
     def __init__(self, driver):
         self.driver = driver
 
