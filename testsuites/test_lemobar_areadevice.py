@@ -108,7 +108,7 @@ class AreadevicePageSearch(unittest.TestCase):
         newsearch.search_button_click()
         newsearch.sleep(2)
         try:
-            assert '' in newsearch.find_result_areaenablestatus()
+            assert 'el-icon-circle-check' in newsearch.find_result_areaenablestatus()
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))

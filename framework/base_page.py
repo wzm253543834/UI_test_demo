@@ -282,7 +282,7 @@ class BasePage(object):
         li = self.find_elements(selector)
         lis = []
         for i in li:
-            lis.append(i.get_attribude('class'))
+            lis.append(i.get_attribute('class'))
         lisr = random.choice(lis)
         return lisr
 
