@@ -429,7 +429,7 @@ class AreadevicePageSearch(unittest.TestCase):
         newsearch.search_button_click()
         newsearch.sleep(2)
         try:
-            assert '2020-06-14' in newsearch.find_result_delivertime()
+            assert '2020-07-10' in newsearch.find_result_delivertime()
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
