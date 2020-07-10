@@ -418,7 +418,7 @@ class AreadevicePageSearch(unittest.TestCase):
         newsearch.sleep(2)
 
         # 标签查询
-        newsearch.tag_search('测试')
+        newsearch.tag_search('1')
         newsearch.search_button_click()
         newsearch.sleep(2)
         newsearch.clear_button_click()
@@ -597,7 +597,7 @@ class AreadevicePageSearch(unittest.TestCase):
         newsearch.sleep(2)
 
         # 网点名称查询
-        newsearch.areaname_search('福州展示仓01')
+        newsearch.areaname_search('福州')
         newsearch.search_button_click()
         newsearch.sleep(2)
         newsearch.clear_button_click()
@@ -631,7 +631,7 @@ class AreadevicePageSearch(unittest.TestCase):
         newsearch.sleep(2)
 
         # 场地名称查询
-        newsearch.placename_search('福州展示仓01')
+        newsearch.placename_search('测试')
         newsearch.search_button_click()
         newsearch.sleep(2)
         newsearch.clear_button_click()
