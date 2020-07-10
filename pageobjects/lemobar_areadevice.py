@@ -605,6 +605,43 @@ class DeviceInfoSearch(BasePage):
     def clear_button_click(self):
         self.click(self.deviceInfo_clear_button)
 
+    # 测试结果断言
+    result_deviceid = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[2]/div/div[3]/table/tbody/tr/td[2]/div/a"
+    result_devicemodel = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[2]/div/div[3]/table/tbody/tr/td[4]/div"
+    result_areaid = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[2]/div/div[3]/table/tbody/tr/td[8]/div"
+    result_areaname = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[2]/div/div[3]/table/tbody/tr/td[7]/div"
+    result_devicestatus = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[2]/div/div[3]/table/tbody/tr/td[5]/div"
+    result_isenable = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[2]/div/div[3]/table/tbody/tr/td[14]/div/i"
+    result_simcardnumber =  "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[2]/div/div[3]/table/tbody/tr/td[13]/div"
+
+    def find_result_deviceid(self):
+        a = self.get_search_result(self.result_deviceid)
+        return a
+
+    def find_result_devicemodel(self):
+        a = self.get_search_result(self.result_devicemodel)
+        return a
+
+    def find_result_areaid(self):
+        a = self.get_search_result(self.result_areaid)
+        return a
+
+    def find_result_areaname(self):
+        a = self.get_search_result(self.result_areaname)
+        return a
+
+    def find_result_devicestatus(self):
+        a = self.get_search_result(self.result_devicestatus)
+        return a
+
+    def find_result_isenable(self):
+        a = self.get_search_result_icon(self.result_isenable)
+        return a
+
+    def find_result_simcardnumber(self):
+        a = self.get_search_result(self.result_simcardnumber)
+        return a
+
 
 class EpdevicelistSearch(BasePage):
 
