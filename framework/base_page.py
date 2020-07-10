@@ -275,7 +275,11 @@ class BasePage(object):
         for i in li:
             lis.append(i.text)
         lisr = random.choice(lis)
-        return lisr
+        try:
+            logger.info("The result is %s.", lisr)
+            return lisr
+        except NameError as e:
+            logger.error("Failed to find the result: %s", e)
 
     # 断言图标
     def get_search_result_icon(self, selector):
@@ -284,7 +288,11 @@ class BasePage(object):
         for i in li:
             lis.append(i.get_attribute('class'))
         lisr = random.choice(lis)
-        return lisr
+        try:
+            logger.info("The result is %s.", lisr)
+            return lisr
+        except NameError as e:
+            logger.error("Failed to find the result: %s", e)
 
     # 等待时间
     @staticmethod

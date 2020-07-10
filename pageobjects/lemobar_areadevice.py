@@ -200,38 +200,47 @@ class AreaSearch(BasePage):
     result_placename = "xpath=>//*[@id='area_fixed']/div[2]/div/div[3]/table/tbody/tr/td[7]/div"
     # result_iswarehouse = "xpath=>"
 
+    # 断言网点ID查询结果
     def find_result_areaid(self):
         a = self.get_search_result(self.result_areaid)
         return a
 
+    # 断言网点名称查询结果
     def find_result_areaname(self):
         a = self.get_search_result(self.result_areaname)
         return a
 
+    # 断言分公司名称查询结果
     def find_result_companyname(self):
         a = self.get_search_result(self.result_companyname)
         return a
 
+    # 断言网点启用状态查询结果
     def find_result_areaenablestatus(self):
         a = self.get_search_result_icon(self.result_areaenablestatus)
         return a
 
+    # 断言周边网点状态查询结果
     def find_result_besideareastatus(self):
         a = self.get_search_result_icon(self.result_besideareastatus)
         return a
 
+    # 断言合伙人查询结果
     def find_result_partnername(self):
         a = self.get_search_result(self.result_partnername)
         return a
 
+    # 断言设备型号查询结果
     def find_result_devicemodel(self):
         a = self.get_search_result(self.result_devicemodel)
         return a
 
+    # 断言合作类型查询结果
     def find_result_partnertype(self):
         a = self.get_search_result(self.result_partnertype)
         return a
 
+    # 断言场地名称查询结果
     def find_result_placename(self):
         a = self.get_search_result(self.result_placename)
         return a
