@@ -468,6 +468,10 @@ class DevicelistSearch(BasePage):
     def clear_button_click(self):
         self.click(self.devicelist_clear_button)
 
+    # 测试结果断言
+    result_deviceid = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[2]/div/div[3]/table/tbody/tr/td[2]/div/a"
+    result_devicename = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[2]/div/div[3]/table/tbody/tr/td[3]/div"
+    result_devicemodel = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[2]/div/div[3]/table/tbody/tr/td[4]/div"
 
 class DeviceInfoSearch(BasePage):
 
