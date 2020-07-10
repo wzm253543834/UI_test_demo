@@ -708,6 +708,50 @@ class EpdevicelistSearch(BasePage):
     def clear_button_click(self):
         self.click(self.epdevicelist_clear_button)
 
+    # 测试结果断言
+    result_deviceid = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[2]/div/div[3]/table/tbody/tr/td[2]/div"
+    result_devicename = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[2]/div/div[3]/table/tbody/tr/td[3]/div"
+    result_devicemodel = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[2]/div/div[3]/table/tbody/tr/td[4]/div"
+    result_areaid = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[2]/div/div[3]/table/tbody/tr/td[9]/div"
+    result_areaname = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[2]/div/div[3]/table/tbody/tr/td[8]/div"
+    result_partnername = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[2]/div/div[3]/table/tbody/tr/td[10]/div"
+    result_delivertime = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[2]/div/div[3]/table/tbody/tr/td[11]/div"
+
+    # 断言设备ID查询结果
+    def find_result_deviceid(self):
+        a = self.get_search_result(self.result_deviceid)
+        return a
+
+    # 断言设备名称查询结果
+    def find_result_devicename(self):
+        a = self.get_search_result(self.result_devicename)
+        return a
+
+    # 断言设备型号查询结果
+    def find_result_devicemodel(self):
+        a = self.get_search_result(self.result_devicemodel)
+        return a
+
+    # 断言网点ID查询结果
+    def find_result_areaid(self):
+        a = self.get_search_result(self.result_areaid)
+        return a
+
+    # 断言网点名称查询结果
+    def find_result_areaname(self):
+        a = self.get_search_result(self.result_areaname)
+        return a
+
+    # 断言合伙人查询结果
+    def find_result_partnername(self):
+        a = self.get_search_result(self.result_partnername)
+        return a
+
+    # 断言发货时间查询结果
+    def find_result_delivertime(self):
+        a = self.get_search_result(self.result_delivertime)
+        return a
+
 
 class ContractSearch(BasePage):
 

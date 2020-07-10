@@ -625,6 +625,11 @@ class AreadevicePageSearch(unittest.TestCase):
         newsearch.deviceid_search('123456')
         newsearch.search_button_click()
         newsearch.sleep(2)
+        try:
+            assert '123456' in newsearch.find_result_deviceid()
+            print('Test Pass')
+        except Exception as e:
+            print('Test Fail', format(e))
         newsearch.clear_button_click()
         newsearch.sleep(2)
 
@@ -632,6 +637,11 @@ class AreadevicePageSearch(unittest.TestCase):
         newsearch.devicename_search('测试')
         newsearch.search_button_click()
         newsearch.sleep(2)
+        try:
+            assert '测试' in newsearch.find_result_devicename()
+            print('Test Pass')
+        except Exception as e:
+            print('Test Fail', format(e))
         newsearch.clear_button_click()
         newsearch.sleep(2)
 
@@ -639,6 +649,11 @@ class AreadevicePageSearch(unittest.TestCase):
         newsearch.devicemodel_search()
         newsearch.search_button_click()
         newsearch.sleep(2)
+        try:
+            assert 'X1' in newsearch.find_result_devicemodel()
+            print('Test Pass')
+        except Exception as e:
+            print('Test Fail', format(e))
         newsearch.clear_button_click()
         newsearch.sleep(2)
 
@@ -646,6 +661,11 @@ class AreadevicePageSearch(unittest.TestCase):
         newsearch.areaid_search('22515')
         newsearch.search_button_click()
         newsearch.sleep(2)
+        try:
+            assert '22515' in newsearch.find_result_areaid()
+            print('Test Pass')
+        except Exception as e:
+            print('Test Fail', format(e))
         newsearch.clear_button_click()
         newsearch.sleep(2)
 
@@ -653,6 +673,11 @@ class AreadevicePageSearch(unittest.TestCase):
         newsearch.areaname_search('福州展示仓01')
         newsearch.search_button_click()
         newsearch.sleep(2)
+        try:
+            assert '福州展示仓01' in newsearch.find_result_areaname()
+            print('Test Pass')
+        except Exception as e:
+            print('Test Fail', format(e))
         newsearch.clear_button_click()
         newsearch.sleep(2)
 
@@ -660,6 +685,11 @@ class AreadevicePageSearch(unittest.TestCase):
         newsearch.partnername_search('直营仓库')
         newsearch.search_button_click()
         newsearch.sleep(2)
+        try:
+            assert '直营仓库' in newsearch.find_result_partnername()
+            print('Test Pass')
+        except Exception as e:
+            print('Test Fail', format(e))
         newsearch.clear_button_click()
         newsearch.sleep(2)
 
@@ -667,6 +697,11 @@ class AreadevicePageSearch(unittest.TestCase):
         newsearch.delivertime_search()
         newsearch.search_button_click()
         newsearch.sleep(2)
+        try:
+            assert '2020-07-06' in newsearch.find_result_delivertime()
+            print('Test Pass')
+        except Exception as e:
+            print('Test Fail', format(e))
         newsearch.clear_button_click()
         newsearch.sleep(2)
 
