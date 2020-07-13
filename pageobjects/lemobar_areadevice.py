@@ -780,6 +780,20 @@ class ContractSearch(BasePage):
     def clear_button_click(self):
         self.click(self.contract_clear_button)
 
+    # 测试结果断言
+    result_partnername = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[2]/div/div[3]/table/tbody/tr/td[5]/div"
+    result_areaname = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[2]/div/div[3]/table/tbody/tr/td[4]/div"
+
+    # 断言合伙人查询结果
+    def find_result_partnername(self):
+        a = self.get_search_result(self.result_partnername)
+        return a
+
+    # 断言网点名称查询结果
+    def find_result_areaname(self):
+        a = self.get_search_result(self.result_areaname)
+        return a
+
 
 class PlaceSearch(BasePage):
 
@@ -813,6 +827,26 @@ class PlaceSearch(BasePage):
     def clear_button_click(self):
         self.click(self.place_clear_button)
 
+    # 测试结果断言
+    result_placeid = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[1]/div[3]/table/tbody/tr/td[2]/div"
+    result_placename = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[1]/div[3]/table/tbody/tr/td[3]/div"
+    result_partnername = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[1]/div[3]/table/tbody/tr/td[4]/div"
+
+    # 断言场地ID查询结果
+    def find_result_placeid(self):
+        a = self.get_search_result(self.result_placeid)
+        return a
+
+    # 断言场地名称查询结果
+    def find_result_placename(self):
+        a = self.get_search_result(self.result_placename)
+        return a
+
+    # 断言合伙人查询结果
+    def find_result_partnername(self):
+        a = self.get_search_result(self.result_partnername)
+        return a
+
 
 class CompanySearch(BasePage):
 
@@ -835,3 +869,11 @@ class CompanySearch(BasePage):
     # 清空按钮
     def clear_button_click(self):
         self.click(self.company_clear_button)
+
+    # 测试结果断言
+    result_companyname = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[1]/div[3]/table/tbody/tr/td[2]/div"
+
+    # 断言分公司名称查询结果
+    def find_result_companyname(self):
+        a = self.get_search_result(self.result_companyname)
+        return a

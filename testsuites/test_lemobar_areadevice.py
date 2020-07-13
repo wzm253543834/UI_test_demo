@@ -729,6 +729,11 @@ class AreadevicePageSearch(unittest.TestCase):
         newsearch.partnername_search('直营仓库')
         newsearch.search_button_click()
         newsearch.sleep(2)
+        try:
+            assert '直营仓库' in newsearch.find_result_partnername()
+            print('Test Pass')
+        except Exception as e:
+            print('Test Fail', format(e))
         newsearch.clear_button_click()
         newsearch.sleep(2)
 
@@ -736,6 +741,11 @@ class AreadevicePageSearch(unittest.TestCase):
         newsearch.areaname_search('福州')
         newsearch.search_button_click()
         newsearch.sleep(2)
+        try:
+            assert '福州' in newsearch.find_result_areaname()
+            print('Test Pass')
+        except Exception as e:
+            print('Test Fail', format(e))
         newsearch.clear_button_click()
         newsearch.sleep(2)
 
@@ -763,6 +773,11 @@ class AreadevicePageSearch(unittest.TestCase):
         newsearch.placeid_search('22515')
         newsearch.search_button_click()
         newsearch.sleep(2)
+        try:
+            assert '22515' in newsearch.find_result_placeid()
+            print('Test Pass')
+        except Exception as e:
+            print('Test Fail', format(e))
         newsearch.clear_button_click()
         newsearch.sleep(2)
 
@@ -770,6 +785,11 @@ class AreadevicePageSearch(unittest.TestCase):
         newsearch.placename_search('测试')
         newsearch.search_button_click()
         newsearch.sleep(2)
+        try:
+            assert '测试' in newsearch.find_result_placename()
+            print('Test Pass')
+        except Exception as e:
+            print('Test Fail', format(e))
         newsearch.clear_button_click()
         newsearch.sleep(2)
 
@@ -777,6 +797,11 @@ class AreadevicePageSearch(unittest.TestCase):
         newsearch.partnername_search('直营仓库')
         newsearch.search_button_click()
         newsearch.sleep(2)
+        try:
+            assert '直营仓库' in newsearch.find_result_partnername()
+            print('Test Pass')
+        except Exception as e:
+            print('Test Fail', format(e))
         newsearch.clear_button_click()
         newsearch.sleep(2)
 
@@ -804,6 +829,11 @@ class AreadevicePageSearch(unittest.TestCase):
         newsearch.companyname_search('上海分公司')
         newsearch.search_button_click()
         newsearch.sleep(2)
+        try:
+            assert '上海分公司' in newsearch.find_result_companyname()
+            print('Test Pass')
+        except Exception as e:
+            print('Test Fail', format(e))
         newsearch.clear_button_click()
         newsearch.sleep(2)
 
