@@ -114,7 +114,7 @@ class PayPageSearch(unittest.TestCase):
         except Exception as e:
             print('Test Fail', format(e))
 
-        newsearch =PaymentSearch(self.driver)
+        newsearch = PaymentSearch(self.driver)
 
         # 支付组ID查询
         newsearch.paymentid_search('1')
