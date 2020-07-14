@@ -55,9 +55,9 @@ class AreadevicePageSearch(unittest.TestCase):
         homepage.get_window_img()  # 调用基类截图方法
         try:
             assert '乐摩吧数据中心管理系统' in homepage.get_page_title()
-            print('Test Pass.')
+            print('Test Pass')
         except Exception as e:
-            print('Test Fail.', format(e))
+            print('Test Fail', format(e))
 
     def test_b_area_search(self):
         """
@@ -74,7 +74,7 @@ class AreadevicePageSearch(unittest.TestCase):
             assert '网点管理' in homepage.find_tab_area()
             print('Test Pass')
         except Exception as e:
-            print('Test Fail.', format(e))
+            print('Test Fail', format(e))
 
         newsearch = AreaSearch(self.driver)
 
@@ -86,7 +86,7 @@ class AreadevicePageSearch(unittest.TestCase):
             assert '22515' in newsearch.find_result_areaid()
             print('Test Pass')
         except Exception as e:
-            print('Test Fail.', format(e))
+            print('Test Fail', format(e))
         newsearch.clear_button_click()
         newsearch.sleep(2)
 
@@ -98,7 +98,7 @@ class AreadevicePageSearch(unittest.TestCase):
             assert '福州展示仓01' in newsearch.find_result_areaname()
             print('Test Pass')
         except Exception as e:
-            print('Test Fail.', format(e))
+            print('Test Fail', format(e))
         newsearch.clear_button_click()
         newsearch.sleep(2)
 
@@ -110,7 +110,7 @@ class AreadevicePageSearch(unittest.TestCase):
             assert '广州分公司' in newsearch.find_result_companyname()
             print('Test Pass')
         except Exception as e:
-            print('Test Fail.', format(e))
+            print('Test Fail', format(e))
         newsearch.clear_button_click()
         newsearch.sleep(2)
 
@@ -209,7 +209,7 @@ class AreadevicePageSearch(unittest.TestCase):
             assert '价格管理' in homepage.find_tab_price()
             print('Test Pass')
         except Exception as e:
-            print('Test Fail.', format(e))
+            print('Test Fail', format(e))
 
         newsearch = PriceSearch(self.driver)
 
@@ -221,7 +221,7 @@ class AreadevicePageSearch(unittest.TestCase):
             assert '10' in newsearch.find_result_wakeupbodyprice()
             print('Test Pass')
         except Exception as e:
-            print('Test Fail.', format(e))
+            print('Test Fail', format(e))
         newsearch.clear_button_click()
         newsearch.sleep(2)
 
@@ -233,7 +233,7 @@ class AreadevicePageSearch(unittest.TestCase):
             assert '10' in newsearch.find_result_passbreathbloodprice()
             print('Test Pass')
         except Exception as e:
-            print('Test Fail.', format(e))
+            print('Test Fail', format(e))
         newsearch.clear_button_click()
         newsearch.sleep(2)
 
@@ -245,7 +245,7 @@ class AreadevicePageSearch(unittest.TestCase):
             assert '10' in newsearch.find_result_diastolemeridiansprice()
             print('Test Pass')
         except Exception as e:
-            print('Test Fail.', format(e))
+            print('Test Fail', format(e))
         newsearch.clear_button_click()
         newsearch.sleep(2)
 
@@ -257,7 +257,7 @@ class AreadevicePageSearch(unittest.TestCase):
             assert '10' in newsearch.find_result_priceid()
             print('Test Pass')
         except Exception as e:
-            print('Test Fail.', format(e))
+            print('Test Fail', format(e))
         newsearch.clear_button_click()
         newsearch.sleep(2)
 
@@ -269,7 +269,7 @@ class AreadevicePageSearch(unittest.TestCase):
             assert 'el-icon-circle-check' in newsearch.find_result_isenable()
             print('Test Pass')
         except Exception as e:
-            print('Test Fail.', format(e))
+            print('Test Fail', format(e))
         newsearch.clear_button_click()
         newsearch.sleep(2)
 
@@ -281,7 +281,7 @@ class AreadevicePageSearch(unittest.TestCase):
             assert '10' in newsearch.find_result_wakeupbodytime()
             print('Test Pass')
         except Exception as e:
-            print('Test Fail.', format(e))
+            print('Test Fail', format(e))
         newsearch.clear_button_click()
         newsearch.sleep(2)
 
@@ -293,7 +293,7 @@ class AreadevicePageSearch(unittest.TestCase):
             assert '10' in newsearch.find_result_passbreathbloodtime()
             print('Test Pass')
         except Exception as e:
-            print('Test Fail.', format(e))
+            print('Test Fail', format(e))
         newsearch.clear_button_click()
         newsearch.sleep(2)
 
@@ -305,7 +305,7 @@ class AreadevicePageSearch(unittest.TestCase):
             assert '10' in newsearch.find_result_diastolemeridianstime()
             print('Test Pass')
         except Exception as e:
-            print('Test Fail.', format(e))
+            print('Test Fail', format(e))
         newsearch.clear_button_click()
         newsearch.sleep(2)
 
@@ -317,7 +317,7 @@ class AreadevicePageSearch(unittest.TestCase):
             assert '通用价格组' in newsearch.find_result_pricename()
             print('Test Pass')
         except Exception as e:
-            print('Test Fail.', format(e))
+            print('Test Fail', format(e))
         newsearch.clear_button_click()
         newsearch.sleep(2)
 
