@@ -24,8 +24,8 @@ class PayPage(BasePage):
 
     # 获取基础支付类型tab名
     def find_tab_basepayment(self):
-        st = self.get_tab_title(self.tab_basepayment)
-        return st
+        a = self.get_tab_title(self.tab_basepayment)
+        return a
 
     # 点击支付组管理
     def search_click_pay_payment(self):
@@ -33,8 +33,8 @@ class PayPage(BasePage):
 
     # 获取支付组管理tab名
     def find_tab_payment(self):
-        st = self.get_tab_title(self.tab_payment)
-        return st
+        a = self.get_tab_title(self.tab_payment)
+        return a
 
 
 class BasepaymentSearch(BasePage):

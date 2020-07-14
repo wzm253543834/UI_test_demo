@@ -36,8 +36,8 @@ class AreadevicePage(BasePage):
 
     # 获取网点管理tab名
     def find_tab_area(self):
-        st = self.get_tab_title(self.tab_area)
-        return st
+        a = self.get_tab_title(self.tab_area)
+        return a
 
     # 点击价格管理
     def search_click_areadevice_price(self):
@@ -45,8 +45,8 @@ class AreadevicePage(BasePage):
 
     # 获取价格管理tab名
     def find_tab_price(self):
-        st = self.get_tab_title(self.tab_price)
-        return st
+        a = self.get_tab_title(self.tab_price)
+        return a
 
     # 点击设备列表
     def search_click_areadevice_devicelist(self):
@@ -54,8 +54,8 @@ class AreadevicePage(BasePage):
 
     # 获取设备列表tab名
     def find_tab_devicelist(self):
-        st = self.get_tab_title(self.tab_devicelist)
-        return st
+        a = self.get_tab_title(self.tab_devicelist)
+        return a
 
     # 点击设备信息
     def search_click_areadevice_deviceinfo(self):
@@ -63,8 +63,8 @@ class AreadevicePage(BasePage):
 
     # 获取设备信息tab名
     def find_tab_deviceinfo(self):
-        st = self.get_tab_title(self.tab_deviceInfo)
-        return st
+        a = self.get_tab_title(self.tab_deviceInfo)
+        return a
 
     # 点击异常设备列表
     def search_click_areadevice_epdevicelist(self):
@@ -72,8 +72,8 @@ class AreadevicePage(BasePage):
 
     # 获取异常设备列表tab名
     def find_tab_epdevicelist(self):
-        st = self.get_tab_title(self.tab_epdevicelist)
-        return st
+        a = self.get_tab_title(self.tab_epdevicelist)
+        return a
 
     # 点击合同预警
     def search_click_areadevice_contract(self):
@@ -81,8 +81,8 @@ class AreadevicePage(BasePage):
 
     # 获取合同预警tab名
     def find_tab_contract(self):
-        st = self.get_tab_title(self.tab_contract)
-        return st
+        a = self.get_tab_title(self.tab_contract)
+        return a
 
     # 点击场地管理
     def search_click_areadevice_place(self):
@@ -90,8 +90,8 @@ class AreadevicePage(BasePage):
 
     # 获取场地管理tab名
     def find_tab_place(self):
-        st = self.get_tab_title(self.tab_place)
-        return st
+        a = self.get_tab_title(self.tab_place)
+        return a
 
     # 点击分公司管理
     def search_click_areadevice_company(self):
@@ -99,8 +99,8 @@ class AreadevicePage(BasePage):
 
     # 获取分公司管理tab名
     def find_tab_company(self):
-        st = self.get_tab_title(self.tab_company)
-        return st
+        a = self.get_tab_title(self.tab_company)
+        return a
 
 
 class AreaSearch(BasePage):
