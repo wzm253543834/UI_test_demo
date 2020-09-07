@@ -107,22 +107,24 @@ class AreaSearch(BasePage):
 
     area_areaid_search = "xpath=>//*[@id='search_list']/div[1]/div/div/input"
     area_areaname_search = "xpath=>//*[@id='search_list']/div[2]/div/div/input"
-    area_companyname_search = "xpath=>//*[@id='search_list']/div[3]/div/div/div/input"
-    area_areaenablestatus_search = "xpath=>//*[@id='search_list']/div[4]/div/div/div/input"
-    area_besideareastatus_search = "xpath=>//*[@id='search_list']/div[5]/div/div/div/input"
-    area_partnername_search = "xpath=>//*[@id='search_list']/div[7]/div/div/input"
-    area_devicemodel_search = "xpath=>//*[@id='search_list']/div[8]/div/div/div/input"
-    area_partnertype_search = "xpath=>//*[@id='search_list']/div[9]/div/div/div/input"
-    area_placename_search = "xpath=>//*[@id='search_list']/div[10]/div/div/input"
-    area_iswarehouse_search = "xpath=>//*[@id='search_list']/div[11]/div/div/div/input"
-    area_search_button = "xpath=>//*[@id='search_list']/div[6]/div/button"
-    area_clear_button = "xpath=>//*[@id='search_list']/div[12]/div/button"
-    area_companyname = "xpath=>/html/body/div[2]/div[1]/div[1]/ul/li[1]"
-    area_areaenablestatus = "xpath=>/html/body/div[3]/div[1]/div[1]/ul/li[1]"
-    area_besideareastatus = "xpath=>/html/body/div[4]/div[1]/div[1]/ul/li[1]"
-    area_devicemodel = "xpath=>/html/body/div[5]/div[1]/div[1]/ul/li[1]"
-    area_partnertype = "xpath=>/html/body/div[6]/div[1]/div[1]/ul/li[1]"
-    area_iswarehouse = "xpath=>/html/body/div[7]/div[1]/div[1]/ul/li[1]"
+    area_areawithdrawal_search = "xpath=>//*[@id='search_list']/div[3]/div/div/div/input"
+    area_companyname_search = "xpath=>//*[@id='search_list']/div[4]/div/div/div/input"
+    area_areaenablestatus_search = "xpath=>//*[@id='search_list']/div[5]/div/div/div/input"
+    area_besideareastatus_search = "xpath=>//*[@id='search_list']/div[6]/div/div/div/input"
+    area_partnername_search = "xpath=>//*[@id='search_list']/div[8]/div/div/input"
+    area_devicemodel_search = "xpath=>//*[@id='search_list']/div[9]/div/div/div/input"
+    area_partnertype_search = "xpath=>//*[@id='search_list']/div[10]/div/div/div/input"
+    area_placename_search = "xpath=>//*[@id='search_list']/div[11]/div/div/input"
+    area_iswarehouse_search = "xpath=>//*[@id='search_list']/div[12]/div/div/div/input"
+    area_search_button = "xpath=>//*[@id='search_list']/div[7]/div/button"
+    area_clear_button = "xpath=>//*[@id='search_list']/div[13]/div/button"
+    area_areawithdrawal = "xpath=>/html/body/div[2]/div[1]/div[1]/ul/li[1]"
+    area_companyname = "xpath=>/html/body/div[3]/div[1]/div[1]/ul/li[1]"
+    area_areaenablestatus = "xpath=>/html/body/div[4]/div[1]/div[1]/ul/li[1]"
+    area_besideareastatus = "xpath=>/html/body/div[5]/div[1]/div[1]/ul/li[1]"
+    area_devicemodel = "xpath=>/html/body/div[6]/div[1]/div[1]/ul/li[1]"
+    area_partnertype = "xpath=>/html/body/div[7]/div[1]/div[1]/ul/li[1]"
+    area_iswarehouse = "xpath=>/html/body/div[8]/div[1]/div[1]/ul/li[1]"
 
     """
     网点管理各筛选项
@@ -135,6 +137,12 @@ class AreaSearch(BasePage):
     # 网点名称查询
     def areaname_search(self, text):
         self.type(self.area_areaname_search, text)
+
+    # 网点提现查询
+    def areawithdrawal_search(self):
+        self.click(self.area_areawithdrawal_search)
+        self.sleep(2)
+        self.click(self.area_areawithdrawal)
 
     # 分公司名称查询
     def companyname_search(self):
@@ -383,6 +391,7 @@ class DevicelistSearch(BasePage):
     devicelist_isinwarehouse_search = "xpath=>//*[@id='search_list']/div[13]/div/div/div/input"
     devicelist_tag_search = "xpath=>//*[@id='search_list']/div[14]/div/div/input"
     devicelist_isscrap_search = "xpath=>//*[@id='search_list']/div[15]/div/div/div/input"
+    devicelist_areawithdrawal_search = "xpath=>//*[@id='search_list']/div[16]/div/div/div/input"
     devicelist_search_button = "xpath=>//*[@id='search_list']/div[6]/div/button"
     devicelist_clear_button = "xpath=>//*[@id='search_list']/div[12]/div/button"
     devicelist_devicemodel = "xpath=>/html/body/div[2]/div[1]/div[1]/ul/li[1]"
@@ -391,6 +400,7 @@ class DevicelistSearch(BasePage):
     devicelist_deviceisenablestatus = "xpath=>/html/body/div[5]/div[1]/div[1]/ul/li[1]"
     devicelist_isinwarehouse = "xpath=>/html/body/div[6]/div[1]/div[1]/ul/li[1]"
     devicelist_isscrap = "xpath=>/html/body/div[7]/div[1]/div[1]/ul/li[1]"
+    devicelist_areawithdrawal = "xpath=>/html/body/div[8]/div[1]/div[1]/ul/li[1]"
 
     """
     设备列表各筛选项
@@ -459,6 +469,12 @@ class DevicelistSearch(BasePage):
         self.click(self.devicelist_isscrap_search)
         self.sleep(2)
         self.click(self.devicelist_isscrap)
+
+    # 网点提现查询
+    def areawithdrawal_search(self):
+        self.click(self.devicelist_areawithdrawal_search)
+        self.sleep(2)
+        self.click(self.devicelist_areawithdrawal)
 
     # 查询按钮
     def search_button_click(self):
@@ -553,11 +569,13 @@ class DeviceInfoSearch(BasePage):
     deviceInfo_devicestatus_search = "xpath=>//*[@id='search_list']/div[6]/div/div/div/input"
     deviceInfo_isenable_search = "xpath=>//*[@id='search_list']/div[7]/div/div/div/input"
     deviceInfo_simcardnumber_search = "xpath=>//*[@id='search_list']/div[8]/div/div/input"
+    deviceInfo_areawithdrawal_search = "xpath=>//*[@id='search_list']/div[9]/div/div/input"
     deviceInfo_search_button = "xpath=>//*[@id='search_list']/div[5]/div/button"
-    deviceInfo_clear_button = "xpath=>//*[@id='search_list']/div[9]/div/button"
+    deviceInfo_clear_button = "xpath=>//*[@id='search_list']/div[10]/div/button"
     deviceInfo_devicemodel = "xpath=>/html/body/div[2]/div[1]/div[1]/ul/li[1]"
     deviceInfo_devicestatus = "xpath=>/html/body/div[3]/div[1]/div[1]/ul/li[1]"
     deviceInfo_isenable = "xpath=>/html/body/div[4]/div[1]/div[1]/ul/li[1]"
+    deviceInfo_areawithdrawal = "xpath=>/html/body/div[5]/div[1]/div[1]/ul/li[1]"
 
     """
     设备信息各筛选项
@@ -596,6 +614,12 @@ class DeviceInfoSearch(BasePage):
     # SIM卡号查询
     def simcardnumber_search(self, text):
         self.type(self.deviceInfo_simcardnumber_search, text)
+
+    # 网点提现查询
+    def areawithdrawal_search(self):
+        self.click(self.deviceInfo_areawithdrawal_search)
+        self.sleep(2)
+        self.click(self.deviceInfo_areawithdrawal)
 
     # 查询按钮
     def search_button_click(self):
@@ -659,10 +683,12 @@ class EpdevicelistSearch(BasePage):
     epdevicelist_areaname_search = "xpath=>//*[@id='search_list']/div[5]/div/div/input"
     epdevicelist_partnername_search = "xpath=>//*[@id='search_list']/div[7]/div/div/input"
     epdevicelist_delivertime_search = "xpath=>//*[@id='search_list']/div[8]/div/div/input[1]"
+    epdevicelist_areawithdrawal_search = "xpath=>//*[@id='search_list']/div[9]/div/div/input"
     epdevicelist_search_button = "xpath=>//*[@id='search_list']/div[6]/div/button"
-    epdevicelist_clear_button = "xpath=>//*[@id='search_list']/div[9]/div/button"
+    epdevicelist_clear_button = "xpath=>//*[@id='search_list']/div[10]/div/button"
     epdevicelist_devicemodel = "xpath=>/html/body/div[2]/div[1]/div[1]/ul/li[1]"
     epdevicelist_delivertime = "xpath=>/html/body/div[3]/div[1]/div/div[1]/table/tbody/tr[5]/td[3]"
+    epdevicelist_areawithdrawal = "xpath=>/html/body/div[4]/div[1]/div[1]/ul/li[1]"
 
     """
     异常设备列表各筛选项
@@ -699,6 +725,12 @@ class EpdevicelistSearch(BasePage):
         self.click(self.epdevicelist_delivertime_search)
         self.sleep(2)
         self.click(self.epdevicelist_delivertime)
+
+    # 网点提现查询
+    def areawithdrawal_search(self):
+        self.click(self.epdevicelist_areawithdrawal_search)
+        self.sleep(2)
+        self.click(self.epdevicelist_areawithdrawal)
 
     # 查询按钮
     def search_button_click(self):
@@ -757,8 +789,10 @@ class ContractSearch(BasePage):
 
     contract_partnername_search = "xpath=>//*[@id='search_list']/div[1]/div/div/input"
     contract_areaname_search = "xpath=>//*[@id='search_list']/div[2]/div/div/input"
-    contract_search_button = "xpath=>//*[@id='search_list']/div[3]/div/button[1]"
-    contract_clear_button = "xpath=>//*[@id='search_list']/div[3]/div/button[2]"
+    contract_areawithdrawal_search = "xpath=>//*[@id='search_list']/div[3]/div/div/input"
+    contract_search_button = "xpath=>//*[@id='search_list']/div[4]/div/button[1]"
+    contract_clear_button = "xpath=>//*[@id='search_list']/div[4]/div/button[2]"
+    contract_areawithdrawal = "xpath=>/html/body/div[2]/div[1]/div[1]/ul/li[1]"
 
     """
     合同预警各筛选项
@@ -771,6 +805,12 @@ class ContractSearch(BasePage):
     # 网点名称查询
     def areaname_search(self, text):
         self.type(self.contract_areaname_search, text)
+
+    # 网点提现查询
+    def areawithdrawal_search(self):
+        self.click(self.contract_areawithdrawal_search)
+        self.sleep(2)
+        self.click(self.contract_areawithdrawal)
 
     # 查询按钮
     def search_button_click(self):

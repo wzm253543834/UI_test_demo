@@ -102,6 +102,13 @@ class AreadevicePageSearch(unittest.TestCase):
         newsearch.clear_button_click()
         newsearch.sleep(2)
 
+        # 网点提现查询
+        newsearch.areawithdrawal_search()
+        newsearch.search_button_click()
+        newsearch.sleep(2)
+        newsearch.clear_button_click()
+        newsearch.sleep(2)
+
         # 分公司名称查询
         newsearch.companyname_search()
         newsearch.search_button_click()
@@ -497,6 +504,13 @@ class AreadevicePageSearch(unittest.TestCase):
         newsearch.clear_button_click()
         newsearch.sleep(2)
 
+        # 网点提现查询
+        newsearch.areawithdrawal_search()
+        newsearch.search_button_click()
+        newsearch.sleep(2)
+        newsearch.clear_button_click()
+        newsearch.sleep(2)
+
         # 刷新页面
         newsearch.refresh()
 
@@ -598,6 +612,13 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
+        newsearch.clear_button_click()
+        newsearch.sleep(2)
+
+        # 网点提现查询
+        newsearch.areawithdrawal_search()
+        newsearch.search_button_click()
+        newsearch.sleep(2)
         newsearch.clear_button_click()
         newsearch.sleep(2)
 
@@ -705,6 +726,13 @@ class AreadevicePageSearch(unittest.TestCase):
         newsearch.clear_button_click()
         newsearch.sleep(2)
 
+        # 网点提现查询
+        newsearch.areawithdrawal_search()
+        newsearch.search_button_click()
+        newsearch.sleep(2)
+        newsearch.clear_button_click()
+        newsearch.sleep(2)
+
         # 刷新页面
         newsearch.refresh()
 
@@ -746,6 +774,13 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
+        newsearch.clear_button_click()
+        newsearch.sleep(2)
+
+        # 网点提现查询
+        newsearch.areawithdrawal_search()
+        newsearch.search_button_click()
+        newsearch.sleep(2)
         newsearch.clear_button_click()
         newsearch.sleep(2)
 
