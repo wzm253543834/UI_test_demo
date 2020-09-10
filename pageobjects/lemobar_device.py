@@ -185,3 +185,98 @@ class DeviceFactorySearch(BasePage):
     def find_result_contacts(self):
         a = self.get_search_result(self.result_contacts)
         return a
+
+
+class DeviceCustomerSearch(BasePage):
+
+    deviceCustomer_customerid_search = "xpath=>//*[@id='search_list']/div[1]/div/div/input"
+    deviceCustomer_customername_search = "xpath=>//*[@id='search_list']/div[2]/div/div/input"
+    deviceCustomer_contacts_search = "xpath=>//*[@id='search_list']/div[3]/div/div/input"
+    deviceCustomer_search_button = "xpath=>//*[@id='search_list']/div[4]/div/button[1]"
+    deviceCustomer_empty_button = "xpath=>//*[@id='search_list']/div[4]/div/button[2]"
+
+    """
+    客户数据各筛选项
+    """
+
+    # 客户ID查询
+    def customerid_search(self, text):
+        self.type(self.deviceCustomer_customerid_search, text)
+
+    # 客户名称查询
+    def customername_search(self, text):
+        self.type(self.deviceCustomer_customername_search, text)
+
+    # 联系方式查询
+    def contacts_search(self, text):
+        self.type(self.deviceCustomer_contacts_search, text)
+
+    # 查询按钮
+    def search_button_click(self):
+        self.click(self.deviceCustomer_search_button)
+
+    # 清空按钮
+    def empty_button_click(self):
+        self.click(self.deviceCustomer_empty_button)
+
+    # 测试结果断言
+    result_customerid = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[1]/div[3]/table/tbody/tr/td[2]/div"
+    result_customername = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[1]/div[3]/table/tbody/tr/td[3]/div"
+    result_contacts = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[1]/div[3]/table/tbody/tr/td[4]/div"
+
+    # 客户ID查询结果
+    def find_result_customerid(self):
+        a = self.get_search_result(self.result_customerid)
+        return a
+
+    # 客户名称查询结果
+    def find_result_customername(self):
+        a = self.get_search_result(self.result_customername)
+        return a
+
+    # 联系方式查询结果
+    def find_result_contacts(self):
+        a = self.get_search_result(self.result_contacts)
+        return a
+
+
+class DeviceTypeSearch(BasePage):
+
+    deviceType_typeid_search = "xpath=>//*[@id='search_list']/div[1]/div/div/input"
+    deviceType_typename_search = "xpath=>//*[@id='search_list']/div[2]/div/div/input"
+    deviceType_search_button = "xpath=>//*[@id='search_list']/div[3]/div/button[1]"
+    deviceType_empty_button = "xpath=>//*[@id='search_list']/div[3]/div/button[2]"
+
+    """
+    设备型号各筛选项
+    """
+
+    # 型号ID查询
+    def typeid_search(self, text):
+        self.type(self.deviceType_typeid_search, text)
+
+    # 型号名称查询
+    def typename_search(self, text):
+        self.type(self.deviceType_typename_search, text)
+
+    # 查询按钮
+    def search_button_click(self):
+        self.click(self.deviceType_search_button)
+
+    # 清空按钮
+    def empty_button_click(self):
+        self.click(self.deviceType_empty_button)
+
+    # 测试结果断言
+    result_typeid = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[1]/div[3]/table/tbody/tr/td[2]/div"
+    result_typename = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[1]/div[3]/table/tbody/tr/td[3]/div"
+
+    # 型号ID查询结果
+    def find_result_typeid(self):
+        a = self.get_search_result(self.result_typeid)
+        return a
+
+    # 型号名称查询结果
+    def find_result_typename(self):
+        a = self.get_search_result(self.result_typename)
+        return a
