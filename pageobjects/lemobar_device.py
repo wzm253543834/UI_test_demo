@@ -132,3 +132,56 @@ class DeviceBatchSearch(BasePage):
     def find_result_customername(self):
         a = self.get_search_result(self.result_customername)
         return a
+
+
+class DeviceFactorySearch(BasePage):
+
+    deviceFactory_factoryid_search = "xpath=>//*[@id='search_list']/div[1]/div/div/input"
+    deviceFactory_factoryname_search = "xpath=>//*[@id='search_list']/div[2]/div/div/input"
+    deviceFactory_phonenumber_search = "xpath=>//*[@id='search_list']/div[3]/div/div/input"
+    deviceFactory_search_button = "xpath=>//*[@id='search_list']/div[4]/div/button[1]"
+    deviceFactory_empty_button = "xpath=>//*[@id='search_list']/div[4]/div/button[2]"
+
+    """
+    设备工厂各筛选项
+    """
+
+    # 工厂ID查询
+    def factoryid_search(self, text):
+        self.type(self.deviceFactory_factoryid_search, text)
+
+    # 工厂名称查询
+    def factoryname_search(self, text):
+        self.type(self.deviceFactory_factoryname_search, text)
+
+    # 联系方式查询
+    def phonenumber_search(self, text):
+        self.type(self.deviceFactory_phonenumber_search, text)
+
+    # 查询按钮
+    def search_button_click(self):
+        self.click(self.deviceFactory_search_button)
+
+    # 清空按钮
+    def empty_button_click(self):
+        self.click(self.deviceFactory_empty_button)
+
+    # 测试结果断言
+    result_factoryid = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[1]/div[3]/table/tbody/tr/td[2]/div"
+    result_factoryname = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[1]/div[3]/table/tbody/tr/td[3]/div"
+    result_phonenumber = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[1]/div[3]/table/tbody/tr/td[4]/div"
+
+    # 工厂ID查询结果
+    def find_result_factoryid(self):
+        a = self.get_search_result(self.result_factoryid)
+        return a
+
+    # 工厂名称查询结果
+    def find_result_factoryname(self):
+        a = self.get_search_result(self.result_factoryname)
+        return a
+
+    # 联系方式查询结果
+    def find_result_phonenumber(self):
+        a = self.get_search_result(self.result_phonenumber)
+        return a
