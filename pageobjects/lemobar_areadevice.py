@@ -117,7 +117,7 @@ class AreaSearch(BasePage):
     area_placename_search = "xpath=>//*[@id='search_list']/div[11]/div/div/input"
     area_iswarehouse_search = "xpath=>//*[@id='search_list']/div[12]/div/div/div/input"
     area_search_button = "xpath=>//*[@id='search_list']/div[7]/div/button"
-    area_clear_button = "xpath=>//*[@id='search_list']/div[13]/div/button"
+    area_empty_button = "xpath=>//*[@id='search_list']/div[13]/div/button"
     area_areawithdrawal = "xpath=>/html/body/div[2]/div[1]/div[1]/ul/li[1]"
     area_companyname = "xpath=>/html/body/div[3]/div[1]/div[1]/ul/li[1]"
     area_areaenablestatus = "xpath=>/html/body/div[4]/div[1]/div[1]/ul/li[1]"
@@ -193,8 +193,8 @@ class AreaSearch(BasePage):
         self.click(self.area_search_button)
 
     # 清空按钮
-    def clear_button_click(self):
-        self.click(self.area_clear_button)
+    def empty_button_click(self):
+        self.click(self.area_empty_button)
 
     # 测试结果断言
     result_areaid = "xpath=>//*[@id='area_fixed']/div[2]/div/div[3]/table/tbody/tr/td[3]/div"
@@ -266,7 +266,7 @@ class PriceSearch(BasePage):
     price_diastolemeridianstime_search = "xpath=>//*[@id='search_list']/div[9]/div/div/input"
     price_pricename_search = "xpath=>//*[@id='search_list']/div[10]/div/div/input"
     price_search_button = "xpath=>//*[@id='search_list']/div[6]/div/button"
-    price_clear_button = "xpath=>//*[@id='search_list']/div[11]/div/button"
+    price_empty_button = "xpath=>//*[@id='search_list']/div[11]/div/button"
     price_isenable = "xpath=>/html/body/div[2]/div[1]/div[1]/ul/li[1]"
 
     """
@@ -316,8 +316,8 @@ class PriceSearch(BasePage):
         self.click(self.price_search_button)
 
     # 清空按钮
-    def clear_button_click(self):
-        self.click(self.price_clear_button)
+    def empty_button_click(self):
+        self.click(self.price_empty_button)
 
     # 测试结果断言
     result_wakeupbodyprice = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[1]/div[3]/table/tbody/tr/td[4]/div"
@@ -393,7 +393,7 @@ class DevicelistSearch(BasePage):
     devicelist_isscrap_search = "xpath=>//*[@id='search_list']/div[15]/div/div/div/input"
     devicelist_areawithdrawal_search = "xpath=>//*[@id='search_list']/div[16]/div/div/div/input"
     devicelist_search_button = "xpath=>//*[@id='search_list']/div[6]/div/button"
-    devicelist_clear_button = "xpath=>//*[@id='search_list']/div[12]/div/button"
+    devicelist_empty_button = "xpath=>//*[@id='search_list']/div[12]/div/button"
     devicelist_devicemodel = "xpath=>/html/body/div[2]/div[1]/div[1]/ul/li[1]"
     devicelist_devicestatus = "xpath=>/html/body/div[3]/div[1]/div[1]/ul/li[1]"
     devicelist_delivertime = "xpath=>/html/body/div[4]/div[1]/div/div[1]/table/tbody/tr[5]/td[3]"
@@ -481,8 +481,8 @@ class DevicelistSearch(BasePage):
         self.click(self.devicelist_search_button)
 
     # 清空按钮
-    def clear_button_click(self):
-        self.click(self.devicelist_clear_button)
+    def empty_button_click(self):
+        self.click(self.devicelist_empty_button)
 
     # 测试结果断言
     result_deviceid = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[2]/div/div[3]/table/tbody/tr/td[2]/div/a"
@@ -571,7 +571,7 @@ class DeviceInfoSearch(BasePage):
     deviceInfo_simcardnumber_search = "xpath=>//*[@id='search_list']/div[8]/div/div/input"
     deviceInfo_areawithdrawal_search = "xpath=>//*[@id='search_list']/div[9]/div/div/input"
     deviceInfo_search_button = "xpath=>//*[@id='search_list']/div[5]/div/button"
-    deviceInfo_clear_button = "xpath=>//*[@id='search_list']/div[10]/div/button"
+    deviceInfo_empty_button = "xpath=>//*[@id='search_list']/div[10]/div/button"
     deviceInfo_devicemodel = "xpath=>/html/body/div[2]/div[1]/div[1]/ul/li[1]"
     deviceInfo_devicestatus = "xpath=>/html/body/div[3]/div[1]/div[1]/ul/li[1]"
     deviceInfo_isenable = "xpath=>/html/body/div[4]/div[1]/div[1]/ul/li[1]"
@@ -626,8 +626,8 @@ class DeviceInfoSearch(BasePage):
         self.click(self.deviceInfo_search_button)
 
     # 清空按钮
-    def clear_button_click(self):
-        self.click(self.deviceInfo_clear_button)
+    def empty_button_click(self):
+        self.click(self.deviceInfo_empty_button)
 
     # 测试结果断言
     result_deviceid = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[2]/div/div[3]/table/tbody/tr/td[2]/div/a"
@@ -685,7 +685,7 @@ class EpdevicelistSearch(BasePage):
     epdevicelist_delivertime_search = "xpath=>//*[@id='search_list']/div[8]/div/div/input[1]"
     epdevicelist_areawithdrawal_search = "xpath=>//*[@id='search_list']/div[9]/div/div/input"
     epdevicelist_search_button = "xpath=>//*[@id='search_list']/div[6]/div/button"
-    epdevicelist_clear_button = "xpath=>//*[@id='search_list']/div[10]/div/button"
+    epdevicelist_empty_button = "xpath=>//*[@id='search_list']/div[10]/div/button"
     epdevicelist_devicemodel = "xpath=>/html/body/div[2]/div[1]/div[1]/ul/li[1]"
     epdevicelist_delivertime = "xpath=>/html/body/div[3]/div[1]/div/div[1]/table/tbody/tr[5]/td[3]"
     epdevicelist_areawithdrawal = "xpath=>/html/body/div[4]/div[1]/div[1]/ul/li[1]"
@@ -737,8 +737,8 @@ class EpdevicelistSearch(BasePage):
         self.click(self.epdevicelist_search_button)
 
     # 清空按钮
-    def clear_button_click(self):
-        self.click(self.epdevicelist_clear_button)
+    def empty_button_click(self):
+        self.click(self.epdevicelist_empty_button)
 
     # 测试结果断言
     result_deviceid = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[2]/div/div[3]/table/tbody/tr/td[2]/div"
@@ -791,7 +791,7 @@ class ContractSearch(BasePage):
     contract_areaname_search = "xpath=>//*[@id='search_list']/div[2]/div/div/input"
     contract_areawithdrawal_search = "xpath=>//*[@id='search_list']/div[3]/div/div/input"
     contract_search_button = "xpath=>//*[@id='search_list']/div[4]/div/button[1]"
-    contract_clear_button = "xpath=>//*[@id='search_list']/div[4]/div/button[2]"
+    contract_empty_button = "xpath=>//*[@id='search_list']/div[4]/div/button[2]"
     contract_areawithdrawal = "xpath=>/html/body/div[2]/div[1]/div[1]/ul/li[1]"
 
     """
@@ -817,8 +817,8 @@ class ContractSearch(BasePage):
         self.click(self.contract_search_button)
 
     # 清空按钮
-    def clear_button_click(self):
-        self.click(self.contract_clear_button)
+    def empty_button_click(self):
+        self.click(self.contract_empty_button)
 
     # 测试结果断言
     result_partnername = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[2]/div/div[3]/table/tbody/tr/td[5]/div"
@@ -841,7 +841,7 @@ class PlaceSearch(BasePage):
     place_placename_search = "xpath=>//*[@id='search_list']/div[2]/div/div/input"
     place_partnername_search = "xpath=>//*[@id='search_list']/div[3]/div/div/input"
     place_search_button = "xpath=>//*[@id='search_list']/div[4]/div/button[1]"
-    place_clear_button = "xpath=>//*[@id='search_list']/div[4]/div/button[2]"
+    place_empty_button = "xpath=>//*[@id='search_list']/div[4]/div/button[2]"
 
     """
     场地管理各筛选项
@@ -864,8 +864,8 @@ class PlaceSearch(BasePage):
         self.click(self.place_search_button)
 
     # 清空按钮
-    def clear_button_click(self):
-        self.click(self.place_clear_button)
+    def empty_button_click(self):
+        self.click(self.place_empty_button)
 
     # 测试结果断言
     result_placeid = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[1]/div[3]/table/tbody/tr/td[2]/div"
@@ -892,7 +892,7 @@ class CompanySearch(BasePage):
 
     company_companyname_search = "xpath=>//*[@id='search_list']/div[1]/div/div/input"
     company_search_button = "xpath=>//*[@id='search_list']/div[2]/div/button[1]"
-    company_clear_button = "xpath=>//*[@id='search_list']/div[2]/div/button[2]"
+    company_empty_button = "xpath=>//*[@id='search_list']/div[2]/div/button[2]"
 
     """
     分公司管理各筛选项
@@ -907,8 +907,8 @@ class CompanySearch(BasePage):
         self.click(self.company_search_button)
 
     # 清空按钮
-    def clear_button_click(self):
-        self.click(self.company_clear_button)
+    def empty_button_click(self):
+        self.click(self.company_empty_button)
 
     # 测试结果断言
     result_companyname = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[1]/div[3]/table/tbody/tr/td[2]/div"

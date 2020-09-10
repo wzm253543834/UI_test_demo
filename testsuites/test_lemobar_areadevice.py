@@ -87,7 +87,7 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 网点名称查询
@@ -99,14 +99,14 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 网点提现查询
         newsearch.areawithdrawal_search()
         newsearch.search_button_click()
         newsearch.sleep(2)
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 分公司名称查询
@@ -118,7 +118,7 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 网点启用状态查询
@@ -130,7 +130,7 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 周边网点状态查询
@@ -142,7 +142,7 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 合伙人查询
@@ -154,7 +154,7 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 设备型号查询
@@ -166,7 +166,7 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 合作类型查询
@@ -178,7 +178,7 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 场地名称查询
@@ -190,14 +190,14 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 是否仓库查询
         newsearch.iswarehouse_search()
         newsearch.search_button_click()
         newsearch.sleep(2)
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 刷新页面
@@ -229,7 +229,7 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 通行气血价格查询
@@ -241,7 +241,7 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 舒张筋骨价格查询
@@ -253,7 +253,7 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 价格ID查询
@@ -265,7 +265,7 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 是否启用查询
@@ -277,7 +277,7 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 唤醒身体时长查询
@@ -289,7 +289,7 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 通行气血时长查询
@@ -301,7 +301,7 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 舒张筋骨时长查询
@@ -313,7 +313,7 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 价格名称查询
@@ -325,7 +325,7 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 刷新页面
@@ -357,7 +357,7 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 设备名称查询
@@ -369,7 +369,7 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 设备型号查询
@@ -381,7 +381,7 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 网点ID查询
@@ -393,7 +393,7 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 网点名称查询
@@ -405,7 +405,7 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 合伙人查询
@@ -417,7 +417,7 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 设备状态查询
@@ -429,7 +429,7 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 发货时间查询
@@ -441,7 +441,7 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 设备启用状态查询
@@ -453,7 +453,7 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 移机时间（大于）查询
@@ -470,14 +470,14 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 是否在仓查询
         newsearch.isinwarehouse_search()
         newsearch.search_button_click()
         newsearch.sleep(2)
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 标签查询
@@ -489,7 +489,7 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 是否报废查询
@@ -501,14 +501,14 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 网点提现查询
         newsearch.areawithdrawal_search()
         newsearch.search_button_click()
         newsearch.sleep(2)
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 刷新页面
@@ -540,7 +540,7 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 设备型号查询
@@ -552,7 +552,7 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 网点ID查询
@@ -564,7 +564,7 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 网点名称查询
@@ -576,7 +576,7 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 设备状态查询
@@ -588,7 +588,7 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 是否启用查询
@@ -600,7 +600,7 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # SIM卡号查询
@@ -612,14 +612,14 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 网点提现查询
         newsearch.areawithdrawal_search()
         newsearch.search_button_click()
         newsearch.sleep(2)
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 刷新页面
@@ -651,7 +651,7 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 设备名称查询
@@ -663,7 +663,7 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 设备型号查询
@@ -675,7 +675,7 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 网点ID查询
@@ -687,7 +687,7 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 网点名称查询
@@ -699,7 +699,7 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 合伙人查询
@@ -711,7 +711,7 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 发货时间查询
@@ -723,14 +723,14 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 网点提现查询
         newsearch.areawithdrawal_search()
         newsearch.search_button_click()
         newsearch.sleep(2)
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 刷新页面
@@ -762,7 +762,7 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 网点名称查询
@@ -774,14 +774,14 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 网点提现查询
         newsearch.areawithdrawal_search()
         newsearch.search_button_click()
         newsearch.sleep(2)
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 刷新页面
@@ -813,7 +813,7 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 场地名称查询
@@ -825,7 +825,7 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 合伙人查询
@@ -837,7 +837,7 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 刷新页面
@@ -869,7 +869,7 @@ class AreadevicePageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.clear_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 刷新页面

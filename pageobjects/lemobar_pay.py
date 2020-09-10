@@ -43,7 +43,7 @@ class BasepaymentSearch(BasePage):
     basepayment_typename_search = "xpath=>//*[@id='search_list']/div[2]/div/div/input"
     basepayment_isenable_search = "xpath=>//*[@id='search_list']/div[3]/div/div/div/input"
     basepayment_search_button = "xpath=>//*[@id='search_list']/div[4]/div/button[1]"
-    basepayment_clear_button = "xpath=>//*[@id='search_list']/div[4]/div/button[2]"
+    basepayment_empty_button = "xpath=>//*[@id='search_list']/div[4]/div/button[2]"
     basepayment_isenable = "xpath=>/html/body/div[2]/div[1]/div[1]/ul/li[1]"
 
     """
@@ -69,8 +69,8 @@ class BasepaymentSearch(BasePage):
         self.click(self.basepayment_search_button)
 
     # 清空按钮
-    def click_button_click(self):
-        self.click(self.basepayment_clear_button)
+    def empty_button_click(self):
+        self.click(self.basepayment_empty_button)
 
     # 测试结果断言
     result_id = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[1]/div[3]/table/tbody/tr/td[2]/div"
@@ -99,7 +99,7 @@ class PaymentSearch(BasePage):
     payment_paymentname_search = "xpath=>//*[@id='search_list']/div[2]/div/div/input"
     payment_isenable_search = "xpath=>//*[@id='search_list']/div[3]/div/div/div[1]/input"
     payment_search_button = "xpath=>//*[@id='search_list']/div[4]/div/button[1]"
-    payment_click_button = "xpath=>//*[@id='search_list']/div[4]/div/button[2]"
+    payment_empty_button = "xpath=>//*[@id='search_list']/div[4]/div/button[2]"
     payment_isenable = "xpath=>/html/body/div[2]/div[1]/div[1]/ul/li[1]"
 
     """
@@ -125,8 +125,8 @@ class PaymentSearch(BasePage):
         self.click(self.payment_search_button)
 
     # 清空按钮
-    def click_button_click(self):
-        self.click(self.payment_click_button)
+    def empty_button_click(self):
+        self.click(self.payment_empty_button)
 
     # 测试结果断言
     result_paymentid = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[1]/div[3]/table/tbody/tr/td[2]/div"

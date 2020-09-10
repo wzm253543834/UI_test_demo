@@ -65,7 +65,7 @@ class AdvertSearch(BasePage):
     advert_adverttitle_search = "xpath=>//*[@id='search_list']/div[2]/div/div/input"
     advert_isenable_search = "xpath=>//*[@id='search_list']/div[3]/div/div/div[1]/input"
     advert_search_button = "xpath=>//*[@id='search_list']/div[4]/div/button[1]"
-    advert_click_button = "xpath=>//*[@id='search_list']/div[4]/div/button[2]"
+    advert_empty_button = "xpath=>//*[@id='search_list']/div[4]/div/button[2]"
     advert_isenable = "xpath=>/html/body/div[2]/div[1]/div[1]/ul/li[1]"
 
     """
@@ -91,8 +91,8 @@ class AdvertSearch(BasePage):
         self.click(self.advert_search_button)
 
     # 清空按钮
-    def click_button_click(self):
-        self.click(self.advert_click_button)
+    def empty_button_click(self):
+        self.click(self.advert_empty_button)
 
     # 测试结果断言
     result_advertid = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[1]/div[3]/table/tbody/tr/td[2]/div"
@@ -125,7 +125,7 @@ class AdvertScheduleSearch(BasePage):
     advertSchedule_effecttype_search = "xpath=>//*[@id='search_list']/div[7]/div/div/div[1]/input"
     advertSchedule_effectchannel_search = "xpath=>//*[@id='search_list']/div[8]/div/div/div/input"
     advertSchedule_search_button = "xpath=>//*[@id='search_list']/div[6]/div/button"
-    advertSchedule_click_button = "xpath=>//*[@id='search_list']/div[9]/div/button"
+    advertSchedule_empty_button = "xpath=>//*[@id='search_list']/div[9]/div/button"
     advertSchedule_begintime = "xpath=>/html/body/div[3]/div[1]/div/div[2]/table[1]/tbody/tr[3]/td[3]/div"
     advertSchedule_endtime = "xpath=>/html/body/div[3]/div[1]/div/div[2]/table[1]/tbody/tr[3]/td[2]/div"
     advertSchedule_isenable = "xpath=>/html/body/div[4]/div[1]/div[1]/ul/li[1]"
@@ -179,8 +179,8 @@ class AdvertScheduleSearch(BasePage):
         self.click(self.advertSchedule_search_button)
 
     # 清空按钮
-    def click_button_click(self):
-        self.click(self.advertSchedule_click_button)
+    def empty_button_click(self):
+        self.click(self.advertSchedule_empty_button)
 
     # 测试结果断言
     result_begintime = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[2]/div/div[3]/table/tbody/tr/td[6]/div"
@@ -222,7 +222,7 @@ class BrandMapSearch(BasePage):
     brandMap_isenable_search = "xpath=>//*[@id='search_list']/div[3]/div/div/div[1]/input"
     brandMap_effectchannel_search = "xpath=>//*[@id='search_list']/div[4]/div/div/div[1]/input"
     brandMap_search_button = "xpath=>//*[@id='search_list']/div[5]/div/button[1]"
-    brandMap_click_button = "xpath=>//*[@id='search_list']/div[5]/div/button[2]"
+    brandMap_empty_button = "xpath=>//*[@id='search_list']/div[5]/div/button[2]"
     brandMap_isenable = "xpath=>/html/body/div[4]/div[1]/div[1]/ul/li[1]"
     brandMap_effectchannel = "xpath=>/html/body/div[5]/div[1]/div[1]/ul/li[1]"
 
@@ -255,8 +255,8 @@ class BrandMapSearch(BasePage):
         self.click(self.brandMap_search_button)
 
     # 清空按钮
-    def click_button_click(self):
-        self.click(self.brandMap_click_button)
+    def empty_button_click(self):
+        self.click(self.brandMap_empty_button)
 
     # 测试结果断言
     result_brandMapid = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[1]/div[3]/table/tbody/tr/td[2]/div"
@@ -293,7 +293,7 @@ class CountDownSearch(BasePage):
     countDown_effectchannel_search = "xpath=>//*[@id='search_list']/div[4]/div/div/div[1]/input"
     countDown_popuptype_search = "xpath=>//*[@id='search_list']/div[5]/div/div/div[1]/input"
     countDown_search_button = "xpath=>//*[@id='search_list']/div[6]/div/button[1]"
-    countDown_click_button = "xpath=>//*[@id='search_list']/div[6]/div/button[2]"
+    countDown_empty_button = "xpath=>//*[@id='search_list']/div[6]/div/button[2]"
     countDown_effectivestatus = "xpath=>/html/body/div[4]/div[1]/div[1]/ul/li[1]"
     countDown_effectchannel = "xpath=>/html/body/div[5]/div[1]/div[1]/ul/li[1]"
     countDown_popuptype = "xpath=>/html/body/div[6]/div[1]/div[1]/ul/li[1]"
@@ -333,8 +333,8 @@ class CountDownSearch(BasePage):
         self.click(self.countDown_search_button)
 
     # 清空按钮
-    def click_button_click(self):
-        self.click(self.countDown_click_button)
+    def empty_button_click(self):
+        self.click(self.countDown_empty_button)
 
     # 测试结果断言
     result_popupid = "xpath=>//*[@id='countDown']/div[1]/div[3]/table/tbody/tr/td[2]/div"

@@ -10,7 +10,7 @@ class HomePage(BasePage):
     index_enter = "xpath=>//*[@id='app']/section/div[2]/div/form/div[7]/div/div/button"
 
     # 清空验证码窗口
-    def clear_code(self):
+    def empty_code(self):
         self.clear(self.index_code)
 
     # 输入账号
@@ -29,7 +29,7 @@ class HomePage(BasePage):
     def login(self):
         self.input_username('wangzm')
         self.input_password('a645765783')
-        self.clear_code()
+        self.empty_code()
         self.sleep(15)
         self.click_login_button()
         self.sleep(5)

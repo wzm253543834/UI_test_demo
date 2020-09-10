@@ -72,7 +72,7 @@ class PayPageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.click_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 类型名称查询
@@ -84,7 +84,7 @@ class PayPageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.click_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 是否启用查询
@@ -96,7 +96,7 @@ class PayPageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.click_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
     def test_c_payment_search(self):
@@ -125,7 +125,7 @@ class PayPageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.click_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 支付组名称查询
@@ -137,7 +137,7 @@ class PayPageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.click_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 是否启用查询
@@ -149,7 +149,7 @@ class PayPageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.click_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
 

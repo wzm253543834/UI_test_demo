@@ -74,7 +74,7 @@ class AdvertPageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.click_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 广告标题查询
@@ -86,7 +86,7 @@ class AdvertPageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.click_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 是否启用查询
@@ -98,7 +98,7 @@ class AdvertPageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.click_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
     def test_c_advertschedule_search(self):
@@ -127,7 +127,7 @@ class AdvertPageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.click_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 结束日期查询
@@ -139,21 +139,21 @@ class AdvertPageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.click_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 网点ID查询
         newsearch.areaid_search('22515')
         newsearch.search_button_click()
         newsearch.sleep(2)
-        newsearch.click_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 网点名称查询
         newsearch.areaname_search('福州')
         newsearch.search_button_click()
         newsearch.sleep(2)
-        newsearch.click_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 是否可用查询
@@ -165,7 +165,7 @@ class AdvertPageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.click_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 作用类型查询
@@ -177,7 +177,7 @@ class AdvertPageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.click_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 作用渠道查询
@@ -189,7 +189,7 @@ class AdvertPageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.click_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
     def test_d_brandmap_search(self):
@@ -218,7 +218,7 @@ class AdvertPageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.click_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 背景图标题查询
@@ -230,7 +230,7 @@ class AdvertPageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.click_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 是否启用查询
@@ -242,7 +242,7 @@ class AdvertPageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.click_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 作用渠道查询
@@ -254,7 +254,7 @@ class AdvertPageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.click_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
     def test_e_countdown_search(self):
@@ -283,7 +283,7 @@ class AdvertPageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.click_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 弹窗名称查询
@@ -295,7 +295,7 @@ class AdvertPageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.click_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 生效状态查询
@@ -307,7 +307,7 @@ class AdvertPageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.click_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 作用渠道查询
@@ -319,7 +319,7 @@ class AdvertPageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.click_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
         # 弹窗类型查询
@@ -331,7 +331,7 @@ class AdvertPageSearch(unittest.TestCase):
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))
-        newsearch.click_button_click()
+        newsearch.empty_button_click()
         newsearch.sleep(2)
 
 
