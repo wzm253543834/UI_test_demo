@@ -51,11 +51,11 @@ class DevicePage(BasePage):
 
     # 点击设备型号
     def search_click_divice_devicetype(self):
-        self.click(self.menu_device_deviceType )
+        self.click(self.menu_device_deviceType)
 
     # 获取设备型号tab名
     def find_tab_devicetype(self):
-        a = self.get_tab_title(self.tab_deviceType )
+        a = self.get_tab_title(self.tab_deviceType)
         return a
 
 
