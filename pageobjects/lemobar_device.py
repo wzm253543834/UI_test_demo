@@ -113,22 +113,22 @@ class DeviceBatchSearch(BasePage):
         a = self.get_search_result(self.result_batchname)
         return a
 
-    # 批次名称查询结果
+    # 批次ID查询结果
     def find_result_batchid(self):
         a = self.get_search_result(self.result_batchid)
         return a
 
-    # 批次名称查询结果
+    # 工厂名称查询结果
     def find_result_factoryname(self):
         a = self.get_search_result(self.result_factoryname)
         return a
 
-    # 批次名称查询结果
+    # 设备类型名称查询结果
     def find_result_devicetypename(self):
         a = self.get_search_result(self.result_devicetypename)
         return a
 
-    # 批次名称查询结果
+    # 客户名称查询结果
     def find_result_customername(self):
         a = self.get_search_result(self.result_customername)
         return a
