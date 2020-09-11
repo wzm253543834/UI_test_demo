@@ -497,3 +497,62 @@ class RetentionSearch(BasePage):
     def find_result_enablestatus(self):
         a = self.get_search_result_icon(self.result_enablestatus)
         return a
+
+
+class CardActivitySearch(BasePage):
+
+    cardActivity_title_search = "xpath=>//*[@id='search_list']/div[1]/div/div/input"
+    cardActivity_arearestrictiontype_search = "xpath=>//*[@id='search_list']/div[2]/div/div/div/input"
+    cardActivity_enablestatus_search = "xpath=>//*[@id='search_list']/div[3]/div/div/div/input"
+    cardActivity_search_button = "xpath=>//*[@id='search_list']/div[4]/div/button[1]"
+    cardActivity_empty_button = "xpath=>//*[@id='search_list']/div[4]/div/button[2]"
+    cardActivity_arearestrictiontype = "xpath=>/html/body/div[2]/div[1]/div[1]/ul/li[1]"
+    cardActivity_enablestatus = "xpath=>/html/body/div[3]/div[1]/div[1]/ul/li[1]"
+
+    """
+    卡券活动各筛选项
+    """
+
+    # 标题查询
+    def title_search(self, text):
+        self.type(self.cardActivity_title_search, text)
+
+    # 区域限制类型查询
+    def arearestrictiontype_search(self):
+        self.click(self.cardActivity_arearestrictiontype_search)
+        self.sleep(2)
+        self.click(self.cardActivity_arearestrictiontype)
+
+    # 启用状态查询
+    def enablestatus_search(self):
+        self.click(self.cardActivity_enablestatus_search)
+        self.sleep(2)
+        self.click(self.cardActivity_enablestatus)
+
+    # 查询按钮
+    def search_button_click(self):
+        self.click(self.cardActivity_search_button)
+
+    # 清空按钮
+    def empty_button_click(self):
+        self.click(self.cardActivity_empty_button)
+
+    # 测试结果断言
+    result_title = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[1]/div[3]/table/tbody/tr/td[2]/div"
+    result_arearestrictiontype = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[1]/div[3]/table/tbody/tr/td[4]/div"
+    result_enablestatus = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[1]/div[3]/table/tbody/tr/td[9]/div/i"
+
+    # 断言标题查询结果
+    def find_result_title(self):
+        a = self.get_search_result(self.result_title)
+        return a
+
+    # 断言区域限制类型查询结果
+    def find_result_arearestrictiontype(self):
+        a = self.get_search_result(self.result_arearestrictiontype)
+        return a
+
+    # 断言启用状态查询结果
+    def find_result_enablestatus(self):
+        a = self.get_search_result_icon(self.result_enablestatus)
+        return a
