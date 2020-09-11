@@ -125,6 +125,9 @@ class DevicePageSearch(unittest.TestCase):
         newsearch.empty_button_click()
         newsearch.sleep(2)
 
+        # 刷新页面
+        homepage.refresh()
+
     def test_c_devicefactory_search(self):
         """
         设备工厂查询
@@ -179,6 +182,9 @@ class DevicePageSearch(unittest.TestCase):
             print('Test Fail', format(e))
         newsearch.empty_button_click()
         newsearch.sleep(2)
+
+        # 刷新页面
+        homepage.refresh()
 
     def test_d_devicecustomer_search(self):
         """
@@ -235,6 +241,9 @@ class DevicePageSearch(unittest.TestCase):
         newsearch.empty_button_click()
         newsearch.sleep(2)
 
+        # 刷新页面
+        homepage.refresh()
+
     def test_f_devicetype_search(self):
         """
         设备型号查询
@@ -277,3 +286,10 @@ class DevicePageSearch(unittest.TestCase):
             print('Test Fail', format(e))
         newsearch.empty_button_click()
         newsearch.sleep(2)
+
+        # 刷新页面
+        homepage.refresh()
+
+
+if __name__ == '__main__':
+    unittest.main()

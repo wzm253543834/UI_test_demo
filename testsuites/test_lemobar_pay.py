@@ -99,6 +99,9 @@ class PayPageSearch(unittest.TestCase):
         newsearch.empty_button_click()
         newsearch.sleep(2)
 
+        # 刷新页面
+        homepage.refresh()
+
     def test_c_payment_search(self):
         """
         支付组管理查询
@@ -151,6 +154,9 @@ class PayPageSearch(unittest.TestCase):
             print('Test Fail', format(e))
         newsearch.empty_button_click()
         newsearch.sleep(2)
+
+        # 刷新页面
+        homepage.refresh()
 
 
 if __name__ == '__main__':

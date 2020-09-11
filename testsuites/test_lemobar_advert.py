@@ -101,6 +101,9 @@ class AdvertPageSearch(unittest.TestCase):
         newsearch.empty_button_click()
         newsearch.sleep(2)
 
+        # 刷新页面
+        homepage.refresh()
+
     def test_c_advertschedule_search(self):
         """
         广告排期查询
@@ -192,6 +195,9 @@ class AdvertPageSearch(unittest.TestCase):
         newsearch.empty_button_click()
         newsearch.sleep(2)
 
+        # 刷新页面
+        homepage.refresh()
+
     def test_d_brandmap_search(self):
         """
         支付页背景图查询
@@ -256,6 +262,9 @@ class AdvertPageSearch(unittest.TestCase):
             print('Test Fail', format(e))
         newsearch.empty_button_click()
         newsearch.sleep(2)
+
+        # 刷新页面
+        homepage.refresh()
 
     def test_e_countdown_search(self):
         """
@@ -333,6 +342,9 @@ class AdvertPageSearch(unittest.TestCase):
             print('Test Fail', format(e))
         newsearch.empty_button_click()
         newsearch.sleep(2)
+
+        # 刷新页面
+        homepage.refresh()
 
 
 if __name__ == '__main__':
