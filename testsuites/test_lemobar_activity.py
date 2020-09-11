@@ -9,6 +9,7 @@ from pageobjects.lemobar_activity import DiscountSearch
 from pageobjects.lemobar_activity import FreeDiscountSearch
 from pageobjects.lemobar_activity import DirectRedEnvelopesSearch
 from pageobjects.lemobar_activity import RetentionSearch
+from pageobjects.lemobar_activity import CardActivitySearch
 
 
 class ActivityPageSearch(unittest.TestCase):
