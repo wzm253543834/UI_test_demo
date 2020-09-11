@@ -41,7 +41,7 @@ class DevicePage(BasePage):
         return a
 
     # 点击客户数据
-    def search_click_divice_devicecstomer(self):
+    def search_click_divice_devicecustomer(self):
         self.click(self.menu_device_deviceCustomer)
 
     # 获取客户数据tab名
