@@ -452,3 +452,48 @@ class DirectRedEnvelopesSearch(BasePage):
     def find_result_activityenablestatus(self):
         a = self.get_search_result_icon(self.result_activityenablestatus)
         return a
+
+
+class RetentionSearch(BasePage):
+
+    retention_title_search = "xpath=>//*[@id='search_list']/div[1]/div/div/input"
+    retention_enablestatus_search = "xpath=>//*[@id='search_list']/div[2]/div/div/div/input"
+    retention_search_button = "xpath=>//*[@id='search_list']/div[3]/div/button[1]"
+    retention_empty_button = "xpath=>//*[@id='search_list']/div[3]/div/button[2]"
+    retention_enablestatus = "xpath=>/html/body/div[2]/div[1]/div[1]/ul/li[1]"
+
+    """
+    挽留机制各筛选项
+    """
+
+    # 标题查询
+    def title_search(self, text):
+        self.type(self.retention_title_search, text)
+
+    # 启用状态查询
+    def enablestatus_search(self):
+        self.click(self.retention_enablestatus_search)
+        self.sleep(2)
+        self.click(self.retention_enablestatus)
+
+    # 查询按钮
+    def search_button_click(self):
+        self.click(self.retention_search_button)
+
+    # 清空按钮
+    def empty_button_click(self):
+        self.click(self.retention_empty_button)
+
+    # 测试结果断言
+    result_title = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[1]/div[3]/table/tbody/tr/td[2]/div"
+    result_enablestatus = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[1]/div[3]/table/tbody/tr/td[6]/div/i"
+
+    # 断言标题查询结果
+    def find_result_title(self):
+        a = self.get_search_result(self.result_title)
+        return a
+
+    # 断言启用状态查询结果
+    def find_result_enablestatus(self):
+        a = self.get_search_result_icon(self.result_enablestatus)
+        return a

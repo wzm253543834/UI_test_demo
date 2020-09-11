@@ -3,6 +3,12 @@ import unittest
 from framework.browser_engine import BrowserEngine
 from pageobjects.lemobar_login import HomePage
 from pageobjects.lemobar_activity import ActivityPage
+from pageobjects.lemobar_activity import VoucherSearch
+from pageobjects.lemobar_activity import CouponSearch
+from pageobjects.lemobar_activity import DiscountSearch
+from pageobjects.lemobar_activity import FreeDiscountSearch
+from pageobjects.lemobar_activity import DirectRedEnvelopesSearch
+from pageobjects.lemobar_activity import RetentionSearch
 
 
 class ActivityPageSearch(unittest.TestCase):
