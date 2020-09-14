@@ -203,9 +203,9 @@ class SpendBillManageSearch(BasePage):
     spendBillManage_invoicenumber_search = "xpath=>//*[@id='search_list']/div[1]/div[8]/div/div/input"
     spendBillManage_search_button = "xpath=>//*[@id='search_list']/div[2]/div[1]/div/button"
     spendBillManage_empty_button = "xpath=>//*[@id='search_list']/div[2]/div[2]/div/button"
-    spendBillManage_costtype = "xpath=>"
-    spendBillManage_billregistrationstatus = "xpath=>"
-    spendBillManage_applicationtime = "xpath=>"
+    spendBillManage_costtype = "xpath=>/html/body/div[3]/div[1]/div[1]/ul/li[1]"
+    spendBillManage_billregistrationstatus = "xpath=>/html/body/div[4]/div[1]/div[1]/ul/li[1]"
+    spendBillManage_applicationtime = "xpath=>/html/body/div[2]/div[1]/div/div[1]/table/tbody/tr[2]/td[3]/div"
 
     """
     费用票据管理各筛选项
@@ -257,3 +257,43 @@ class SpendBillManageSearch(BasePage):
     # 清空按钮
     def empty_button_click(self):
         self.click(self.spendBillManage_empty_button)
+
+    # 测试结果断言
+    result_taskid = "xpath=>//*[@id='spendBillManage']/section/div[1]/div[3]/table/tbody/tr/td[2]/div"
+    result_areaid = "xpath=>//*[@id='spendBillManage']/section/div[1]/div[3]/table/tbody/tr/td[3]/div"
+    result_areaname = "xpath=>//*[@id='spendBillManage']/section/div[1]/div[3]/table/tbody/tr/td[4]/div"
+    result_payee = "xpath=>//*[@id='spendBillManage']/section/div[1]/div[3]/table/tbody/tr/td[5]/div"
+    # result_costtype = "xpath=>"
+    result_billregistrationstatus = "xpath=>//*[@id='spendBillManage']/section/div[1]/div[3]/table/tbody/tr/td[8]/div"
+    result_applicationtime = "xpath=>//*[@id='spendBillManage']/section/div[1]/div[3]/table/tbody/tr/td[9]/div"
+    # result_invoicenumber = "xpath=>"
+
+    # 断言任务ID查询结果
+    def find_result_taskid(self):
+        a = self.get_search_result(self.result_taskid)
+        return a
+
+    # 断言网点ID查询结果
+    def find_result_areaid(self):
+        a = self.get_search_result(self.result_areaid)
+        return a
+
+    # 断言网点名称查询结果
+    def find_result_areaname(self):
+        a = self.get_search_result(self.result_areaname)
+        return a
+
+    # 断言收款单位查询结果
+    def find_result_payee(self):
+        a = self.get_search_result(self.result_payee)
+        return a
+
+    # 断言票据登记状态查询结果
+    def find_result_billregistrationstatus(self):
+        a = self.get_search_result(self.result_billregistrationstatus)
+        return a
+
+    # 断言申请时间查询结果
+    def find_result_applicationtime(self):
+        a = self.get_search_result(self.result_applicationtime)
+        return a
