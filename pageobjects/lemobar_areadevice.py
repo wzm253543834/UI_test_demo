@@ -443,6 +443,7 @@ class DevicelistSearch(BasePage):
         self.click(self.devicelist_delivertime_search)
         self.sleep(2)
         self.click(self.devicelist_delivertime)
+        self.click(self.devicelist_delivertime)
 
     # 设备启用状态查询
     def deviceisenablestatus_search(self):
@@ -724,6 +725,7 @@ class EpdevicelistSearch(BasePage):
     def delivertime_search(self):
         self.click(self.epdevicelist_delivertime_search)
         self.sleep(2)
+        self.click(self.epdevicelist_delivertime)
         self.click(self.epdevicelist_delivertime)
 
     # 网点提现查询

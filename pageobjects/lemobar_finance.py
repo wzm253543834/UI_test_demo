@@ -189,3 +189,71 @@ class FinancePage(BasePage):
     def find_tab_billdetails(self):
         a = self.get_tab_title(self.tab_billDetails)
         return a
+
+
+class SpendBillManageSearch(BasePage):
+
+    spendBillManage_taskid_search = "xpath=>//*[@id='search_list']/div[1]/div[1]/div/div/input"
+    spendBillManage_areaid_search = "xpath=>//*[@id='search_list']/div[1]/div[2]/div/div/input"
+    spendBillManage_areaname_search = "xpath=>//*[@id='search_list']/div[1]/div[3]/div/div/input"
+    spendBillManage_payee_search = "xpath=>//*[@id='search_list']/div[1]/div[4]/div/div/input"
+    spendBillManage_costtype_search = "xpath=>//*[@id='search_list']/div[1]/div[5]/div/div/div/input"
+    spendBillManage_billregistrationstatus_search = "xpath=>//*[@id='search_list']/div[1]/div[6]/div/div/div/input"
+    spendBillManage_applicationtime_search = "xpath=>//*[@id='search_list']/div[1]/div[7]/div/div/input[1]"
+    spendBillManage_invoicenumber_search = "xpath=>//*[@id='search_list']/div[1]/div[8]/div/div/input"
+    spendBillManage_search_button = "xpath=>//*[@id='search_list']/div[2]/div[1]/div/button"
+    spendBillManage_empty_button = "xpath=>//*[@id='search_list']/div[2]/div[2]/div/button"
+    spendBillManage_costtype = "xpath=>"
+    spendBillManage_billregistrationstatus = "xpath=>"
+    spendBillManage_applicationtime = "xpath=>"
+
+    """
+    费用票据管理各筛选项
+    """
+
+    # 任务ID查询
+    def taskid_search(self, text):
+        self.type(self.spendBillManage_taskid_search, text)
+
+    # 网点ID查询
+    def areaid_search(self, text):
+        self.type(self.spendBillManage_areaid_search, text)
+
+    # 网点名称查询
+    def areaname_search(self, text):
+        self.type(self.spendBillManage_areaname_search, text)
+
+    # 收款单位查询
+    def payee_search(self, text):
+        self.type(self.spendBillManage_payee_search, text)
+
+    # 费用类别查询
+    def costtype_search(self):
+        self.click(self.spendBillManage_costtype_search)
+        self.sleep(2)
+        self.click(self.spendBillManage_costtype)
+
+    # 票据登记状态查询
+    def billregistrationstatus_search(self):
+        self.click(self.spendBillManage_billregistrationstatus_search)
+        self.sleep(2)
+        self.click(self.spendBillManage_billregistrationstatus)
+
+    # 申请时间查询
+    def applicationtime_search(self):
+        self.click(self.spendBillManage_applicationtime_search)
+        self.sleep(2)
+        self.click(self.spendBillManage_applicationtime)
+        self.click(self.spendBillManage_applicationtime)
+
+    # 发票号码查询
+    def invoicenumber_search(self, text):
+        self.type(self.spendBillManage_invoicenumber_search, text)
+
+    # 查询按钮
+    def search_button_click(self):
+        self.click(self.spendBillManage_search_button)
+
+    # 清空按钮
+    def empty_button_click(self):
+        self.click(self.spendBillManage_empty_button)
