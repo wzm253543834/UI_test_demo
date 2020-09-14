@@ -556,3 +556,171 @@ class CardActivitySearch(BasePage):
     def find_result_enablestatus(self):
         a = self.get_search_result_icon(self.result_enablestatus)
         return a
+
+
+class OvertimeCouponSearch(BasePage):
+
+    overtimeCoupon_activityid_search = "xpath=>//*[@id='search_list']/div[1]/div/div/input"
+    overtimeCoupon_activitytitle_search = "xpath=>//*[@id='search_list']/div[2]/div/div/input"
+    overtimeCoupon_activityenablestatus_search = "xpath=>//*[@id='search_list']/div[3]/div/div/div/input"
+    overtimeCoupon_search_button = "xpath=>//*[@id='search_list']/div[4]/div/button[1]"
+    overtimeCoupon_empty_button = "xpath=>//*[@id='search_list']/div[4]/div/button[2]"
+    overtimeCoupon_activityenablestatus = "xpath=>/html/body/div[2]/div[1]/div[1]/ul/li[1]"
+
+    """
+    加时券管理各筛选项
+    """
+
+    # 活动ID查询
+    def activityid_search(self, text):
+        self.type(self.overtimeCoupon_activityid_search, text)
+
+    # 活动标题查询
+    def activitytitle_search(self, text):
+        self.type(self.overtimeCoupon_activitytitle_search, text)
+
+    # 活动启用状态查询
+    def activityenablestatus_search(self):
+        self.click(self.overtimeCoupon_activityenablestatus_search)
+        self.sleep(2)
+        self.click(self.overtimeCoupon_activityenablestatus)
+
+    # 查询按钮
+    def search_button_click(self):
+        self.click(self.overtimeCoupon_search_button)
+
+    # 清空按钮
+    def empty_button_click(self):
+        self.click(self.overtimeCoupon_empty_button)
+
+    # 测试结果断言
+    result_activityid = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[1]/div[3]/table/tbody/tr/td[2]/div"
+    result_activitytitle = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[1]/div[3]/table/tbody/tr/td[3]/div"
+    result_activityenablestatus = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[1]/div[3]/table/tbody/tr/td[10]/div/i"
+
+    # 断言活动ID查询结果
+    def find_result_activityid(self):
+        a = self.get_search_result(self.result_activityid)
+        return a
+
+    # 断言活动标题查询结果
+    def find_result_activitytitle(self):
+        a = self.get_search_result(self.result_activitytitle)
+        return a
+
+    # 断言活动启用状态查询结果
+    def find_result_activityenablestatus(self):
+        a = self.get_search_result_icon(self.result_activityenablestatus)
+        return a
+
+
+class SubscriptionActivitySearch(BasePage):
+
+    subscriptionActivity_activityid_search = "xpath=>//*[@id='search_list']/div[1]/div/div/input"
+    subscriptionActivity_activitytitle_search = "xpath=>//*[@id='search_list']/div[2]/div/div/input"
+    subscriptionActivity_activityenablestatus_search = "xpath=>//*[@id='search_list']/div[3]/div/div/div/input"
+    subscriptionActivity_search_button = "xpath=>//*[@id='search_list']/div[4]/div/button[1]"
+    subscriptionActivity_empty_button = "xpath=>//*[@id='search_list']/div[4]/div/button[2]"
+    subscriptionActivity_activityenablestatus = "xpath=>/html/body/div[2]/div[1]/div[1]/ul/li[1]"
+
+    """
+    订阅活动管理各筛选项
+    """
+
+    # 活动ID查询
+    def activityid_search(self, text):
+        self.type(self.subscriptionActivity_activityid_search, text)
+
+    # 活动标题查询
+    def activitytitle_search(self, text):
+        self.type(self.subscriptionActivity_activitytitle_search, text)
+
+    # 活动启用状态查询
+    def activityenablestatus_search(self):
+        self.click(self.subscriptionActivity_activityenablestatus_search)
+        self.sleep(2)
+        self.click(self.subscriptionActivity_activityenablestatus)
+
+    # 查询按钮
+    def search_button_click(self):
+        self.click(self.subscriptionActivity_search_button)
+
+    # 清空按钮
+    def empty_button_click(self):
+        self.click(self.subscriptionActivity_empty_button)
+
+    # 测试结果断言
+    result_activityid = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[1]/div[3]/table/tbody/tr/td[2]/div"
+    result_activitytitle = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[1]/div[3]/table/tbody/tr/td[3]/div"
+    result_activityenablestatus = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[1]/div[3]/table/tbody/tr/td[9]/div/i"
+
+    # 断言活动ID查询结果
+    def find_result_activityid(self):
+        a = self.get_search_result(self.result_activityid)
+        return a
+
+    # 断言活动标题查询结果
+    def find_result_activitytitle(self):
+        a = self.get_search_result(self.result_activitytitle)
+        return a
+
+    # 断言活动启用状态查询结果
+    def find_result_activityenablestatus(self):
+        a = self.get_search_result_icon(self.result_activityenablestatus)
+        return a
+
+
+class SellCouponSearch(BasePage):
+
+    sellCoupon_activityid_search = "xpath=>//*[@id='search_list']/div[1]/div/div/input"
+    sellCoupon_activitytitle_search = "xpath=>//*[@id='search_list']/div[2]/div/div/input"
+    sellCoupon_activityenablestatus_search = "xpath=>//*[@id='search_list']/div[3]/div/div/div/input"
+    sellCoupon_search_button = "xpath=>//*[@id='search_list']/div[4]/div/button[1]"
+    sellCoupon_empty_button = "xpath=>//*[@id='search_list']/div[4]/div/button[2]"
+    sellCoupon_activityenablestatus = "xpath=>/html/body/div[2]/div[1]/div[1]/ul/li[1]"
+
+    """
+    卖券活动各筛选项
+    """
+
+    # 活动ID查询
+    def activityid_search(self, text):
+        self.type(self.sellCoupon_activityid_search, text)
+
+    # 活动标题查询
+    def activitytitle_search(self, text):
+        self.type(self.sellCoupon_activitytitle_search, text)
+
+    # 活动启用状态查询
+    def activityenablestatus_search(self):
+        self.click(self.sellCoupon_activityenablestatus_search)
+        self.sleep(2)
+        self.click(self.sellCoupon_activityenablestatus)
+
+    # 查询按钮
+    def search_button_click(self):
+        self.click(self.sellCoupon_search_button)
+
+    # 清空按钮
+    def empty_button_click(self):
+        self.click(self.sellCoupon_empty_button)
+
+    # 测试结果断言
+    result_activityid = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[1]/div[3]/table/tbody/tr/td[2]/div"
+    result_activitytitle = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[1]/div[3]/table/tbody/tr/td[3]/div"
+    result_activityenablestatus = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[1]/div[3]/table/tbody/tr/td[8]/div/i"
+
+    # 断言活动ID查询结果
+    def find_result_activityid(self):
+        a = self.get_search_result(self.result_activityid)
+        return a
+
+    # 断言活动标题查询结果
+    def find_result_activitytitle(self):
+        a = self.get_search_result(self.result_activitytitle)
+        return a
+
+    # 断言活动启用状态查询结果
+    def find_result_activityenablestatus(self):
+        a = self.get_search_result_icon(self.result_activityenablestatus)
+        return a
