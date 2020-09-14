@@ -297,3 +297,14 @@ class SpendBillManageSearch(BasePage):
     def find_result_applicationtime(self):
         a = self.get_search_result(self.result_applicationtime)
         return a
+
+
+class OrderSearch(BasePage):
+
+    order_creationtime_search = "xpath=>//*[@id='search_list']/div[1]/div/div/input"
+    order_paymentmethod_search = "xpath=>//*[@id='search_list']/div[2]/div/div/div/input"
+    order_ordernumber_search = "xpath=>//*[@id='search_list']/div[3]/div/div/input"
+    order_orderstatus_search = "xpath=>//*[@id='search_list']/div[4]/div/div/div/input"
+    order_transactionnumber_search = "xpath=>//*[@id='search_list']/div[5]/div/div/input"
+    order_areaname_search = "xpath=>//*[@id='search_list']/div[6]/div/div/input"
+    order_deviceid_search = "xpath=>//*[@id='search_list']/div[8]/div/div/input"
