@@ -134,8 +134,6 @@ class DevicePageSearch(unittest.TestCase):
         :return:
         """
         homepage = DevicePage(self.driver)
-        homepage.search_click_divice()
-        homepage.sleep(3)
         homepage.search_click_divice_devicefactory()
         homepage.sleep(3)
         homepage.get_window_img()
@@ -192,8 +190,6 @@ class DevicePageSearch(unittest.TestCase):
         :return:
         """
         homepage = DevicePage(self.driver)
-        homepage.search_click_divice()
-        homepage.sleep(3)
         homepage.search_click_divice_devicecustomer()
         homepage.sleep(3)
         homepage.get_window_img()
@@ -250,8 +246,6 @@ class DevicePageSearch(unittest.TestCase):
         :return:
         """
         homepage = DevicePage(self.driver)
-        homepage.search_click_divice()
-        homepage.sleep(3)
         homepage.search_click_divice_devicetype()
         homepage.sleep(3)
         homepage.get_window_img()
