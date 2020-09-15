@@ -308,3 +308,36 @@ class OrderSearch(BasePage):
     order_transactionnumber_search = "xpath=>//*[@id='search_list']/div[5]/div/div/input"
     order_areaname_search = "xpath=>//*[@id='search_list']/div[6]/div/div/input"
     order_deviceid_search = "xpath=>//*[@id='search_list']/div[8]/div/div/input"
+    order_activitytype_search = "xpath=>//*[@id='search_list']/div[9]/div/div/div/input"
+    order_province_search = "xpath=>//*[@id='search_list']/div[10]/div/div/div/input"
+    order_city_search = "xpath=>//*[@id='search_list']/div[11]/div/div/div/input"
+    order_areawithdrawal_search = "xpath=>//*[@id='search_list']/div[12]/div/div/div/input"
+    order_search_button = "xpath=>//*[@id='search_list']/div[6]/div/button"
+    order_empty_button = "xpath=>//*[@id='search_list']/div[13]/div/button"
+    order_creationtime = "xpath=>/html/body/div[2]/div[1]/div/div[2]/table[1]/tbody/tr[2]/td[1]/div"
+    order_paymentmethod = "xpath=>/html/body/div[3]/div[1]/div[1]/ul/li[1]"
+    order_orderstatus = "xpath=>/html/body/div[4]/div[1]/div[1]/ul/li[1]"
+    order_activitytype = "xpath=>/html/body/div[5]/div[1]/div[1]/ul/li[1]"
+    order_province = "xpath=>/html/body/div[6]/div[1]/div[1]/ul/li[1]"
+    order_city = "xpath=>/html/body/div[7]/div[1]/div[1]/ul/li[1]"
+    order_areawithdrawal = "xpath=>/html/body/div[8]/div[1]/div[1]/ul/li[1]"
+
+    """
+    订单流水各筛选项
+    """
+
+    # 创建时间查询
+    def creationtime_search(self):
+        self.click(self.order_creationtime_search)
+        self.sleep(2)
+        self.click(self.order_creationtime)
+
+    # 付款方式查询
+    def paymentmethod_search(self):
+        self.click(self.order_paymentmethod_search)
+        self.sleep(2)
+        self.click(self.order_paymentmethod)
+
+    # 订单号查询
+    def ordernumber_search(self, text):
+        self.type(self.order_ordernumber_search, text)
