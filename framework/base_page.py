@@ -67,6 +67,21 @@ class BasePage(object):
             logger.error("Failed to take screenshot! %s", e)
             self.get_window_img()
 
+    # 保存图片
+    def get_code_img(self):
+        """
+        在这里我们把file_path这个参数写死，直接保存到我们项目根目录的一个文件夹。screenshots下
+        :return:
+        """
+        file_path = os.path.dirname(os.path.abspath('.')) + '/screenshots/'
+        screen_name = file_path + 'code.png'
+        try:
+            self.driver.get_screenshot_as_file(screen_name)
+            logger.info("Had take screenshot and save to folder: /screenshots")
+        except NameError as e:
+            logger.error("Failed to take screenshot! %s", e)
+            self.get_window_img()
+
     # 定位元素方法
     def find_element(self, selector):
         """

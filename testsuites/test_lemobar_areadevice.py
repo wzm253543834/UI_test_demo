@@ -13,6 +13,7 @@ from pageobjects.lemobar_areadevice import EpdevicelistSearch
 from pageobjects.lemobar_areadevice import ContractSearch
 from pageobjects.lemobar_areadevice import PlaceSearch
 from pageobjects.lemobar_areadevice import CompanySearch
+from pageobjects.lemobar_areadevice import RentWarnSearch
 
 
 class AreadevicePageSearch(unittest.TestCase):
@@ -866,6 +867,86 @@ class AreadevicePageSearch(unittest.TestCase):
         newsearch.sleep(2)
         try:
             assert '上海分公司' in newsearch.find_result_companyname()
+            print('Test Pass')
+        except Exception as e:
+            print('Test Fail', format(e))
+        newsearch.empty_button_click()
+        newsearch.sleep(2)
+
+        # 刷新页面
+        newsearch.refresh()
+
+    def test_j_rentwarn_search(self):
+        """
+        租金提醒查询
+        :return:
+        """
+        homepage = AreadevicePage(self.driver)
+        homepage.search_click_areadevice_rentWarn()
+        homepage.sleep(3)
+        homepage.get_window_img()
+        try:
+            assert '租金提醒' in homepage.find_tab_rentWarn()
+            print('Test Pass')
+        except Exception as e:
+            print('Test Fail', format(e))
+
+        newsearch = RentWarnSearch(self.driver)
+
+        # 租金月份查询
+        newsearch.rentmonth_search()
+        newsearch.search_button_click()
+        newsearch.sleep(2)
+        try:
+            assert '2020-01' in newsearch.find_result_rentmonth()
+            print('Test Pass')
+        except Exception as e:
+            print('Test Fail', format(e))
+        newsearch.empty_button_click()
+        newsearch.sleep(2)
+
+        # 网点名称查询
+        newsearch.areaname_search('福州')
+        newsearch.search_button_click()
+        newsearch.sleep(2)
+        try:
+            assert '福州' in newsearch.find_result_areaname()
+            print('Test Pass')
+        except Exception as e:
+            print('Test Fail', format(e))
+        newsearch.empty_button_click()
+        newsearch.sleep(2)
+
+        # 场地方名称查询
+        newsearch.fieldname_search('福州')
+        newsearch.search_button_click()
+        newsearch.sleep(2)
+        try:
+            assert '福州' in newsearch.find_result_fieldname()
+            print('Test Pass')
+        except Exception as e:
+            print('Test Fail', format(e))
+        newsearch.empty_button_click()
+        newsearch.sleep(2)
+
+        # 状态查询
+        newsearch.status_search()
+        newsearch.search_button_click()
+        newsearch.sleep(2)
+        try:
+            assert '缴清' in newsearch.find_result_status()
+            print('Test Pass')
+        except Exception as e:
+            print('Test Fail', format(e))
+        newsearch.empty_button_click()
+        newsearch.sleep(2)
+
+        # 支付方式查询
+        newsearch.paymethod_search()
+        newsearch.search_button_click()
+        newsearch.sleep(2)
+        try:
+            assert '微信' in newsearch.find_result_paymethod()
             print('Test Pass')
         except Exception as e:
             print('Test Fail', format(e))

@@ -13,6 +13,7 @@ class AreadevicePage(BasePage):
     menu_areadevice_contract = "xpath=>//*[@id='app']/div/div/div[2]/aside/ul/li[1]/ul/li[6]"
     menu_areadevice_place = "xpath=>//*[@id='app']/div/div/div[2]/aside/ul/li[1]/ul/li[7]"
     menu_areadevice_company = "xpath=>//*[@id='app']/div/div/div[2]/aside/ul/li[1]/ul/li[8]"
+    menu_areadevice_rentWarn = "xpath=>//*[@id='app']/div/div/div[2]/aside/ul/li[1]/ul/li[9]"
     tab_area = "xpath=>//*[@id='tab-2']"
     tab_price = "xpath=>//*[@id='tab-3']"
     tab_devicelist = "xpath=>//*[@id='tab-4']"
@@ -21,6 +22,7 @@ class AreadevicePage(BasePage):
     tab_contract = "xpath=>//*[@id='tab-109']"
     tab_place = "xpath=>//*[@id='tab-120']"
     tab_company = "xpath=>//*[@id='tab-126']"
+    tab_rentWarn = "xpath=>//*[@id='tab-183']"
 
     """
     网点设备各菜单地址及tab页地址
@@ -100,6 +102,15 @@ class AreadevicePage(BasePage):
     # 获取分公司管理tab名
     def find_tab_company(self):
         a = self.get_tab_title(self.tab_company)
+        return a
+
+    # 点击租金提醒
+    def search_click_areadevice_rentWarn(self):
+        self.click(self.menu_areadevice_rentWarn)
+
+    # 获取租金提醒tab名
+    def find_tab_rentWarn(self):
+        a = self.get_tab_title(self.tab_rentWarn)
         return a
 
 
@@ -918,4 +929,88 @@ class CompanySearch(BasePage):
     # 断言分公司名称查询结果
     def find_result_companyname(self):
         a = self.get_search_result(self.result_companyname)
+        return a
+
+
+class RentWarnSearch(BasePage):
+
+    rentWarn_rentmonth_search = "xpath=>//*[@id='search_list']/div[1]/div/div/input"
+    rentWarn_areaname_search = "xpath=>//*[@id='search_list']/div[2]/div/div/input"
+    rentWarn_fieldname_search = "xpath=>//*[@id='search_list']/div[3]/div/div/input"
+    rentWarn_status_search = "xpath=>//*[@id='search_list']/div[4]/div/div/div/input"
+    rentWarn_paymethod_search = "xpath=>//*[@id='search_list']/div[5]/div/div/div/input"
+    rentWarn_search_button = "xpath=>//*[@id='search_list']/div[6]/div/button[1]"
+    rentWarn_empty_button = "xpath=>//*[@id='search_list']/div[6]/div/button[2]"
+    rentWarn_rentmonth = "xpath=>/html/body/div[2]/div[1]/div/div[2]/table[3]/tbody/tr[1]/td[1]/a"
+    rentWarn_status = "xpath=>/html/body/div[3]/div[1]/div[1]/ul/li[1]"
+    rentWarn_paymethod = "xpath=>/html/body/div[4]/div[1]/div[1]/ul/li[2]"
+
+    """
+    租金提醒各筛选项
+    """
+
+    # 租金月份查询
+    def rentmonth_search(self):
+        self.click(self.rentWarn_rentmonth_search)
+        self.sleep(2)
+        self.click(self.rentWarn_rentmonth)
+
+    # 网点名称查询
+    def areaname_search(self, text):
+        self.type(self.rentWarn_areaname_search, text)
+
+    # 场地方名称查询
+    def fieldname_search(self, text):
+        self.type(self.rentWarn_fieldname_search, text)
+
+    # 状态查询
+    def status_search(self):
+        self.click(self.rentWarn_status_search)
+        self.sleep(2)
+        self.click(self.rentWarn_status)
+
+    # 支付方式查询
+    def paymethod_search(self):
+        self.click(self.rentWarn_paymethod_search)
+        self.sleep(2)
+        self.click(self.rentWarn_paymethod)
+
+    # 查询按钮
+    def search_button_click(self):
+        self.click(self.rentWarn_search_button)
+
+    # 清空按钮
+    def empty_button_click(self):
+        self.click(self.rentWarn_empty_button)
+
+    # 测试结果断言
+    result_rentmonth = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[2]/div/div[3]/table/tbody/tr/td[10]/div"
+    result_areaname = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[2]/div/div[3]/table/tbody/tr/td[4]/div"
+    result_fieldname = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[2]/div/div[3]/table/tbody/tr/td[5]/div"
+    result_status = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[2]/div/div[3]/table/tbody/tr/td[18]/div"
+    result_paymethod = "xpath=>//*[@id='app']/div/div/div[2]/div/div[2]/section/div[2]/div/div[3]/table/tbody/tr/td[15]/div"
+
+    # 断言租金月份查询结果
+    def find_result_rentmonth(self):
+        a = self.get_search_result(self.result_rentmonth)
+        return a
+
+    # 断言网点名称查询结果
+    def find_result_areaname(self):
+        a = self.get_search_result(self.result_areaname)
+        return a
+
+    # 断言场地方名称查询结果
+    def find_result_fieldname(self):
+        a = self.get_search_result(self.result_fieldname)
+        return a
+
+    # 断言状态查询结果
+    def find_result_status(self):
+        a = self.get_search_result(self.result_status)
+        return a
+
+    # 断言支付方式查询结果
+    def find_result_paymethod(self):
+        a = self.get_search_result(self.result_paymethod)
         return a
